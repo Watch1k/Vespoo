@@ -1,0 +1,780 @@
+@import reset
+@import lib/mixins
+@import compass
+/*----- Slick Slider Styles -----*/
+@import slick
+@import icon-main/*.png
+/**/
+@import icon-social/*.png
+/**/
+@import icon-work/*.png
+/**/
+@import icon-all/*.png
+/**/
+
+/*----- icon main -----*/
+$icon-main-sprite-dimensions: true
+@include all-icon-main-sprites
+/*----- icon social -----*/
+$icon-social-sprite-dimensions: true
+@include all-icon-social-sprites
+/*----- icon work -----*/
+$icon-work-sprite-dimensions: true
+@include all-icon-work-sprites
+/*----- icon all -----*/
+$icon-all-sprite-dimensions: true
+@include all-icon-all-sprites
+
+// fonts
+$default-fonts: Arial, sans-serif
+
+// colors
+$viollet: #583d8b
+$orange: #d4762d
+
+/*-------------------------------------------------------------------------*/
+/*----------------------------- MAIN STYLES -------------------------------*/
+/*-------------------------------------------------------------------------*/
+.text-uppercase
+	text-transform: uppercase
+.container
+	margin: 0 auto
+	width: 980px
+.row
+	+pie-clearfix
+button::-moz-focus-inner, input::-moz-focus-inner
+	border: 0
+	padding: 0
+a
+	text-decoration: none
+a:hover, a:focus
+	text-decoration: none
+svg
+	width: 100%
+	height: 100%
+body
+	min-width: 1240px
+	font-family: $default-fonts
+	font-size: 16px
+	color: $viollet
+	line-height: 1.4
+.header
+	position: absolute
+	top: 100px
+	left: 0
+	width: 100%
+	min-width: 1240px
+	> .container
+		z-index: 1000
+.body-branding
+	position: fixed
+	z-index: 3
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	.banner-1
+		position: absolute
+		z-index: 1100
+		right: 20px
+		top: 100px
+		> a
+			display: block
+	.service-1
+		position: absolute
+		z-index: 1100
+		top: 100px
+		left: 0
+		> a
+			display: block
+	.service-2
+		position: absolute
+		z-index: 1100
+		top: 450px
+		left: 0
+		> a
+			display: block
+.content-wrap
+	position: relative
+	z-index: 4
+	margin-top: 200px
+.wrapper
+	overflow: hidden
+	min-height: 100%
+	padding-bottom: 306px
+.footer
+	position: relative
+	z-index: 5
+	margin-top: -286px
+/*----- Main page -----*/
+.close-banner, .close-banner-fix
+	position: absolute
+	top: 0
+	right: 0
+	padding: 0 3px 1px 3px
+	color: #fff
+	background-color: $orange
+.banner-top
+	position: relative
+	z-index: 4
+	&__in
+		position: relative
+		display: block
+		margin: 0 auto
+		width: 600px
+		height: 100px
+		background-color: #ccc
+.header
+	font-size: 20px
+	.container
+		position: relative
+		padding-top: 30px
+		padding-bottom: 0
+		background-color: #fff
+		transition: all 0.3s
+	&__top
+		position: relative
+		+pie-clearfix
+		.logo
+			float: left
+			margin-left: 0
+			height: 64px
+			transition: all 0.3s
+			img
+				height: 100%
+				vertical-align: bottom
+		.post-new
+			margin-top: 10px
+			margin-right: 0
+			transition: all 0.3s
+		.userbox
+			float: right
+			margin-top: 10px
+			margin-right: 20px
+			line-height: 38px
+			transition: all 0.3s
+			&:hover
+				color: $orange
+		.lang-selector
+			position: absolute
+			top: 14px
+			left: 100%
+			margin-left: 10px
+			padding: 0 3px
+			white-space: nowrap
+			background-color: #fff
+			border-radius: 5px
+			transition: all 0.3s
+			li
+				display: inline-block
+				font-size: 16px
+				&:hover
+					color: $orange
+				+ li
+					&:before
+						content: '|'
+						margin-right: 5px
+						color: $viollet
+	&.is-fixed
+		position: fixed
+		top: 0
+		z-index: 1000
+		.container
+			position: relative
+			padding-top: 2px
+			padding-bottom: 2px
+			box-shadow: 0 0 6px rgba(1,1,1,0.5)
+			transition: all 0.3s
+			.header__bot
+				display: none
+			.logo
+				margin-left: 2px
+				height: 38px
+				width: 57px
+				background: url("../img/logo-mini.png") no-repeat center center
+				transition: all 0.3s
+				img
+					display: none
+			.userbox
+				margin-top: 0
+				font-size: 16px
+				transition: all 0.3s
+			.post-new
+				margin-top: 0
+				margin-right: 2px
+				font-size: 16px
+				transition: all 0.3s
+			.lang-selector
+				top: 0
+				transition: all 0.3s
+			.form-search
+				position: absolute
+				left: 70px
+				top: 0
+				margin-top: 0
+				padding: 5px
+				background-color: transparent
+				.location
+					display: none
+				input, button
+					height: 32px
+					line-height: 32px
+				.search
+					width: 360px
+					margin-left: 0
+					transition: all 0.3s
+					input
+						box-shadow: inset 0 0 3px 1px $viollet
+						&:focus
+							box-shadow: inset 0 0 3px 1px $orange
+				.submit
+					margin-left: 10px
+					transition: all 0.3s
+.post-new
+	float: right
+	padding: 0 10px
+	color: #fff
+	line-height: 38px
+	text-transform: uppercase
+	background-color: $orange
+	transition: all 0.2s
+	&:hover
+		background-color: $viollet
+		transition: all 0.2s
+#ui-id-1
+	float: left
+	z-index: 1001
+	background-color: #fff
+	box-shadow: 0 0 6px rgba(1,1,1,0.5)
+	li
+		cursor: pointer
+.form-search
+	margin-top: 10px
+	padding: 20px
+	background-color: $viollet
+	transition: all 0.3s
+	+pie-clearfix
+	.field
+		float: left
+		width: 268px
+		input, button
+			width: 100%
+			height: 36px
+			line-height: 36px
+		input
+			padding: 0 10px
+			font-size: 20px
+			color: $viollet
+			+placeholder-color($viollet)
+			&:focus
+				box-shadow: inset 0 0 3px 1px $orange
+		button
+			font-size: 16px
+			color: #fff
+			text-transform: uppercase
+			text-align: left
+			text-indent: 38px
+			background-color: #9685b6
+			background-image: url("../img/icon-zoom.png")
+			background-position: 10px center
+			background-repeat: no-repeat
+			transition: all 0.2s
+			&:hover
+				background-color: $orange
+				transition: all 0.2s
+	.search
+		width: 522px
+		margin-left: 20px
+		transition: all 0.3s
+	.submit
+		float: right
+		width: 110px
+		transition: all 0.3s
+.section-main
+	position: relative
+	+pie-clearfix
+	&__in
+		position: relative
+		float: left
+		width: 672px
+		background-color: #fff
+		+pie-clearfix
+.post-list
+	margin-left: -10px
+	+pie-clearfix
+	li
+		position: relative
+		float: left
+		margin-top: 13px
+		margin-left: 13px
+		padding: 7px
+		width: 184px
+		box-shadow: 0 0 6px rgba(1, 1, 1, 0.3)
+		&:hover
+			box-shadow: 0 0 5px 1px $orange
+		.post-list__mark
+			position: absolute
+			top: -2px
+			left: -2px
+			line-height: 50px
+			text-align: center
+			i
+				display: inline-block
+				position: relative
+				left: -2px
+				top: 1px
+				margin-left: auto
+				margin-right: auto
+				vertical-align: middle
+	&__img
+		display: block
+		width: 170px
+		height: 132px
+		line-height: 132px
+		text-align: center
+		vertical-align: middle
+		img
+			max-width: 170px
+			max-height: 132px
+			vertical-align: middle
+	&__in
+		margin-top: 8px
+		border-top: 1px solid rgba(88, 61, 139, 0.65)
+		p
+			+ p
+				font-size: 20px
+				color: $orange
+.vip-post
+	margin-top: 20px
+	.post-list
+		margin-left: 0
+		li
+			margin-top: 20px
+			margin-left: 30px
+.post-title
+	padding-left: 10px
+	font-size: 20px
+	color: #fff
+	line-height: 36px
+	text-transform: uppercase
+	font-weight: normal
+	background-color: $orange
+	a
+		&:hover
+			border-bottom: 2px solid #fff
+	span
+		text-transform: none
+.icon-all-star
+	display: block
+	float: right
+	margin-top: 3px
+	cursor: pointer
+.show-all-btn
+	margin-top: 15px
+	text-align: center
+	color: #fff
+	line-height: 40px
+	letter-spacing: 0.05em
+	text-transform: uppercase
+	a
+		display: inline-block
+		padding: 0 10px
+		background-color: rgba(88, 61, 139, 0.9)
+		transition: all 0.2s
+		&:hover
+			background-color: $orange
+			transition: all 0.2s
+.slider-main
+	padding: 5px 35px
+	font-size: 26px
+	background-color: #f1f0f0
+	p
+		+ p
+			color: $orange
+	.icon-all-arrow-top-orange
+		position: absolute
+		display: block
+		top: 0
+		right: 0
+	.slick-prev, .slick-next
+		margin-top: -21px
+		width: 20px
+		height: 42px
+		border: 2px solid #c2c0c0
+		font-size: 0
+		line-height: 0
+		transition: all 0.2s
+		&:hover
+			background-color: #c2c0c0
+			transition: all 0.2s
+		&:before
+			display: none
+		&:after
+			content: ''
+			display: inline-block
+			font-size: 24px
+			color: #898787
+			line-height: 40px
+	.slick-prev
+		border-left: none
+		&:after
+			content: '\003C'
+	.slick-next
+		border-right: none
+		&:after
+			content: '\003E'
+	.slick-dots
+		li
+			padding: 0 5px
+			button
+				border-radius: 0
+				box-shadow: none
+				width: 10px
+				height: 10px
+				background-color: #c2c0c0
+		li.slick-active
+			button
+				opacity: 1
+				background-color: #898787
+	.slick-slide
+		padding-top: 30px
+		padding-bottom: 30px
+.nav-main
+	float: left
+	width: 308px
+	font-size: 18px
+	+pie-clearfix
+	> li
+		padding-right: 6px
+		margin-bottom: 5px
+		> span, > a
+			position: relative
+			z-index: 6
+			overflow: hidden
+			display: block
+			padding-left: 10px
+			height: 50px
+			line-height: 50px
+			background-color: #fff
+			cursor: pointer
+			.icon-wrap
+				display: inline-block
+				width: 60px
+				text-align: center
+				i
+					display: inline-block
+					vertical-align: middle
+		&.is-active, &:hover
+			padding-right: 0
+			box-shadow: 0 0 6px rgba(1, 1, 1, 0.3)
+.nav-main-sub
+	display: none
+	position: absolute
+	z-index: 5
+	left: 308px
+	right: 0
+	top: 0
+	padding-bottom: 420px
+	background-color: #fff
+	background-position: center bottom
+	background-size: 100% auto
+	background-repeat: no-repeat
+	box-shadow: 0 0 6px rgba(1, 1, 1, 0.3)
+	+pie-clearfix
+	> ul
+		padding-top: 10px
+		+pie-clearfix
+		> li
+			float: left
+			margin-left: 2%
+			margin-bottom: 5px
+			width: 48%
+			color: $orange
+			&:hover
+				background-color: lighten($viollet,55)
+			a
+				overflow: hidden
+				display: block
+				height: 50px
+				line-height: 50px
+				> span
+					display: inline-block
+					width: 75px
+					text-align: center
+					i
+						display: inline-block
+						vertical-align: middle
+	.post-title
+		+pie-clearfix
+		.nav-close-btn
+			float: right
+			margin-right: 10px
+			font-size: 14px
+			letter-spacing: 0.02em
+			cursor: pointer
+	&.child-bg
+		background-image: url("../img/bg/child-bg.jpg")
+	&.state-bg
+		background-image: url("../img/bg/state-bg.jpg")
+	&.transport-bg
+		background-image: url("../img/bg/transport-bg.jpg")
+	&.work-bg
+		background-image: url("../img/bg/work-bg.jpg")
+	&.animal-bg
+		background-image: url("../img/bg/animal-bg.jpg")
+	&.house-bg
+		background-image: url("../img/bg/house-bg.jpg")
+	&.electro-bg
+		background-image: url("../img/bg/electro-bg.jpg")
+	&.business-bg
+		background-image: url("../img/bg/business-bg.jpg")
+	&.style-bg
+		background-image: url("../img/bg/style-bg.jpg")
+	&.hobby-bg
+		background-image: url("../img/bg/hobby-bg.jpg")
+.section-top
+	margin-top: 20px
+	+pie-clearfix
+	.top-post
+		&-btn
+			float: right
+			margin-top: 10px
+			margin-bottom: -10px
+			height: 60px
+			font-size: 20px
+			font-style: italic
+			vertical-align: top
+			transition: all 0.2s
+			&:hover
+				color: $orange
+				transition: all 0.2s
+			.icon-all-arrow-left
+				display: inline-block
+				margin-top: 10px
+				margin-right: 5px
+.section-new
+	margin-top: 20px
+	+pie-clearfix
+	&__left
+		float: left
+		width: 584px
+	&__right
+		float: right
+		width: 360px
+		.banner
+			margin-top: 20px
+			a
+				display: block
+				overflow: hidden
+				margin: 0 auto
+				width: 300px
+				height: 600px
+				box-shadow: 0 0 6px rgba(1, 1, 1, 0.3)
+				img
+					width: inherit
+					height: inherit
+.news-list
+	line-height: 1.29
+	li
+		margin-top: 13px
+		padding: 7px 7px 5px 7px
+		box-shadow: 0 0 6px rgba(1, 1, 1, 0.3)
+		+pie-clearfix
+		&:hover
+			box-shadow: 0 0 5px 1px $orange
+	&__img
+		float: left
+		margin-right: 7px
+		padding-right: 7px
+		width: 58px
+		height: 58px
+		line-height: 58px
+		text-align: center
+		vertical-align: middle
+		border-right: 1px solid rgba(88, 61, 139, 0.5)
+		box-sizing: content-box
+		img
+			max-width: 58px
+			max-height: 58px
+			vertical-align: middle
+	&__in
+		.news-title
+			font-size: 18px
+			color: $orange
+			transition: all 0.2s
+			&:hover
+				text-shadow: 0 0 0.5px $orange
+				transition: all 0.2s
+		.news-list__info
+			font-size: 14px
+			+pie-clearfix
+			.news-date
+				float: left
+				transition: all 0.2s
+				&:hover
+					text-shadow: 0 0 0.5px $viollet
+					transition: all 0.2s
+			.news-comment
+				float: right
+				transition: all 0.2s
+				&:hover
+					text-shadow: 0 0 0.5px $viollet
+					transition: all 0.2s
+.section-post-new
+	margin-top: 20px
+	padding: 24px
+	padding-bottom: 14px
+	background-color: #f6e4d5
+	+pie-clearfix
+	p
+		float: right
+		font-size: 26px
+		line-height: 36px
+		text-transform: uppercase
+	.icon-all-arrow-right
+		float: right
+		margin-top: 12px
+		margin-left: 20px
+		margin-right: 20px
+.section-about
+	margin-top: 20px
+	padding: 0 20px
+	background-color: #f1f0f0
+	+pie-clearfix
+	> .row
+		padding-top: 10px
+		padding-bottom: 10px
+		font-size: 18px
+		line-height: 22px
+		border-bottom: 1px solid #d2d1d1
+		a
+			&:hover
+				color: $orange
+	.logo
+		float: right
+		margin-left: 25px
+		height: 105px
+		width: 240px
+		border-left: 1px solid #d2d1d1
+		text-align: center
+		a
+			display: block
+			margin: 10px auto 0
+			width: 162px
+			height: 81px
+			img
+				width: inherit
+				height: inherit
+				vertical-align: bottom
+.social-title
+	margin-top: 15px
+	margin-bottom: 15px
+	font-size: 24px
+	text-align: center
+.social-list
+	padding-bottom: 20px
+	li
+		display: inline-block
+		margin-left: 21px
+		line-height: 30px
+		background-color: #e0e0e0
+		transition: all 0.2s
+		&:hover
+			background-color: lighten($orange,30)
+			transition: all 0.2s
+		i
+			float: left
+			margin-right: 5px
+		span
+			float: right
+			margin-left: 5px
+			padding: 0 4px
+			font-size: 18px
+			background-color: #fff
+.footer
+	background-color: $viollet
+	padding-top: 10px
+	padding-bottom: 10px
+	color: #fff
+	+pie-clearfix
+	.footer-list
+		padding-right: 15px
+		li
+			&:hover
+				color: lighten($orange,25)
+				text-decoration: underline
+	&__left
+		float: left
+		margin-right: 4%
+		margin-bottom: 15px
+		width: 66%
+		color: #e0e0e0
+		+pie-clearfix
+		.footer__col
+			float: left
+			width: 50%
+			p
+				margin-bottom: 15px
+				padding-top: 10px
+				padding-bottom: 15px
+				font-weight: bold
+				border-bottom: 1px solid #e0e0e0
+	&__right
+		float: right
+		padding: 10px 20px 20px 20px
+		width: 30%
+		color: $viollet
+		border-radius: 5px
+		background-color: #fff
+		p:first-child
+			margin-bottom: 15px
+			padding-bottom: 15px
+			font-weight: bold
+			border-bottom: 1px solid $viollet
+		p:nth-child(2)
+			color: $orange
+			font-weight: bold
+		p:nth-child(3)
+			line-height: 1.2
+		p:nth-child(4)
+			float: left
+			margin-top: 7px
+			margin-right: 7px
+		.phone-list
+			margin-top: 7px
+			overflow: hidden
+		.phone-btn
+			display: block
+			margin: 15px auto 0
+			width: 60%
+			font-size: 20px
+			line-height: 36px
+			color: #fff
+			background-color: $viollet
+			border-radius: 5px
+			text-align: center
+			transition: all 0.2s
+			&:hover
+				background-color: $orange
+				transition: all 0.2s
+	&__bottom
+		color: #e0e0e0
+		line-height: 1.7
+		+pie-clearfix
+		.footer__logo
+			float: left
+			margin-right: 15px
+			padding: 3px 13px
+			width: 138px
+			height: 54px
+			border-radius: 5px
+			background-color: #fff
+			img
+				width: 112px
+				height: 48px
+		p
+			+ p
+				color: #fff
+			a
+				&:hover
+					color: lighten($orange,25)
