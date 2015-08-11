@@ -263,6 +263,13 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 .form-search .search { width: 522px; margin-left: 20px; -webkit-transition: all 0.3s; transition: all 0.3s; }
 .form-search .submit { float: right; width: 110px; -webkit-transition: all 0.3s; transition: all 0.3s; }
 
+.location-wrap { padding-left: 20px; padding-right: 20px; padding-bottom: 20px; background-color: #583d8b; }
+
+.region-wrap, .city-wrap { width: 100%; font-size: 14px; color: #fff; -webkit-column-count: 4; -moz-column-count: 4; column-count: 4; *zoom: 1; }
+.region-wrap:after, .city-wrap:after { content: ""; display: table; clear: both; }
+.region-wrap li, .city-wrap li { cursor: pointer; }
+.region-wrap li:hover, .city-wrap li:hover { color: #e5ad82; text-decoration: underline; }
+
 .section-main { position: relative; *zoom: 1; }
 .section-main:after { content: ""; display: table; clear: both; }
 .section-main__in { position: relative; float: left; width: 672px; background-color: #fff; *zoom: 1; }

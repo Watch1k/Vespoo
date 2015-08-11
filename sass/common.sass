@@ -290,6 +290,22 @@ body
 		float: right
 		width: 110px
 		transition: all 0.3s
+.location-wrap
+	padding-left: 20px
+	padding-right: 20px
+	padding-bottom: 20px
+	background-color: $viollet
+.region-wrap, .city-wrap
+	width: 100%
+	font-size: 14px
+	color: #fff
+	column-count: 4
+	+pie-clearfix
+	li
+		cursor: pointer
+		&:hover
+			color: lighten($orange,20)
+			text-decoration: underline
 .section-main
 	position: relative
 	+pie-clearfix
