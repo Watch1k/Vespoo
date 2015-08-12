@@ -68,6 +68,7 @@ $(document).ready(function(){
 		$('.city-list').remove();
 		$('.city-wrap').hide();
 		$('.region-wrap').show();
+		$('.location-title__region').hide();
 		$(this).hide();
 	});
 
