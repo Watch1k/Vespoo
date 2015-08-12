@@ -281,7 +281,7 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 .search-city-wrap input { width: 100%; padding: 0 10px; font-size: 16px; color: #583d8b; line-height: 26px; vertical-align: top; }
 .search-city-wrap .clear-input { margin-top: 8px; margin-right: 8px; }
 
-.location-wrap { display: none; min-height: 220px; padding-left: 20px; padding-right: 20px; padding-bottom: 20px; background-color: #583d8b; }
+.location-wrap { display: none; min-height: 220px; margin-top: -1px; padding-left: 20px; padding-right: 20px; padding-bottom: 20px; background-color: #583d8b; }
 
 .location-title { margin-bottom: 10px; padding-bottom: 3px; font-size: 16px; color: #fff; border-bottom: 1px solid #fff; *zoom: 1; }
 .location-title:after { content: ""; display: table; clear: both; }
