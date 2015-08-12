@@ -3,7 +3,8 @@ $(document).ready(function(){
 // Validation
 	$.validate({
 		validateOnBlur : true,
-		scrollToTopOnError : false
+		scrollToTopOnError : false,
+		modules: 'security'
 	});
 
 // custom checkbox

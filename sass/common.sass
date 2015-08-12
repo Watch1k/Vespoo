@@ -909,10 +909,15 @@ body
 	background-color: #fff
 	box-shadow: 0 0 3px rgba(1,1,1,0.3)
 	vertical-align: top
+	&.has-error
+		box-shadow: 0 0 3px 1px #FF0000
+		&.checked
+			box-shadow: 0 0 3px rgba(1,1,1,0.3)
 .form-input
 	padding: 0 10px
 	height: 35px
 	font-size: 16px
+	color: $viollet
 	width: 100%
 	box-shadow: 0 0 3px rgba(1,1,1,0.3)
 	+placeholder-color($viollet)
@@ -926,17 +931,17 @@ body
 	label
 		margin-left: 15px
 		cursor: pointer
-	button[type=submit]
-		width: 100%
-		font-size: 20px
-		color: #fff
-		line-height: 40px
-		text-transform: uppercase
-		background-color: $viollet
+.submit-btn
+	width: 100%
+	font-size: 20px
+	color: #fff
+	line-height: 40px
+	text-transform: uppercase
+	background-color: $viollet
+	transition: all 0.3s
+	&:hover
+		background-color: $orange
 		transition: all 0.3s
-		&:hover
-			background-color: $orange
-			transition: all 0.3s
 .help-block.form-error
 	font-size: 14px
 	line-height: 1.2
@@ -962,3 +967,59 @@ body
 			display: block
 		+ li
 			float: right
+/*-------------------------------------------------------------------------*/
+/*-------------------------- Registration page ----------------------------*/
+/*-------------------------------------------------------------------------*/
+.registration
+	padding-bottom: 50px
+	+pie-clearfix
+	&__in
+		float: left
+		width: 360px
+		.post-title
+			text-align: center
+	&__info
+		float: right
+		width: 620px
+		padding: 75px 50px
+		.reg-info-list
+			margin-top: 15px
+			margin-bottom: 25px
+			li
+				margin-left: 10px
+				&:before
+					content: '\2192'
+					display: inline-block
+					margin-right: 20px
+					font-family: Verdana, Arial, sans-serif
+					font-size: 22px
+					color: $orange
+					line-height: 1
+.form-reg
+	margin-top: 10px
+	padding: 40px
+	background-color: #F0EDEE
+	.help-block.form-error
+		display: none
+	.field
+		position: relative
+		a
+			color: $orange
+		+ .field
+			margin-top: 15px
+		&:last-child
+			padding-bottom: 0
+		&.has-error
+			input
+				box-shadow: 0 0 3px 1px #FF0000
+	input
+		+ p
+			margin-top: 2px
+			margin-left: 10px
+			font-size: 12px
+	.icheckbox_square-orange
+		margin-right: 10px
+		+ span
+			font-size: 14px
+			a:hover
+				text-decoration: underline

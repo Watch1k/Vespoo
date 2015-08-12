@@ -100,63 +100,55 @@
 
 		<!-- begin content-wrap  -->
 		<div class="content-wrap container">
-			<!-- begin login  -->
-			<div class="login">
-				<h2 class="post-title">Вход</h2>
-				<!-- begin login__inner  -->
-				<div class="login__inner">
-					<form action="#" id="formLogin" class="form-login">
+			<!-- begin registration  -->
+			<div class="registration">
+				<!-- begin registration__in  -->
+				<div class="registration__in">
+					<h2 class="post-title">Создать учетную запись</h2>
+					<form action="#" id="formRegistration" class="form-reg">
 						<fieldset>
 							<!-- begin field -->
 							<div class="field">
-								<input type="text" class="form-input" name="user_email" data-validation="email" data-validation-error-msg="Введите свою почту" placeholder="Email">
+								<input type="text" class="form-input" name="user_email" data-validation="email" placeholder="Email" placeholder="Email">
+								<p>Введите Ваш email адрес</p>
 							</div>
 							<!-- begin field -->
 							<div class="field">
-								<input type="password" class="form-input" name="user_password" data-validation="length" data-validation-length="min5" data-validation-error-msg="Длина пароля не меньше 5 символов" placeholder="Пароль">
+								<input type="password" class="form-input" name="user_pass" data-validation="length" data-validation-length="min5" placeholder="Пароль">
+								<p>Введите свой пароль</p>
 							</div>
 							<!-- begin field -->
 							<div class="field">
-								<input type="checkbox" name="remember" id="remember">
-								<label for="remember">Запомнить меня</label>
+								<input type="password" class="form-input" name="user_repass" data-validation="confirmation" data-validation-confirm="user_pass" placeholder="Повторите пароль">
+								<p>Повторите пароль</p>
 							</div>
 							<!-- begin field -->
 							<div class="field">
-								<button type="submit" class="submit-btn">Войти</button>
+								<input type="checkbox" data-validation="required">
+								<span>Я соглашаюсь с <a href="#">правилами использования сервиса</a>, а также с  передачей и обработкой моих данных в Vespoo.ua. Я подтверждаю свое совершеннолетие и ответственность за размещение объявления.</span>
+							</div>
+							<!-- begin field -->
+							<div class="field">
+								<button type="submit" class="submit-btn">Отправить</button>
 							</div>
 						</fieldset>
 					</form>
-
-					<!-- begin login__item  -->
-					<div class="login__item">
-						<a href="#">Не можете войти?</a>
-						<a href="#">Регистрация</a>
-					</div>
-					<!-- end login__item -->
 				</div>
-				<!-- end login__inner -->
-			</div>
-			<!-- end login -->
+				<!-- end registration__in -->
 
-			<!-- begin login-info  -->
-			<div class="login-info">
-				<p>Вы разместили объявление, но у Вас нет пароля?</p>
-				<a href="#">Нажмите здесь</a>
-				<div class="h-line"></div>
-				<ul class="social-login">
-					<li>
-						<p>Войти через Вконтакте</p>
-						<a href="#"><img src="img/other/vk.jpg" alt="vkontakte"></a>
-					</li>
-					<li>
-						<p>Войти через Facebook</p>
-						<a href="#"><img src="img/other/fb.jpg" alt="facebook"></a>
-					</li>
-				</ul>
-				<p>Войдя в раздел Мой профиль, Вы принимаете</p>
-				<p><a href="#">Условия использования</a> сайта</p>
+				<!-- begin registration__info  -->
+				<div class="registration__info">
+					<p>Пароль нужен для входа в раздел <strong>Мои объявления</strong>, где Вы сможете работать с объявлениями:</p>
+					<ul class="reg-info-list">
+						<li>редактировать, удалять и обновлять</li>
+						<li>просматривать сообщения</li>
+						<li>просматривать сохраненные объявления</li>
+					</ul>
+					<p>Введите Вашу email-почту, пароль и подтвердите, перейдя по ссылке в письме, которое мы Вам отправили.</p>
+				</div>
+				<!-- end registration__info -->
 			</div>
-			<!-- end login-info -->
+			<!-- end registration -->
 
 			<!-- begin section-about  -->
 			<div class="section-about">
