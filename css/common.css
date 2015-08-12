@@ -472,7 +472,7 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 
 .form-login .field + .field { margin-top: 15px; }
 .form-login .field.has-error input { box-shadow: 0 0 3px 1px #FF0000; }
-.form-login label { margin-left: 15px; }
+.form-login label { margin-left: 15px; cursor: pointer; }
 .form-login button[type=submit] { width: 100%; font-size: 20px; color: #fff; line-height: 40px; text-transform: uppercase; background-color: #583d8b; -webkit-transition: all 0.3s; transition: all 0.3s; }
 .form-login button[type=submit]:hover { background-color: #d4762d; -webkit-transition: all 0.3s; transition: all 0.3s; }
 
