@@ -255,6 +255,7 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 #ui-id-1 li { cursor: pointer; }
 #ui-id-1 li:hover { background-color: #e0d9ee; }
 #ui-id-1 li + li { border-top: 1px solid #e0d9ee; }
+#ui-id-1 + .ui-helper-hidden-accessible { display: none; }
 
 .form-search { margin-top: 10px; padding: 20px; background-color: #583d8b; -webkit-transition: all 0.3s; transition: all 0.3s; *zoom: 1; }
 .form-search:after { content: ""; display: table; clear: both; }
