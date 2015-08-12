@@ -1,5 +1,16 @@
 $(document).ready(function(){
 
+// Clear placeholder
+	(function() {
+		$('input,textarea').focus(function(){
+				$(this).data('placeholder',$(this).attr('placeholder'))
+				$(this).attr('placeholder','');
+		});
+		$('input,textarea').blur(function(){
+			$(this).attr('placeholder',$(this).data('placeholder'));
+		});
+	}());
+
 // fix adblock
 	$(window).load(function(){
 		$('.banner-top').each(function(){
@@ -12,6 +23,65 @@ $(document).ready(function(){
 			// 	$('.header').css('top', '0');
 			// };
 		});
+	});
+
+// form search
+	// hide location-wrap on outer click
+	if ($('.location-wrap').length) {
+		$(document).click(function(e) {
+			if ( ($(e.target).closest('.location-wrap').length === 0) && ($(e.target).closest('#cityCurrent').length === 0) ) {
+				$('.location-wrap').hide();
+			}
+		});
+	};
+	// show/hide location-wrap
+	$('#cityCurrent').on('click', function(){
+		$('.location-wrap').toggle();
+	});
+	$('.header input').blur(function(){
+		if ($(this).val()) {
+			$(this).siblings('.clear-input').css('display', 'block');
+		};
+	});
+
+	// clear-input button
+	$('.clear-input').on('click', function(){
+		$(this).siblings('input').val('');
+		$(this).hide();
+	});
+
+	// location-all button
+	$('.location-title__all').on('click', function(){
+		$('#cityCurrent').val($(this).text()).siblings('.clear-input').css('display', 'block');
+		$('.location-wrap').hide();
+		$('.location-wrap input').val('');
+		$('.location-wrap .clear-input').hide();
+		$('.city-wrap').hide();
+		$('.city-list').remove();
+		$('.region-wrap').show();
+		$('.location-title__region').hide();
+		$('.location-title__back').hide();
+	});
+
+	// location-title__back button
+	$('.location-title__back').on('click', function(){
+		$('.city-list').remove();
+		$('.city-wrap').hide();
+		$('.region-wrap').show();
+		$(this).hide();
+	});
+
+	// location-title__region
+	$('.location-title__region').on('click', function(){
+		$("#cityCurrent").val($(this).text()).siblings('.clear-input').css('display', 'block');
+		$('.location-wrap').hide();
+		$('.location-wrap input').val('');
+		$('.location-wrap .clear-input').hide();
+		$('.city-wrap').hide();
+		$('.city-list').remove();
+		$('.region-wrap').show();
+		$('.location-title__region').hide();
+		$('.location-title__back').hide();
 	});
 
 // region list
@@ -43,6 +113,10 @@ $(document).ready(function(){
 		$('.region-list li').on('click', function(){
 			regionMark = $(this).text();
 			cityList();
+			$('.region-wrap').hide();
+			$('.city-wrap').show();
+			$('.location-title__region').show().text(regionMark);
+			$('.location-title__back').show();
 		});
 	}
 
@@ -79,7 +153,16 @@ $(document).ready(function(){
 		    	$('.city-list li:last-child').text(cityArr[i]);
 		    };
 		    $('.city-list li').on('click', function(){
-				$('#cityBox').val($(this).text());
+				$('#cityBox').val($(this).text()).siblings('.clear-input').css('display', 'block');
+				$('#cityCurrent').val($('#cityBox').val()).siblings('.clear-input').css('display', 'block');
+				$('.location-wrap').hide();
+				$('.location-wrap input').val('');
+				$('.location-wrap .clear-input').hide();
+				$('.city-wrap').hide();
+				$('.city-list').remove();
+				$('.region-wrap').show();
+				$('.location-title__region').hide();
+				$('.location-title__back').hide();
 			});
 		}
 	};
@@ -110,11 +193,22 @@ $(document).ready(function(){
 	                return matcher.test( item );
 	            }) );
 	        },
-	        minLength: 1
-	        // select: function(event, ui) {
-	        //     $("#cityBox").val(ui.item.value);
-	        //     $("#searchForm").submit();
-	        // }
+	        minLength: 1,
+	        select: function(event, ui) {
+	        	$("#cityBox").val(ui.item.value);
+	        	var cityCurrent = $("#cityBox").val();
+	            $('#cityCurrent').val(cityCurrent).siblings('.clear-input').css('display', 'block');
+	            $('.location-wrap').hide();
+	            $('.location-wrap input').val('');
+	            $('.location-wrap .clear-input').hide();
+	            $('.city-wrap').hide();
+	            $('.city-list').remove();
+	            $('.region-wrap').show();
+	            $('.location-title__region').hide();
+	            $('.location-title__back').hide();
+	            ui.item.value = '';
+	            $('#cityBox').val(ui.item.value);
+	        }
 	    });
 	}
 

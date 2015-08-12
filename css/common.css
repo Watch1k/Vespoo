@@ -167,12 +167,12 @@ a { color: inherit; }
 
 .icon-all-arrow-top-orange { background-position: 0 -72px; height: 91px; width: 114px; }
 
-.icon-all-close { background-position: 0 -163px; height: 19px; width: 19px; }
+.icon-all-close { background-position: 0 -163px; height: 12px; width: 12px; }
 
-.icon-all-icon-mark { background-position: 0 -182px; height: 70px; width: 55px; }
+.icon-all-icon-mark { background-position: 0 -175px; height: 70px; width: 55px; }
 
-.icon-all-star { background-position: 0 -274px; height: 22px; width: 23px; }
-.icon-all-star:hover, .icon-all-star.star-hover { background-position: 0 -252px; }
+.icon-all-star { background-position: 0 -267px; height: 22px; width: 23px; }
+.icon-all-star:hover, .icon-all-star.star-hover { background-position: 0 -245px; }
 
 /*------------------------------------------------------------------------- */
 /*----------------------------- MAIN STYLES ------------------------------- */
@@ -249,33 +249,52 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 .post-new { float: right; padding: 0 10px; color: #fff; line-height: 38px; text-transform: uppercase; background-color: #d4762d; -webkit-transition: all 0.2s; transition: all 0.2s; }
 .post-new:hover { background-color: #583d8b; -webkit-transition: all 0.2s; transition: all 0.2s; }
 
-#ui-id-1 { float: left; z-index: 1001; background-color: #fff; box-shadow: 0 0 6px rgba(1, 1, 1, 0.5); }
+#ui-id-1 { float: left; padding: 0 10px; z-index: 1001; background-color: #fff; box-shadow: 0 2px 6px rgba(1, 1, 1, 0.5); }
 #ui-id-1 li { cursor: pointer; }
+#ui-id-1 li:hover { background-color: #e0d9ee; }
+#ui-id-1 li + li { border-top: 1px solid #e0d9ee; }
 
 .form-search { margin-top: 10px; padding: 20px; background-color: #583d8b; -webkit-transition: all 0.3s; transition: all 0.3s; *zoom: 1; }
 .form-search:after { content: ""; display: table; clear: both; }
 .form-search .field { float: left; width: 268px; }
 .form-search .field input, .form-search .field button { width: 100%; height: 36px; line-height: 36px; }
-.form-search .field input { padding: 0 10px; font-size: 20px; color: #583d8b; }
+.form-search .field input { padding: 0 10px; font-size: 16px; color: #583d8b; }
 .form-search .field input:-moz-placeholder, .form-search .field input::-moz-placeholder { color: #583d8b; opacity: 1; }
 .form-search .field input::-webkit-input-placeholder { color: #583d8b; }
 .form-search .field input:focus { box-shadow: inset 0 0 3px 1px #d4762d; }
 .form-search .field button { font-size: 16px; color: #fff; text-transform: uppercase; text-align: left; text-indent: 38px; background-color: #9685b6; background-image: url("../img/icon-zoom.png"); background-position: 10px center; background-repeat: no-repeat; -webkit-transition: all 0.2s; transition: all 0.2s; }
 .form-search .field button:hover { background-color: #d4762d; -webkit-transition: all 0.2s; transition: all 0.2s; }
 .form-search .location { position: relative; }
+.form-search .location input { cursor: text; }
+.form-search .location input:focus { box-shadow: none; }
 .form-search .location input::-ms-clear { display: none; }
-.form-search .location .clear-input { position: absolute; display: block; right: 0; top: 0; margin-right: 8px; margin-top: 8px; }
 .form-search .search { position: relative; width: 522px; margin-left: 20px; -webkit-transition: all 0.3s; transition: all 0.3s; }
 .form-search .search input::-ms-clear { display: none; }
-.form-search .search .clear-input { position: absolute; display: block; right: 0; top: 0; margin-right: 8px; margin-top: 8px; }
+.form-search .search .clear-input { position: absolute; z-index: 6; display: none; right: 0; top: 0; margin-right: 10px; margin-top: 12px; }
 .form-search .submit { float: right; width: 110px; -webkit-transition: all 0.3s; transition: all 0.3s; }
 
-.location-wrap { padding-left: 20px; padding-right: 20px; padding-bottom: 20px; background-color: #583d8b; }
+.clear-input { position: absolute; display: none; right: 0; top: 0; margin-right: 10px; margin-top: 12px; }
 
-.region-wrap, .city-wrap { width: 100%; font-size: 14px; color: #fff; -webkit-column-count: 4; -moz-column-count: 4; column-count: 4; *zoom: 1; }
+.search-city-wrap { position: relative; margin-bottom: 15px; width: 268px; }
+.search-city-wrap input { width: 100%; padding: 0 10px; font-size: 16px; color: #583d8b; line-height: 26px; vertical-align: top; }
+.search-city-wrap .clear-input { margin-top: 8px; margin-right: 8px; }
+
+.location-wrap { display: none; min-height: 220px; padding-left: 20px; padding-right: 20px; padding-bottom: 20px; background-color: #583d8b; }
+
+.location-title { margin-bottom: 10px; padding-bottom: 3px; font-size: 16px; color: #fff; border-bottom: 1px solid #fff; *zoom: 1; }
+.location-title:after { content: ""; display: table; clear: both; }
+.location-title__all, .location-title__region, .location-title__back { float: left; margin-right: 20px; font-size: inherit; color: inherit; background-color: transparent; cursor: pointer; }
+.location-title__all:hover, .location-title__region:hover, .location-title__back:hover { color: #e5ad82; }
+.location-title__region { display: none; }
+.location-title__back { display: none; float: right; margin-right: 0; }
+
+.region-wrap, .city-wrap { width: 100%; font-size: 14px; color: #fff; *zoom: 1; }
 .region-wrap:after, .city-wrap:after { content: ""; display: table; clear: both; }
-.region-wrap li, .city-wrap li { cursor: pointer; }
-.region-wrap li:hover, .city-wrap li:hover { color: #e5ad82; text-decoration: underline; }
+.region-wrap .region-list, .region-wrap .city-list, .city-wrap .region-list, .city-wrap .city-list { -webkit-column-count: 4; -moz-column-count: 4; column-count: 4; -webkit-column-rule: 1px solid rgba(255, 255, 255, 0.5); -moz-column-rule: 1px solid rgba(255, 255, 255, 0.5); column-rule: 1px solid rgba(255, 255, 255, 0.5); }
+.region-wrap .region-list li, .region-wrap .city-list li, .city-wrap .region-list li, .city-wrap .city-list li { cursor: pointer; }
+.region-wrap .region-list li:hover, .region-wrap .city-list li:hover, .city-wrap .region-list li:hover, .city-wrap .city-list li:hover { color: #e5ad82; text-decoration: underline; }
+
+.city-wrap { display: none; }
 
 .section-main { position: relative; *zoom: 1; }
 .section-main:after { content: ""; display: table; clear: both; }
