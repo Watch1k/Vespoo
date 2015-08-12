@@ -331,17 +331,18 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 .show-all-btn a { display: inline-block; padding: 0 10px; background-color: rgba(88, 61, 139, 0.9); -webkit-transition: all 0.2s; transition: all 0.2s; }
 .show-all-btn a:hover { background-color: #d4762d; -webkit-transition: all 0.2s; transition: all 0.2s; }
 
-.slider-main { padding: 5px 35px; font-size: 26px; background-color: #f1f0f0; }
+.slider-main { padding: 0; font-size: 26px; background-color: #f1f0f0; }
+.slider-main__in { padding: 5px 38px; }
 .slider-main p + p { color: #d4762d; }
-.slider-main .icon-all-arrow-top-orange { position: absolute; display: block; top: 0; right: 0; }
+.slider-main .icon-all-arrow-top-orange { position: absolute; display: block; top: 5px; right: 38px; }
 .slider-main .slick-prev, .slider-main .slick-next { margin-top: -19px; font-size: 0; line-height: 0; -webkit-transition: all 0.2s; transition: all 0.2s; }
 .slider-main .slick-prev:hover, .slider-main .slick-next:hover { -webkit-transform: scale(1.25, 1.25); -ms-transform: scale(1.25, 1.25); transform: scale(1.25, 1.25); -webkit-transition: all 0.2s; transition: all 0.2s; }
 .slider-main .slick-prev:before, .slider-main .slick-next:before { display: none; }
 .slider-main .slick-prev:after, .slider-main .slick-next:after { content: ""; display: block; width: 25px; height: 30px; }
 .slider-main .slick-prev { border-left: none; }
-.slider-main .slick-prev:after { background: url("../img/other/icon-right.svg") no-repeat center center; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
+.slider-main .slick-prev:after { margin-left: 4px; background: url("../img/other/icon-right.svg") no-repeat center center; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
 .slider-main .slick-next { border-right: none; }
-.slider-main .slick-next:after { background: url("../img/other/icon-right.svg") no-repeat center center; }
+.slider-main .slick-next:after { margin-right: 4px; background: url("../img/other/icon-right.svg") no-repeat center center; }
 .slider-main .slick-dots li { padding: 0 5px; }
 .slider-main .slick-dots li button { border-radius: 0; box-shadow: none; width: 10px; height: 10px; background-color: #c2c0c0; }
 .slider-main .slick-dots li.slick-active button { opacity: 1; background-color: #898787; }

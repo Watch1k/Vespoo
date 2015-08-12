@@ -485,17 +485,19 @@ body
 			background-color: $orange
 			transition: all 0.2s
 .slider-main
-	padding: 5px 35px
+	padding: 0
 	font-size: 26px
 	background-color: #f1f0f0
+	&__in
+		padding: 5px 38px
 	p
 		+ p
 			color: $orange
 	.icon-all-arrow-top-orange
 		position: absolute
 		display: block
-		top: 0
-		right: 0
+		top: 5px
+		right: 38px
 	.slick-prev, .slick-next
 		margin-top: -19px
 		font-size: 0
@@ -514,11 +516,13 @@ body
 	.slick-prev
 		border-left: none
 		&:after
+			margin-left: 4px
 			background: url("../img/other/icon-right.svg") no-repeat center center
 			transform: rotate(180deg)
 	.slick-next
 		border-right: none
-		&:after			
+		&:after
+			margin-right: 4px	
 			background: url("../img/other/icon-right.svg") no-repeat center center
 	.slick-dots
 		li
