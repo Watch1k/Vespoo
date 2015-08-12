@@ -35,7 +35,7 @@ $(document).ready(function(){
 		});
 	};
 	// show/hide location-wrap
-	$('#cityCurrent').on('click', function(){
+	$('#cityCurrent').on('focus', function(){
 		$('.location-wrap').toggle();
 	});
 	$('.header input').blur(function(){
