@@ -282,10 +282,33 @@ body
 			&:hover
 				background-color: $orange
 				transition: all 0.2s
+	.location
+		position: relative
+		input
+			&::-ms-clear
+				display: none
+		.clear-input
+			position: absolute
+			display: block
+			right: 0
+			top: 0
+			margin-right: 8px
+			margin-top: 8px
 	.search
+		position: relative
 		width: 522px
 		margin-left: 20px
 		transition: all 0.3s
+		input
+			&::-ms-clear
+				display: none
+		.clear-input
+			position: absolute
+			display: block
+			right: 0
+			top: 0
+			margin-right: 8px
+			margin-top: 8px
 	.submit
 		float: right
 		width: 110px
