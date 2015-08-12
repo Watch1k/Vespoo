@@ -1,5 +1,18 @@
 $(document).ready(function(){
 
+// Validation
+	$.validate({
+		validateOnBlur : true,
+		scrollToTopOnError : false
+	});
+
+// custom checkbox
+	$('input').iCheck({
+		checkboxClass: 'icheckbox_square-orange',
+		radioClass: 'iradio_square-orange',
+		increaseArea: '20%' // optional
+	});
+
 // Clear placeholder
 	(function() {
 		$('input,textarea').focus(function(){

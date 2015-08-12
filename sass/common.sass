@@ -106,7 +106,9 @@ body
 	position: relative
 	z-index: 5
 	margin-top: -286px
-/*----- Main page -----*/
+/*-------------------------------------------------------------------------*/
+/*----------------------------- Main page ---------------------------------*/
+/*-------------------------------------------------------------------------*/
 .close-banner, .close-banner-fix
 	position: absolute
 	top: 0
@@ -270,8 +272,8 @@ body
 		width: 268px
 		input, button
 			width: 100%
-			height: 36px
-			line-height: 36px
+			height: 35px
+			line-height: 35px
 		input
 			padding: 0 10px
 			font-size: 16px
@@ -334,11 +336,11 @@ body
 	width: 268px
 	input
 		width: 100%
-		height: 26px
+		height: 25px
 		padding: 0 10px
 		font-size: 16px
 		color: $viollet
-		line-height: 26px
+		line-height: 25px
 		vertical-align: top
 	.clear-input
 		margin-top: 8px
@@ -453,7 +455,7 @@ body
 	padding-left: 10px
 	font-size: 20px
 	color: #fff
-	line-height: 36px
+	line-height: 35px
 	text-transform: uppercase
 	font-weight: normal
 	background-color: $orange
@@ -495,32 +497,29 @@ body
 		top: 0
 		right: 0
 	.slick-prev, .slick-next
-		margin-top: -21px
-		width: 20px
-		height: 42px
-		border: 2px solid #c2c0c0
+		margin-top: -19px
 		font-size: 0
 		line-height: 0
 		transition: all 0.2s
 		&:hover
-			background-color: #c2c0c0
+			transform: scale(1.25,1.25)
 			transition: all 0.2s
 		&:before
 			display: none
 		&:after
 			content: ''
-			display: inline-block
-			font-size: 24px
-			color: #898787
-			line-height: 40px
+			display: block
+			width: 25px
+			height: 30px
 	.slick-prev
 		border-left: none
 		&:after
-			content: '\003C'
+			background: url("../img/other/icon-right.svg") no-repeat center center
+			transform: rotate(180deg)
 	.slick-next
 		border-right: none
-		&:after
-			content: '\003E'
+		&:after			
+			background: url("../img/other/icon-right.svg") no-repeat center center
 	.slick-dots
 		li
 			padding: 0 5px
@@ -730,7 +729,7 @@ body
 	p
 		float: right
 		font-size: 26px
-		line-height: 36px
+		line-height: 35px
 		text-transform: uppercase
 	.icon-all-arrow-right
 		float: right
@@ -849,7 +848,7 @@ body
 			margin: 15px auto 0
 			width: 60%
 			font-size: 20px
-			line-height: 36px
+			line-height: 35px
 			color: #fff
 			background-color: $viollet
 			border-radius: 5px
@@ -879,3 +878,82 @@ body
 			a
 				&:hover
 					color: lighten($orange,25)
+/*-------------------------------------------------------------------------*/
+/*----------------------------- Login page --------------------------------*/
+/*-------------------------------------------------------------------------*/
+.login
+	margin: 0 auto
+	width: 350px
+	.post-title
+		text-align: center
+	&__inner
+		margin-top: 10px
+		padding: 40px
+		background-color: #F0EDEE
+	&__item
+		margin-top: 15px
+		+pie-clearfix
+		a
+			float: left
+			color: $orange
+			&:hover
+				text-decoration: underline
+			+ a
+				float: right
+				color: $viollet
+.icheckbox_square-orange, .iradio_square-orange
+	background-color: #fff
+	box-shadow: 0 0 3px rgba(1,1,1,0.3)
+	vertical-align: top
+.form-input
+	padding: 0 10px
+	height: 35px
+	font-size: 16px
+	width: 100%
+	box-shadow: 0 0 3px rgba(1,1,1,0.3)
+	+placeholder-color($viollet)
+.form-login
+	.field
+		+ .field
+			margin-top: 15px
+		&.has-error
+			input
+				box-shadow: 0 0 3px 1px #FF0000
+	label
+		margin-left: 15px
+	button[type=submit]
+		width: 100%
+		font-size: 20px
+		color: #fff
+		line-height: 40px
+		text-transform: uppercase
+		background-color: $viollet
+		transition: all 0.3s
+		&:hover
+			background-color: $orange
+			transition: all 0.3s
+.help-block.form-error
+	font-size: 14px
+	line-height: 1.2
+.login-info
+	margin: 20px auto 0
+	padding-bottom: 50px
+	width: 450px
+	text-align: center
+	a, a:hover, a:active
+		text-decoration: underline
+		color: $orange
+	.h-line
+		margin: 15px auto
+		width: 350px
+		height: 1px
+		background-color: lighten($viollet,20)
+.social-login
+	margin-bottom: 10px
+	+pie-clearfix
+	li
+		float: left
+		a
+			display: block
+		+ li
+			float: right
