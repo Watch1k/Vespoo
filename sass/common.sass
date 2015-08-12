@@ -224,12 +224,16 @@ body
 					margin-left: 0
 					transition: all 0.3s
 					input
-						box-shadow: inset 0 0 3px 1px $viollet
+						box-shadow: inset 0 0 0 2px $viollet
 						&:focus
-							box-shadow: inset 0 0 3px 1px $orange
+							box-shadow: inset 0 0 0 2px $orange
 				.submit
 					margin-left: 10px
 					transition: all 0.3s
+					button
+						background-color: $viollet
+						&:hover
+							background-color: $orange
 .post-new
 	float: right
 	padding: 0 10px
@@ -345,7 +349,7 @@ body
 				font-size: 20px
 				color: $orange
 .vip-post
-	margin-top: 20px
+	margin-top: 27px
 	.post-list
 		margin-left: 0
 		li
@@ -475,6 +479,7 @@ body
 	right: 0
 	top: 0
 	padding-bottom: 420px
+	font-size: 16px
 	background-color: #fff
 	background-position: center bottom
 	background-size: 100% auto
@@ -533,7 +538,8 @@ body
 	&.hobby-bg
 		background-image: url("../img/bg/hobby-bg.jpg")
 .section-top
-	margin-top: 20px
+	margin-top: 30px
+	transition: all 0.3s
 	+pie-clearfix
 	.top-post
 		&-btn
@@ -545,15 +551,16 @@ body
 			font-style: italic
 			vertical-align: top
 			transition: all 0.2s
+			+pie-clearfix
 			&:hover
 				color: $orange
 				transition: all 0.2s
 			.icon-all-arrow-left
-				display: inline-block
+				float: left
 				margin-top: 10px
 				margin-right: 5px
 .section-new
-	margin-top: 20px
+	margin-top: 40px
 	+pie-clearfix
 	&__left
 		float: left
@@ -621,7 +628,7 @@ body
 					text-shadow: 0 0 0.5px $viollet
 					transition: all 0.2s
 .section-post-new
-	margin-top: 20px
+	margin-top: 30px
 	padding: 24px
 	padding-bottom: 14px
 	background-color: #f6e4d5
