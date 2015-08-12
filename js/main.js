@@ -84,6 +84,7 @@ $(document).ready(function(){
 	// nav close button
 	$('.nav-close-btn').on('click', function(){
 		$(this).parent().parent().hide().parent().removeClass('is-active');
+		$('.section-top').css('margin-top', '30px');
 	});
 
 // banner
