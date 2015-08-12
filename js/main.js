@@ -194,7 +194,7 @@ $(document).ready(function(){
 	                return matcher.test( item );
 	            }) );
 	        },
-	        minLength: 1,
+	        minLength: 2,
 	        select: function(event, ui) {
 	        	$("#cityBox").val(ui.item.value);
 	        	var cityCurrent = $("#cityBox").val();
