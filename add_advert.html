@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vespoo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/orange.css">
+	<link rel="stylesheet" href="css/selectric.css">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	
+	<!-- begin wrapper  -->
+	<div id="main" class="wrapper">
+		<!-- begin banner-top -->
+		<div class="banner-top">
+			<a href="#" class="banner-top__in">
+				<button class="close-banner-fix">x</button>
+			</a>
+		</div>
+		<!-- end banner-top -->
+		
+		<!-- begin header  -->
+		<div class="header">
+			<div class="container">
+				<!-- begin header__top  -->
+				<div class="header__top">
+					<a href="index.html" class="logo"><img src="img/logo.png" alt="Vespoo"></a>
+					<a href="#" class="post-new">+ Подать объявление</a>
+					<a href="#" class="userbox">Мой профиль</a>
+					<ul class="lang-selector">
+						<li><a href="#">язык</a></li>
+						<li><a href="#">мова</a></li>
+					</ul>
+				</div>
+				<!-- end header__top -->
+				
+				<form action="#" id="searchForm" class="form-search">
+					<fieldset>
+						<!-- begin field  -->
+						<div class="field location">
+							<input type="text" id="cityCurrent" readonly="readonly" placeholder="Город, область...">
+							<a href="#" class="clear-input reset icon-all-close"></a>
+						</div>
+						<!-- begin field  -->
+						<div class="field search">
+							<input type="text" placeholder="Поиск...">
+							<a href="#" class="clear-input icon-all-close"></a>
+						</div>
+						<!-- begin field  -->
+						<div class="field submit">
+							<button type="submit">Поиск</button>
+						</div>
+					</fieldset>
+				</form>
+
+				<!-- begion location-wrap -->
+				<div class="location-wrap">
+					<div class="location-title">
+						<button class="location-title__all">Вся Украина</button>
+						<button class="location-title__region">область</button>
+						<button class="location-title__back">вернуться к выбору области</button>
+					</div>
+					<div class="search-city-wrap">
+						<input type="text" id="cityBox" placeholder="Начните вводить город">
+						<a href="#" class="clear-input icon-all-close"></a>
+					</div>
+					<div class="region-wrap"></div>
+					<div class="city-wrap"></div>
+				</div>
+				<!-- end location-wrap -->
+			</div>
+		</div>
+		<!-- end header -->
+
+		<!-- begin body-branding  -->
+		<div class="body-branding">
+			<!-- begin banner  -->
+			<div class="banner-1">
+				<a href="#"><img src="img/banners/Banner-160x600.jpg" alt="banner"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end banner -->
+
+			<!-- begin service-1  -->
+			<div class="service-1">
+				<a href="#"><img src="img/banners/service-1.jpg" alt="service"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end service-1 -->
+
+			<!-- begin service-2  -->
+			<div class="service-2">
+				<a href="#"><img src="img/banners/service-1.jpg" alt="service"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end service-2 -->
+		</div>
+		<!-- end body-branding -->
+
+		<!-- begin content-wrap  -->
+		<div class="content-wrap container">
+			<form action="#" id="formAdvert" class="advert-add">
+				<fieldset>
+					<h2 class="post-title">Подать объявление</h2>
+					<!-- begin field -->
+					<div class="field">
+						<div class="label-form">
+							<label for="advertTitle">Заголовок <span class="text-orange">*</span></label>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<input type="text" id="advertTitle" class="form-input" name="advert_title" data-validation="required" data-validation-help="Пожалуйста, укажите заголовок" data-validation-error-msg="Поле обязательное для заполнения">
+								<i class="icon-success"></i>
+							</div>
+							<p class="desc">70 знаков осталось</p>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field">
+						<div class="label-form">
+							<label>Рубрика <span class="text-orange">*</span></label>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<select data-validation="required" data-validation-event="change">
+									<option value="">Укажите рубрику</option>
+									<option value="Рубрика 1">Рубрика 1</option>
+									<option value="Рубрика 2">Рубрика 2</option>
+									<option value="Рубрика 3">Рубрика 3</option>
+									<option value="Рубрика 4">Рубрика 4</option>
+									<option value="Рубрика 5">Рубрика 5</option>
+								</select>
+								<i class="icon-success"></i>
+							</div>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field h-line">
+						<div class="label-form">
+							<label for="advertText">Описание товара <span class="text-orange">*</span></label>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<textarea id="advertText" name="advert_area" class="form-area" data-validation="required" data-validation-help="Описание Вашего товара"  data-validation-error-msg="Поле обязательное для заполнения"></textarea>
+								<i class="icon-success"></i>
+							</div>
+							<p class="desc">4096 знаков осталось</p>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field">
+						<div class="label-form">
+							<label>Фотографии <span class="text-orange">*</span></label>
+							<p class="label-icon"></p>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<ul class="photoload">
+									<!-- begin photo -->
+									<li class="photoload__in">
+										<div class="photoload__el">
+											<a href="#" class="photoload__item is-loaded">
+												<img src="img/bg/animal-bg.jpg" alt="user-img">
+											</a>
+										</div>
+									</li>
+									<!-- begin photo -->
+									<li class="photoload__in">
+										<div class="photoload__el">
+											<a href="#" class="photoload__item is-loaded">
+												<img src="img/content/photo-h.jpg" alt="user-img">
+											</a>
+										</div>
+									</li>
+									<!-- begin photo -->
+									<li class="photoload__in">
+										<div class="photoload__el">
+											<a href="#" class="photoload__item is-loaded">
+												<img src="img/bg/hobby-bg.jpg" alt="user-img">
+											</a>
+										</div>
+									</li>
+									<!-- begin photo -->
+									<li class="photoload__in">
+										<div class="photoload__el">
+											<a href="#" class="photoload__item"></a>
+										</div>
+									</li>
+									<!-- begin photo -->
+									<li class="photoload__in">
+										<div class="photoload__el">
+											<a href="#" class="photoload__item"></a>
+										</div>
+									</li>
+									<!-- begin photo -->
+									<li class="photoload__in">
+										<div class="photoload__el">
+											<a href="#" class="photoload__item"></a>
+										</div>
+									</li>
+									<!-- begin photo -->
+									<li class="photoload__in">
+										<div class="photoload__el">
+											<a href="#" class="photoload__item"></a>
+										</div>
+									</li>
+									<!-- begin photo -->
+									<li class="photoload__in">
+										<div class="photoload__el">
+											<a href="#" class="photoload__item"></a>
+										</div>
+									</li>
+									<!-- begin photo -->
+									<li class="photoload__in">
+										<div class="photoload__el">
+											<a href="#" class="photoload__item"></a>
+										</div>
+									</li>
+									<!-- begin photo -->
+									<li class="photoload__in">
+										<div class="photoload__el">
+											<a href="#" class="photoload__item"></a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h2 class="post-title">Ваши контактные данные</h2>
+					<!-- begin field -->
+					<div class="field">
+						<div class="label-form">
+							<label>Область <span class="text-orange">*</span></label>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<select data-validation="required" data-validation-event="change">
+									<option value="">Укажите область</option>
+									<option value="Киевская область">Киевская область</option>
+									<option value="Черкасская область">Черкасская область</option>
+								</select>
+								<i class="icon-success"></i>
+							</div>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field">
+						<div class="label-form">
+							<label>Город <span class="text-orange">*</span></label>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<select data-validation="required" data-validation-event="change">
+									<option value="">Укажите город</option>
+									<option value="Киев">Киев</option>
+									<option value="Черкассы">Черкассы</option>
+								</select>
+								<i class="icon-success"></i>
+							</div>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field h-line">
+						<div class="label-form">
+							<label for="advertName">Контактное лицо <span class="text-orange">*</span></label>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<input type="text" id="advertName" name="advert_name" class="form-input" data-validation="required" data-validation-help="Как к Вам обращаться?" data-validation-error-msg="Поле обязательное для заполнения">
+								<i class="icon-success"></i>
+							</div>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field">
+						<div class="label-form">
+							<label for="advertEmail">Email <span class="text-orange">*</span></label>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<input type="text" id="advertEmail" class="form-input" name="advert_email" data-validation="email" data-validation-help="Введите Ваш email-адрес" data-validation-error-msg="Поле обязательное для заполнения">
+								<i class="icon-success"></i>
+							</div>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field">
+						<div class="label-form">
+							<label for="advertPhone">Номер телефона</label>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<input type="text" id="advertPhone" name="advert_phone" class="form-input" data-validation-help="Вы можете ввести несколько номеров, разделив их запятой. Обратите внимание: если указанный номер телефона уже используется в другой учетной записи на сервисе Vespoo - учетная запись будет заблокирована.">
+							</div>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field">
+						<div class="label-form">
+							<label for="advertICQ">ICQ</label>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<input type="text" id="advertICQ" name="advert_icq" class="form-input" data-validation-help="Укажите ваш номер ICQ" >
+							</div>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field">
+						<div class="label-form">
+							<label for="advertSkype">Skype</label>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<input type="text" id="advertSkype" name="advert_skype" class="form-input" data-validation-help="Укажите свой skype">
+							</div>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field">
+						<div class="label-form">
+							<label>Тип объявления <span class="text-orange">*</span></label>
+						</div>
+						<div class="area-form">
+							<div class="area-form__in">
+								<select data-validation="required" data-validation-event="change">
+									<option value="">Укажите тип</option>
+									<option value="Частное">Частное</option>
+									<option value="Бизнес">Бизнес</option>
+								</select>
+								<i class="icon-success"></i>
+							</div>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field h-line">
+						<div class="label-form">
+							<label>Согласие на обработку данных <span class="text-orange">*</span></label>
+						</div>
+						<div class="area-form">
+							<input type="checkbox" name="advert_check" data-validation="required">
+							<p>Я соглашаюсь с <a href="#">правилами использования сервиса</a>, а также с предачей и обработкой моих данных в Vespoo.ua. Я подтверждаю свое совершеннолетие и ответственность за размещение обьявления.</p>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field h-line mt40">
+						<div class="label-form">
+							<label class="label-hide">Предпросмотр</label>
+						</div>
+						<div class="area-form">
+							<button class="submit-btn inverse">Предпросмотр</button>
+						</div>
+					</div>
+					<!-- begin field -->
+					<div class="field">
+						<div class="label-form">
+							<label class="label-hide">Отправить</label>
+						</div>
+						<div class="area-form">
+							<button type="submit" class="submit-btn">Отправить</button>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+
+			<!-- begin section-about  -->
+			<div class="section-about">
+				<div class="row">
+					<div class="logo">
+						<a href="#">
+							<img src="img/logo-2.png" alt="Vespoo">
+						</a>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam totam rem aperiam totam</p>
+				</div>
+				<div class="row">
+					<p><strong>Популярные запросы:</strong> <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>.</p>
+				</div>
+				<p class="social-title">Спасибо, что рассказываете о нас друзьям!</p>
+				<ul class="social-list">
+					<li><a href="#"><i class="icon-social-twitter"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-fb"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-vk"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-class"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-gplus"></i>Поделиться<span>35</span></a></li>
+				</ul>
+			</div>
+			<!-- end section-about -->
+		</div>
+		<!-- end content-wrap -->
+	</div>
+	<!-- end wrapper -->
+
+	<!-- begin footer  -->
+	<div class="footer">
+		<div class="container">
+			<!-- begin footer__left  -->
+			<div class="footer__left">
+				<div class="footer__col">
+					<p>Компания</p>
+					<ul class="footer-list">
+						<li><a href="#">Добавить обьявление</a></li>
+						<li><a href="#">Добавить магазин</a></li>
+						<li><a href="#">Реклама на сайте</a></li>
+						<li><a href="#">Безопасные сделки Vespoo</a></li>
+						<li><a href="#">Партнерские программы</a></li>
+						<li><a href="#">Сортировка в поиске</a></li>
+					</ul>
+				</div>
+				<div class="footer__col">
+					<p>Партнерам</p>
+					<ul class="footer-list">
+						<li><a href="#">Политика конфиденциальности и возвращения средств</a></li>
+						<li><a href="#">Карта опций</a></li>
+						<li><a href="#">Карта городов</a></li>
+						<li><a href="#">Карта сайта</a></li>
+						<li><a href="#">Помощь</a></li>
+						<li><a href="#">Оставить отзыв о сайте Vespoo</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end footer__left -->
+
+			<!-- begin footer__right  -->
+			<div class="footer__right">
+				<p>Отдел заботы о пользователях</p>
+				<p>Фамилия Имя</p>
+				<p>Консультант по вопросам работы сайта Vespoo</p>
+				<p>Горячая линия:</p>
+				<ul class="phone-list">
+					<li>0-800-00-00-00</li>
+					<li>(067)123-45-67</li>
+					<li>(093)123-45-67</li>
+				</ul>
+				<a href="#" class="phone-btn">Связаться</a>
+			</div>
+			<!-- end footer__right -->
+
+			<!-- begin footer__bottom  -->
+			<div class="footer__bottom">
+				<a href="#" class="footer__logo"><img src="img/logo-2.png" alt="Vespoo"></a>
+				<p>&copy; Vespoo.com. Все права защищены.</p>
+				<p>Разработка и поддержка <a href="#">MTITM &amp; Koldios</a></p>
+			</div>
+			<!-- end footer__bottom -->
+		</div>
+	</div>
+	<!-- end footer -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/icheck.min.js"></script>
+	<script src="js/jquery.selectric.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.form-validator.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

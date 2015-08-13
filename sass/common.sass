@@ -109,6 +109,12 @@ body
 /*-------------------------------------------------------------------------*/
 /*----------------------------- Main page ---------------------------------*/
 /*-------------------------------------------------------------------------*/
+.text-orange
+	color: $orange
+.text-viollet
+	color: $viollet
+.label-hide
+	opacity: 0
 .close-banner, .close-banner-fix
 	position: absolute
 	top: 0
@@ -919,19 +925,37 @@ body
 	font-size: 16px
 	color: $viollet
 	width: 100%
-	box-shadow: 0 0 3px rgba(1,1,1,0.3)
+	box-shadow: 0 0 6px rgba(1,1,1,0.3)
 	+placeholder-color($viollet)
+	&:focus
+		box-shadow: 0 0 6px rgba(1,1,1,0.3), inset 0 0 0 1px $orange
+.has-error
+	.form-input
+		box-shadow: 0 0 3px 1px #FF0000
+.form-area
+	padding: 5px 10px
+	font-family: $default-fonts
+	font-size: 14px
+	color: $viollet
+	border: none
+	box-shadow: 0 0 6px rgba(1,1,1,0.3)
+	width: 100%
+	height: 100px
+	resize: none
+	&:focus
+		box-shadow: 0 0 6px rgba(1,1,1,0.3), inset 0 0 0 1px $orange
+.has-error
+	.form-area
+		box-shadow: 0 0 3px 1px #FF0000
 .form-login
 	.field
 		+ .field
 			margin-top: 15px
-		&.has-error
-			input
-				box-shadow: 0 0 3px 1px #FF0000
 	label
 		margin-left: 15px
 		cursor: pointer
 .submit-btn
+	display: block
 	width: 100%
 	font-size: 20px
 	color: #fff
@@ -942,9 +966,16 @@ body
 	&:hover
 		background-color: $orange
 		transition: all 0.3s
-.help-block.form-error
-	font-size: 14px
-	line-height: 1.2
+	&.inverse
+		color: $viollet
+		background-color: #fff
+		box-shadow: 0 0 6px rgba(1,1,1,0.3)
+		transition: all 0.2s
+		&:hover
+			color: #fff
+			background-color: $orange
+			box-shadow: none
+			transition: all 0.2s
 .login-info
 	margin: 20px auto 0
 	padding-bottom: 50px
@@ -1009,9 +1040,6 @@ body
 			margin-top: 15px
 		&:last-child
 			padding-bottom: 0
-		&.has-error
-			input
-				box-shadow: 0 0 3px 1px #FF0000
 	input
 		+ p
 			margin-top: 2px
@@ -1023,3 +1051,161 @@ body
 			font-size: 14px
 			a:hover
 				text-decoration: underline
+/*-------------------------------------------------------------------------*/
+/*-------------------------- New Advert page ------------------------------*/
+/*-------------------------------------------------------------------------*/
+.selectric-wrapper
+	&.selectric-open
+		box-shadow: 0 0 6px rgba(1,1,1,0.3), inset 0 0 0 1px $orange
+		.selectric
+			background: transparent
+.selectric-items
+	background: #fff
+	box-shadow: 0 1px 5px rgba(1,1,1,0.3)
+	border: none
+	li
+		font-size: 14px
+		color: $viollet
+		border-top: none
+		&:hover
+			background: lighten($orange,45)
+	li.selected
+		color: #fff
+		background: $orange
+.has-error
+	+ .selectric
+		box-shadow: 0 0 3px 1px #FF0000
+.selectric
+	box-shadow: 0 0 6px rgba(1,1,1,0.3)
+	.button:after
+		top: 6px
+		border: 7px solid transparent
+		border-top-color: #d4762d
+	.label
+		font-size: 16px
+		color: $viollet
+.advert-add
+	padding-bottom: 100px
+	.post-title
+		margin-bottom: 20px
+	.field
+		position: relative
+		+pie-clearfix
+		+ .field
+			margin-top: 20px
+		&.h-line
+			padding-top: 20px
+			border-top: 1px solid lighten($viollet,20)
+		.submit-btn
+			width: 362px
+	.label-form
+		position: relative
+		float: left
+		padding-right: 20px
+		width: 308px
+		font-size: 18px
+		line-height: 35px
+		text-align: right
+		+pie-clearfix
+		.label-icon
+			position: absolute
+			top: 80px
+			right: 20px
+			width: 176px
+			height: 60px
+			background: url("../img/other/label-img.png") no-repeat center center
+	.area-form
+		position: relative
+		float: left
+		width: 672px
+		+pie-clearfix
+		.form-input, .form-area
+			width: 362px
+			float: left
+		&__in
+			+pie-clearfix
+			&.has-success
+				.icon-success
+					display: block
+		.form-area
+			vertical-align: bottom
+		.help.help-block
+			position: absolute
+			left: 435px
+			top: 30px
+			display: block
+			padding: 5px 5px 10px 25px
+			font-size: 14px
+			color: $orange
+			line-height: 1.3
+			background: url("../img/other/icon-attention.png") no-repeat 3px 6px, #fff
+			box-shadow: 0 0 6px rgba(1,1,1,0.2)
+			&:after
+				content: ''
+				position: absolute
+				display: block
+				top: -20px
+				left: -45px
+				width: 41px
+				height: 38px
+				background: url("../img/other/help-arrow.png") no-repeat center center
+		.icon-success
+			display: none
+			float: left
+			margin-top: 10px
+			margin-left: 10px
+			width: 16px
+			height: 16px
+			background: url("../img/other/icon-success.png") no-repeat center center
+		.help-block.form-error
+			float: left
+			margin-top: 4px
+			margin-left: 10px
+			width: 100%
+			font-size: 12px
+			line-height: 1.2
+			color: #FF0000
+		.selectric-wrapper
+			width: 362px
+		.icheckbox_square-orange
+			float: left
+			margin-top: 5px
+			margin-right: 10px
+			.help-block.form-error
+				display: none
+			+ p
+				margin-right: 100px
+				font-size: 16px
+				line-height: 1.2
+				a
+					color: $orange
+		.desc
+			margin-top: 3px
+			margin-left: 10px
+			font-size: 12px
+			color: $orange
+			line-height: 15px
+.photoload
+	&__in
+		float: left
+		width: 20%
+		margin-bottom: 15px
+	&__el
+		padding: 5px
+		width: 120px
+		height: 120px
+		box-shadow: 0 0 6px rgba(1,1,1,0.3)
+	&__item
+		display: block
+		width: 100%
+		height: 100%
+		line-height: 110px
+		text-align: center
+		vertical-align: middle
+		background: url("../img/other/photoload-bg.jpg") no-repeat center center
+		&.is-loaded
+			background: #fff
+		img
+			max-width: 110px
+			max-height: 110px
+			vertical-align: middle

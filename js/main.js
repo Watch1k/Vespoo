@@ -4,8 +4,12 @@ $(document).ready(function(){
 	$.validate({
 		validateOnBlur : true,
 		scrollToTopOnError : false,
+		validateOnEvent: true,
 		modules: 'security'
 	});
+
+// Selectric
+	$('select').selectric();
 
 // custom checkbox
 	$('input').iCheck({
