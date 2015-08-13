@@ -123,8 +123,8 @@
 							<label>Рубрика <span class="text-orange">*</span></label>
 						</div>
 						<div class="area-form">
-							<div class="area-form__in">
-								<select data-validation="required" data-validation-event="change">
+							<div class="area-form__in" id="errorCategory">
+								<select data-validation="required" data-validation-event="change" data-validation-error-msg="Поле обязательное для заполнения" data-validation-error-msg-container="#errorCategory">
 									<option value="">Укажите рубрику</option>
 									<option value="Рубрика 1">Рубрика 1</option>
 									<option value="Рубрика 2">Рубрика 2</option>
@@ -235,8 +235,8 @@
 							<label>Область <span class="text-orange">*</span></label>
 						</div>
 						<div class="area-form">
-							<div class="area-form__in">
-								<select data-validation="required" data-validation-event="change">
+							<div class="area-form__in" id="errorRegion">
+								<select data-validation="required" data-validation-event="change" data-validation-error-msg="Поле обязательное для заполнения" data-validation-error-msg-container="#errorRegion">
 									<option value="">Укажите область</option>
 									<option value="Киевская область">Киевская область</option>
 									<option value="Черкасская область">Черкасская область</option>
@@ -251,8 +251,8 @@
 							<label>Город <span class="text-orange">*</span></label>
 						</div>
 						<div class="area-form">
-							<div class="area-form__in">
-								<select data-validation="required" data-validation-event="change">
+							<div class="area-form__in" id="errorCity">
+								<select data-validation="required" data-validation-event="change" data-validation-error-msg="Поле обязательное для заполнения" data-validation-error-msg-container="#errorCity">
 									<option value="">Укажите город</option>
 									<option value="Киев">Киев</option>
 									<option value="Черкассы">Черкассы</option>
@@ -324,8 +324,8 @@
 							<label>Тип объявления <span class="text-orange">*</span></label>
 						</div>
 						<div class="area-form">
-							<div class="area-form__in">
-								<select data-validation="required" data-validation-event="change">
+							<div class="area-form__in" id="errorType">
+								<select data-validation="required" data-validation-event="change" data-validation-error-msg="Поле обязательное для заполнения" data-validation-error-msg-container="#errorType">
 									<option value="">Укажите тип</option>
 									<option value="Частное">Частное</option>
 									<option value="Бизнес">Бизнес</option>

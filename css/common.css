@@ -539,7 +539,7 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 .selectric-items li:hover { background: #fbf2eb; }
 .selectric-items li.selected { color: #fff; background: #d4762d; }
 
-.has-error + .selectric { box-shadow: 0 0 3px 1px #FF0000; }
+.has-error .selectric { box-shadow: 0 0 3px 1px #FF0000; }
 
 .selectric { box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
 .selectric .button:after { top: 6px; border: 7px solid transparent; border-top-color: #d4762d; }
@@ -557,6 +557,7 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 .advert-add .label-form .label-icon { position: absolute; top: 80px; right: 20px; width: 176px; height: 60px; background: url("../img/other/label-img.png") no-repeat center center; }
 .advert-add .area-form { position: relative; float: left; width: 672px; *zoom: 1; }
 .advert-add .area-form:after { content: ""; display: table; clear: both; }
+.advert-add .area-form .selectric-wrapper { float: left; }
 .advert-add .area-form .form-input, .advert-add .area-form .form-area { width: 362px; float: left; }
 .advert-add .area-form__in { *zoom: 1; }
 .advert-add .area-form__in:after { content: ""; display: table; clear: both; }
