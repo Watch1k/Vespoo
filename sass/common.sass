@@ -286,7 +286,7 @@ body
 			color: $viollet
 			+placeholder-color($viollet)
 			&:focus
-				box-shadow: inset 0 0 3px 1px $orange
+				box-shadow: inset 0 0 0 2px $orange
 		button
 			font-size: 16px
 			color: #fff
@@ -916,7 +916,7 @@ body
 	box-shadow: 0 0 3px rgba(1,1,1,0.3)
 	vertical-align: top
 	&.has-error
-		box-shadow: 0 0 3px 1px #FF0000
+		box-shadow: 0 0 2px 1px #FF0000
 		&.checked
 			box-shadow: 0 0 3px rgba(1,1,1,0.3)
 .form-input
@@ -929,7 +929,7 @@ body
 	+placeholder-color($viollet)
 .has-error
 	.form-input
-		box-shadow: 0 0 3px 1px #FF0000
+		box-shadow: 0 0 2px 1px #FF0000
 .form-area
 	padding: 5px 10px
 	font-family: $default-fonts
@@ -942,7 +942,7 @@ body
 	resize: none
 .has-error
 	.form-area
-		box-shadow: 0 0 3px 1px #FF0000
+		box-shadow: 0 0 2px 1px #FF0000
 .form-login
 	.field
 		+ .field
@@ -950,6 +950,8 @@ body
 	label
 		margin-left: 15px
 		cursor: pointer
+	.help-block.form-error
+		font-size: 14px
 .submit-btn
 	display: block
 	width: 100%
@@ -1069,7 +1071,7 @@ body
 		background: $orange
 .has-error
 	.selectric
-		box-shadow: 0 0 3px 1px #FF0000
+		box-shadow: 0 0 2px 1px #FF0000
 .selectric
 	box-shadow: 0 0 6px rgba(1,1,1,0.3)
 	.button:after
