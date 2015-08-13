@@ -560,7 +560,7 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 .advert-add .area-form__in:after { content: ""; display: table; clear: both; }
 .advert-add .area-form__in.has-success .icon-success { display: block; }
 .advert-add .area-form .form-area { vertical-align: bottom; }
-.advert-add .area-form .help.help-block { position: absolute; left: 435px; top: 30px; display: block; padding: 5px 5px 10px 25px; font-size: 14px; color: #d4762d; line-height: 1.3; background: url("../img/other/icon-attention.png") no-repeat 3px 6px, #fff; box-shadow: 0 0 6px rgba(1, 1, 1, 0.2); }
+.advert-add .area-form .help.help-block { position: absolute; left: 435px; top: 30px; display: block; padding: 5px 5px 5px 25px; font-size: 14px; color: #583d8b; line-height: 1.3; background: url("../img/other/icon-attention.png") no-repeat 3px 6px, #fff; box-shadow: 0 0 6px rgba(1, 1, 1, 0.2); }
 .advert-add .area-form .help.help-block:after { content: ""; position: absolute; display: block; top: -20px; left: -45px; width: 41px; height: 38px; background: url("../img/other/help-arrow.png") no-repeat center center; }
 .advert-add .area-form .icon-success { display: none; float: left; margin-top: 10px; margin-left: 10px; width: 16px; height: 16px; background: url("../img/other/icon-success.png") no-repeat center center; }
 .advert-add .area-form .help-block.form-error { float: left; margin-top: 4px; margin-left: 10px; width: 100%; font-size: 12px; line-height: 1.2; color: #FF0000; }
