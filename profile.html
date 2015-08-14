@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vespoo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/orange.css">
+	<link rel="stylesheet" href="css/selectric.css">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	
+	<!-- begin wrapper  -->
+	<div id="main" class="wrapper">
+		<!-- begin banner-top -->
+		<div class="banner-top">
+			<a href="#" class="banner-top__in">
+				<button class="close-banner-fix">x</button>
+			</a>
+		</div>
+		<!-- end banner-top -->
+		
+		<!-- begin header  -->
+		<div class="header">
+			<div class="container">
+				<!-- begin header__top  -->
+				<div class="header__top">
+					<a href="index.html" class="logo"><img src="img/logo.png" alt="Vespoo"></a>
+					<a href="#" class="post-new">+ Подать объявление</a>
+					<a href="#" class="userbox">Мой профиль</a>
+					<ul class="lang-selector">
+						<li><a href="#">язык</a></li>
+						<li><a href="#">мова</a></li>
+					</ul>
+				</div>
+				<!-- end header__top -->
+				
+				<form action="#" id="searchForm" class="form-search">
+					<fieldset>
+						<!-- begin field  -->
+						<div class="field location">
+							<input type="text" id="cityCurrent" readonly="readonly" placeholder="Город, область...">
+							<a href="#" class="clear-input reset icon-all-close"></a>
+						</div>
+						<!-- begin field  -->
+						<div class="field search">
+							<input type="text" placeholder="Поиск...">
+							<a href="#" class="clear-input icon-all-close"></a>
+						</div>
+						<!-- begin field  -->
+						<div class="field submit">
+							<button type="submit">Поиск</button>
+						</div>
+					</fieldset>
+				</form>
+
+				<!-- begion location-wrap -->
+				<div class="location-wrap">
+					<div class="location-title">
+						<button class="location-title__all">Вся Украина</button>
+						<button class="location-title__region">область</button>
+						<button class="location-title__back">вернуться к выбору области</button>
+					</div>
+					<div class="search-city-wrap">
+						<input type="text" id="cityBox" placeholder="Начните вводить город">
+						<a href="#" class="clear-input icon-all-close"></a>
+					</div>
+					<div class="region-wrap"></div>
+					<div class="city-wrap"></div>
+				</div>
+				<!-- end location-wrap -->
+			</div>
+		</div>
+		<!-- end header -->
+
+		<!-- begin body-branding  -->
+		<div class="body-branding">
+			<!-- begin banner  -->
+			<div class="banner-1">
+				<a href="#"><img src="img/banners/Banner-160x600.jpg" alt="banner"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end banner -->
+
+			<!-- begin service-1  -->
+			<div class="service-1">
+				<a href="#"><img src="img/banners/service-1.jpg" alt="service"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end service-1 -->
+
+			<!-- begin service-2  -->
+			<div class="service-2">
+				<a href="#"><img src="img/banners/service-1.jpg" alt="service"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end service-2 -->
+		</div>
+		<!-- end body-branding -->
+
+		<!-- begin content-wrap  -->
+		<div class="content-wrap container">
+			<!-- begin profile  -->
+			<div class="profile">
+				<h2 class="post-title">Объявления</h2>
+				<p>Здесь вы найдёте ваши активные и архивные объявления</p>
+				<div class="profile-tabs">
+					<ul>
+						<li><a href="#profile_1">Обьявления</a></li>
+						<li><a href="#profile_2">Сообщения</a></li>
+						<li><a href="#profile_3">Аукционы</a></li>
+						<li><a href="#profile_4">Платежи</a></li>
+						<li><a href="#profile_5">Настройки</a></li>
+						<li><a href="#profile_6">Доставка</a></li>
+					</ul>
+					<!-- begin profile-advert -->
+					<div id="profile_1" class="profile-advert is-empty">
+						<p class="profile-text-empty">Сейчас у Вас нет активных обьявлений</p>
+						<div class="post-new-wrap">
+							<a href="#" class="post-new">+ Подать объявление</a>
+						</div>
+					</div>
+					<!-- end profile-advert -->
+
+					<!-- begin profile-msg -->
+					<div id="profile_2" class="profile-msg is-empty">
+						<div class="profile-msg__top">
+							<ul class="msg-status">
+								<li class="is-active"><a href="#">Полученные</a></li>
+								<li><a href="#">Отправленные</a></li>
+								<li><a href="#">Архивные</a></li>
+							</ul>
+							<form action="#" class="search-msg">
+								<fieldset>
+									<!-- begin field -->
+									<div class="field">
+										<input type="text" class="form-input" placeholder="Поиск...">
+									</div>
+									<!-- begin field -->
+									<div class="field">
+										<button type="submit"></button>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+						<p class="profile-text-empty">Сейчас у Вас нет сообщений</p>
+					</div>
+					<!-- end profile-msg -->
+
+					<!-- begin profile-auction -->
+					<div id="profile_3" class="profile-auction empty">
+						<p class="profile-text-empty">Сервис будет доступен в ближайшее время</p>
+					</div>
+					<!-- end profile-auction -->
+
+					<!-- begin profile-payment -->
+					<div id="profile_4" class="profile-payment">
+						<div class="profile-payment__top">
+							<form action="#" class="search-payment">
+								<fieldset>
+									<!-- begin field -->
+									<div class="field">
+										<input type="text" class="form-input" placeholder="Поиск платежей">
+									</div>
+									<!-- begin field -->
+									<div class="field">
+										<button type="submit"></button>
+									</div>
+								</fieldset>
+							</form>
+							<div class="profile-payment__balance">
+								<p>Ваш счет <span class="text-orange">10000 грн.</span></p>
+								<i class="payment-arrow-right"></i>
+							</div>
+						</div>
+						<div class="profile-payment__mid">
+							<button class="submit-btn">Пополнить счет</button>
+						</div>
+						<div class="profile-payment__content">
+							<p>Здесь вы найдете сведения обо всех платёжных операциях, произведенных для продвижения ваших объявлений. Также здесь вы можете посмотреть остаток средств (баланс) на вашем счёте. Пройдите <a href="#">по ссылке</a>, чтобы узнать как эффективно рекламировать объявление.</p>
+						</div>
+					</div>
+					<!-- end profile-payment -->
+
+					<!-- begin profile-settings -->
+					<div id="profile_5" class="profile-settings">
+						<ul class="settings">
+							<li>
+								<span href="#" class="settings__title">Изменить контактные даные</span>
+								<!-- begin settings__in  -->
+								<div class="settings__in">
+									<form action="#" class="settings-data">
+										<fieldset>
+											<!-- begin field -->
+											<div class="field">
+												<select>
+													<option value="">Выбрать область</option>
+													<option value="Киевская область">Киевская область</option>
+													<option value="Донецкая область">Донецкая область</option>
+												</select>
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<select>
+													<option value="">Выбрать город</option>
+													<option value="Киев">Киев</option>
+													<option value="Донецк">Донецк</option>
+												</select>
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<input type="text" class="form-input" placeholder="Контактное лицо">
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<input type="text" class="form-input" placeholder="Номер телефона">
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<input type="text" class="form-input" placeholder="Skype">
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<input type="text" class="form-input" placeholder="ICQ">
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<input type="checkbox">
+												<span>не показывать все объявления на странице моего объявления</span>
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<input type="checkbox">
+												<span>отключить предзаполнение</span>
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<button class="submit-btn">Сохранить</button>
+												<i class="arrow-bot-orange"></i>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+								<!-- end settings__in -->
+							</li>
+							<li>
+								<span href="#" class="settings__title">Изменить пароль</span>
+								<!-- begin settings__in  -->
+								<div class="settings__in">
+									<form action="#" class="settings-data">
+										<fieldset>
+											<!-- begin field -->
+											<div class="field">
+												<input type="password" name="change_pass" class="form-input" data-validation="length" data-validation-length="min5" data-validation-error-msg="Пароль должен содержать минимум 5 символов" data-validation-help="Пароль должен содержать минимум 5 символов" placeholder="Новый пароль *">
+												<i class="icon-success"></i>
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<input type="password" name="change_repass" class="form-input" data-validation="confirmation" data-validation-confirm="change_pass" placeholder="Повторите новый пароль *" data-validation-error-msg="Пароли не совпадают">
+												<i class="icon-success"></i>
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<button class="submit-btn">Сохранить</button>
+												<i class="arrow-right-orange"></i>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+								<!-- end settings__in -->
+							</li>
+							<li>
+								<span href="#" class="settings__title">Изменить email-адрес</span>
+								<!-- begin settings__in  -->
+								<div class="settings__in">
+									<form action="#" class="settings-data">
+										<fieldset>
+											<!-- begin field -->
+											<div class="field">
+												<input type="text" class="form-input" data-validation="email" placeholder="Новый e-mail *" data-validation-error-msg="Укажите свою новую почту">
+												<i class="icon-success"></i>
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<button class="submit-btn">Сохранить</button>
+												<i class="arrow-right-orange"></i>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+								<!-- end settings__in -->
+							</li>
+							<li>
+								<span href="#" class="settings__title">Email-адрес уведомления</span>
+								<!-- begin settings__in  -->
+								<div class="settings__in">
+									<form action="#" class="settings-data">
+										<fieldset>
+											<!-- begin field -->
+											<div class="field">
+												<input type="checkbox">
+												<span>да, я хочу получать рассылку</span>
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<input type="checkbox">
+												<span>да, я хочу получать email-уведомления о новых сообщениях</span>
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<input type="checkbox">
+												<span>да, я хочу получать email-увeдомления о новых объявлениях</span>
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<button class="submit-btn ml0">Сохранить данные</button>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+								<!-- end settings__in -->
+							</li>
+							<li>
+								<span href="#" class="settings__title">Sms-уведомления</span>
+								<!-- begin settings__in  -->
+								<div class="settings__in">
+									<form action="#" class="settings-data">
+										<fieldset>
+											<!-- begin field -->
+											<div class="field">
+												<div class="row">
+													<input type="text" class="form-input" placeholder="Введите свой номер телефона">
+												</div>
+												<p class="desc">пример: 0661234567</p>
+											</div>
+											<!-- begin field -->
+											<div class="field">
+												<button class="submit-btn ml0">Сохранить данные</button>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+								<!-- end settings__in -->
+							</li>
+							<li>
+								<span href="#" class="settings__title">Удалить учетную запись</span>
+								<!-- begin settings__in  -->
+								<div class="settings__in">
+									<div class="text-center">
+										<button class="submit-btn submit-center">Удалить учетную запись</button>
+									</div>
+								</div>
+								<!-- end settings__in -->
+							</li>
+						</ul>
+					</div>
+					<!-- end profile-settings -->
+
+					<!-- begin profile-delivery -->
+					<div id="profile_6" class="profile-delivery is-empty">
+						<p class="profile-text-empty">Сервис будет доступен в ближайшее время</p>
+					</div>
+					<!-- end profile-delivery -->
+				</div>
+			</div>
+			<!-- end profile -->
+
+			<!-- begin section-about  -->
+			<div class="section-about">
+				<div class="row">
+					<div class="logo">
+						<a href="#">
+							<img src="img/logo-2.png" alt="Vespoo">
+						</a>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam totam rem aperiam totam</p>
+				</div>
+				<div class="row">
+					<p><strong>Популярные запросы:</strong> <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>.</p>
+				</div>
+				<p class="social-title">Спасибо, что рассказываете о нас друзьям!</p>
+				<ul class="social-list">
+					<li><a href="#"><i class="icon-social-twitter"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-fb"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-vk"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-class"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-gplus"></i>Поделиться<span>35</span></a></li>
+				</ul>
+			</div>
+			<!-- end section-about -->
+		</div>
+		<!-- end content-wrap -->
+	</div>
+	<!-- end wrapper -->
+
+	<!-- begin footer  -->
+	<div class="footer">
+		<div class="container">
+			<!-- begin footer__left  -->
+			<div class="footer__left">
+				<div class="footer__col">
+					<p>Компания</p>
+					<ul class="footer-list">
+						<li><a href="#">Добавить обьявление</a></li>
+						<li><a href="#">Добавить магазин</a></li>
+						<li><a href="#">Реклама на сайте</a></li>
+						<li><a href="#">Безопасные сделки Vespoo</a></li>
+						<li><a href="#">Партнерские программы</a></li>
+						<li><a href="#">Сортировка в поиске</a></li>
+					</ul>
+				</div>
+				<div class="footer__col">
+					<p>Партнерам</p>
+					<ul class="footer-list">
+						<li><a href="#">Политика конфиденциальности и возвращения средств</a></li>
+						<li><a href="#">Карта опций</a></li>
+						<li><a href="#">Карта городов</a></li>
+						<li><a href="#">Карта сайта</a></li>
+						<li><a href="#">Помощь</a></li>
+						<li><a href="#">Оставить отзыв о сайте Vespoo</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end footer__left -->
+
+			<!-- begin footer__right  -->
+			<div class="footer__right">
+				<p>Отдел заботы о пользователях</p>
+				<p>Фамилия Имя</p>
+				<p>Консультант по вопросам работы сайта Vespoo</p>
+				<p>Горячая линия:</p>
+				<ul class="phone-list">
+					<li>0-800-00-00-00</li>
+					<li>(067)123-45-67</li>
+					<li>(093)123-45-67</li>
+				</ul>
+				<a href="#" class="phone-btn">Связаться</a>
+			</div>
+			<!-- end footer__right -->
+
+			<!-- begin footer__bottom  -->
+			<div class="footer__bottom">
+				<a href="#" class="footer__logo"><img src="img/logo-2.png" alt="Vespoo"></a>
+				<p>&copy; Vespoo.com. Все права защищены.</p>
+				<p>Разработка и поддержка <a href="#">MTITM &amp; Koldios</a></p>
+			</div>
+			<!-- end footer__bottom -->
+		</div>
+	</div>
+	<!-- end footer -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/icheck.min.js"></script>
+	<script src="js/jquery.selectric.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.form-validator.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

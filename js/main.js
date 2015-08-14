@@ -8,6 +8,19 @@ $(document).ready(function(){
 		modules: 'security'
 	});
 
+// settings accordion
+	$('.settings__title').on('click', function(){
+		if ($(this).parent().hasClass('is-active')) {
+			$(this).parent().removeClass('is-active').find('.settings__in').slideUp();
+		} else {
+			$('.settings__title').parent().removeClass('is-active').find('.settings__in').slideUp();
+			$(this).parent().addClass('is-active').find('.settings__in').slideDown();
+		};
+	});
+
+// jQuery tabs
+	$('.profile').tabs();
+
 // Selectric
 	$('select').selectric();
 
