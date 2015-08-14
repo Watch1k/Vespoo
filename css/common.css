@@ -668,7 +668,8 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 .profile-tabs > .ui-tabs-nav { margin: 0 5px; *zoom: 1; }
 .profile-tabs > .ui-tabs-nav:after { content: ""; display: table; clear: both; }
 .profile-tabs > .ui-tabs-nav > li { position: relative; z-index: 1; overflow: hidden; float: left; padding: 5px 5px 0 5px; width: 162px; font-size: 18px; line-height: 40px; text-transform: uppercase; text-align: center; outline: none; }
+.profile-tabs > .ui-tabs-nav > li > a { display: block; }
 .profile-tabs > .ui-tabs-nav > li:last-child { width: 160px; }
 .profile-tabs > .ui-tabs-nav > li.ui-tabs-active { z-index: 3; color: #d4762d; }
-.profile-tabs > .ui-tabs-nav > li.ui-tabs-active > a { display: block; background-color: #fff; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
+.profile-tabs > .ui-tabs-nav > li.ui-tabs-active > a { background-color: #fff; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
 .profile-tabs > .ui-tabs-panel { position: relative; z-index: 2; min-height: 480px; margin: -1px 10px 0; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
