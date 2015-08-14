@@ -275,6 +275,8 @@ body
 	background-color: $viollet
 	transition: all 0.3s
 	+pie-clearfix
+	&.is-hidden
+		display: none
 	.field
 		float: left
 		width: 268px
@@ -836,7 +838,6 @@ body
 		padding: 10px 20px 20px 20px
 		width: 30%
 		color: $viollet
-		border-radius: 5px
 		background-color: #fff
 		p:first-child
 			margin-bottom: 15px
@@ -863,7 +864,6 @@ body
 			line-height: 35px
 			color: #fff
 			background-color: $viollet
-			border-radius: 5px
 			text-align: center
 			transition: all 0.2s
 			&:hover
@@ -879,7 +879,6 @@ body
 			padding: 3px 13px
 			width: 138px
 			height: 54px
-			border-radius: 5px
 			background-color: #fff
 			img
 				width: 112px

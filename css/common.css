@@ -269,6 +269,7 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 
 .form-search { margin-top: 10px; padding: 20px; background-color: #583d8b; -webkit-transition: all 0.3s; transition: all 0.3s; *zoom: 1; }
 .form-search:after { content: ""; display: table; clear: both; }
+.form-search.is-hidden { display: none; }
 .form-search .field { float: left; width: 268px; }
 .form-search .field input, .form-search .field button { width: 100%; height: 35px; line-height: 35px; }
 .form-search .field input { padding: 0 10px; font-size: 16px; color: #583d8b; }
@@ -446,17 +447,17 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 .footer__left:after { content: ""; display: table; clear: both; }
 .footer__left .footer__col { float: left; width: 50%; }
 .footer__left .footer__col p { margin-bottom: 15px; padding-top: 10px; padding-bottom: 15px; font-weight: bold; border-bottom: 1px solid #e0e0e0; }
-.footer__right { float: right; padding: 10px 20px 20px 20px; width: 30%; color: #583d8b; border-radius: 5px; background-color: #fff; }
+.footer__right { float: right; padding: 10px 20px 20px 20px; width: 30%; color: #583d8b; background-color: #fff; }
 .footer__right p:first-child { margin-bottom: 15px; padding-bottom: 15px; font-weight: bold; border-bottom: 1px solid #583d8b; }
 .footer__right p:nth-child(2) { color: #d4762d; font-weight: bold; }
 .footer__right p:nth-child(3) { line-height: 1.2; }
 .footer__right p:nth-child(4) { float: left; margin-top: 7px; margin-right: 7px; }
 .footer__right .phone-list { margin-top: 7px; overflow: hidden; }
-.footer__right .phone-btn { display: block; margin: 15px auto 0; width: 60%; font-size: 20px; line-height: 35px; color: #fff; background-color: #583d8b; border-radius: 5px; text-align: center; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.footer__right .phone-btn { display: block; margin: 15px auto 0; width: 60%; font-size: 20px; line-height: 35px; color: #fff; background-color: #583d8b; text-align: center; -webkit-transition: all 0.2s; transition: all 0.2s; }
 .footer__right .phone-btn:hover { background-color: #d4762d; -webkit-transition: all 0.2s; transition: all 0.2s; }
 .footer__bottom { color: #e0e0e0; line-height: 1.7; *zoom: 1; }
 .footer__bottom:after { content: ""; display: table; clear: both; }
-.footer__bottom .footer__logo { float: left; margin-right: 15px; padding: 3px 13px; width: 138px; height: 54px; border-radius: 5px; background-color: #fff; }
+.footer__bottom .footer__logo { float: left; margin-right: 15px; padding: 3px 13px; width: 138px; height: 54px; background-color: #fff; }
 .footer__bottom .footer__logo img { width: 112px; height: 48px; }
 .footer__bottom p + p { color: #fff; }
 .footer__bottom p a:hover { color: #eabb97; }
