@@ -252,11 +252,6 @@ $(document).ready(function(){
 		dots: true
 	});
 
-// if header form removed
-	if (!$('.form-search').length) {
-		$('.content-wrap').css('margin-top', '125px');
-	};
-
 // Main Nav
 	$(window).load(function(){
 		var mainInnerHeight = $('.section-main__in').height();
