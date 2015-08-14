@@ -921,6 +921,8 @@ body
 		box-shadow: 0 0 2px 1px #FF0000
 		&.checked
 			box-shadow: 0 0 3px rgba(1,1,1,0.3)
+form .field
+	+pie-clearfix
 .form-input
 	float: left
 	padding: 0 10px
@@ -955,6 +957,8 @@ body
 		cursor: pointer
 	.help-block.form-error
 		font-size: 14px
+	.icheckbox_square-orange
+		margin-top: 0
 .submit-btn
 	display: block
 	width: 100%
@@ -1090,7 +1094,6 @@ body
 		margin-bottom: 20px
 	.field
 		position: relative
-		+pie-clearfix
 		+ .field
 			margin-top: 20px
 		&.h-line
