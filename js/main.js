@@ -418,7 +418,7 @@ $(document).ready(function(){
 // fixed advert aside
 	$(window).load(function(){
 		if ($('.advert-el').length) {
-			var advertStart = $('.advert-el').offset().top - 100;
+			var advertStart = $('.advert-el').offset().top - 60;
 			var advertStop = $('.advert-wrap').height() + advertStart - $('.advert-el').height();
 			console.log(advertStop);
 			$(window).scroll(function(){
@@ -432,14 +432,14 @@ $(document).ready(function(){
 						'top': 'auto',
 						'bottom': '50px',
 						'right': '0'
-					});
+					}).addClass('is-active');
 				} else {
 					$('.advert-el').css({
 						'top': '0',
 						'bottom': 'auto',
 						'right': 'auto'
-					});
-					$('.advert-el.is-fixed').css('top', '100px');
+					}).removeClass('is-active');
+					$('.advert-el.is-fixed').css('top', '60px');
 				}
 			});
 		}

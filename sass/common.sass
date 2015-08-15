@@ -1922,7 +1922,6 @@ form .field
 	width: 304px
 	+pie-clearfix
 	.banner
-		margin-left: 25px
 		a
 			width: 250px
 			height: 250px
@@ -1933,8 +1932,16 @@ form .field
 	width: 304px
 	&.is-fixed
 		position: fixed
-		top: 100px
+		top: 60px
 		width: 304px
+	&.is-fixed, &.is-active
+		.advert-el__container
+			padding-bottom: 10px
+			box-shadow: 0 0 6px rgba(1,1,1,0.3)
+		.advert-el__user
+			box-shadow: 0 0 6px rgba(1,1,1,0.3)
+		.advert-el__map
+			display: none
 	&__price
 		height: 86px
 		font-size: 38px

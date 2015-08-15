@@ -852,11 +852,13 @@ form .field:after { content: ""; display: table; clear: both; }
 /* advert aside */
 .advert-aside { float: right; width: 304px; *zoom: 1; }
 .advert-aside:after { content: ""; display: table; clear: both; }
-.advert-aside .banner { margin-left: 25px; }
 .advert-aside .banner a { width: 250px; height: 250px; }
 
 .advert-el { position: absolute; top: 0; right: 0; width: 304px; }
-.advert-el.is-fixed { position: fixed; top: 100px; width: 304px; }
+.advert-el.is-fixed { position: fixed; top: 60px; width: 304px; }
+.advert-el.is-fixed .advert-el__container, .advert-el.is-active .advert-el__container { padding-bottom: 10px; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
+.advert-el.is-fixed .advert-el__user, .advert-el.is-active .advert-el__user { box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
+.advert-el.is-fixed .advert-el__map, .advert-el.is-active .advert-el__map { display: none; }
 .advert-el__price { height: 86px; font-size: 38px; color: #d4762d; font-weight: bold; text-align: center; line-height: 86px; background-color: #f1f0f0; }
 .advert-el .submit-btn { margin-top: 20px; padding-left: 15px; text-align: left; display: block; line-height: 45px; }
 .advert-el .submit-btn.show-phone { text-transform: none; }
