@@ -252,6 +252,55 @@ $(document).ready(function(){
 		dots: true
 	});
 
+// Advertisement Slider
+
+	// FIX fancybox clones
+	var indexMax = 0,
+		indexCurrent,
+		indexMark;
+	$('.advert-slider').on('init', function(event, slick){
+
+		$('.advert-slider .slick-slide').each(function(){
+			indexCurrent = parseInt($(this).attr('data-slick-index'));
+			if (indexCurrent > indexMax) {
+				indexMax = indexCurrent;
+			};
+		});
+		indexMax -= 5;
+
+		$('.advert-slider .slick-slide.slick-active').each(function(){
+			$(this).find('.advert-fancybox').attr('data-fancybox-group', 'advert-gallery');
+		});
+
+		$('.advert-slider .slick-slide').each(function(){
+			if (($(this).attr('data-slick-index') >= 0) && ($(this).attr('data-slick-index') <= indexMax)) {
+				$(this).find('.advert-fancybox').attr('data-fancybox-group', 'advert-gallery');
+			};
+		});
+	});
+	$('.advert-slider').on('afterChange', function(event, slick, currentSlider){
+		$('.advert-slider .slick-active').each(function(){
+			$(this).find('.advert-fancybox').attr('data-fancybox-group', 'advert-gallery');
+		});
+		$('.advert-slider .slick-cloned.slick-active').each(function(){
+			$(this).find('.advert-fancybox').attr('data-fancybox-group', 'advert-gallery');
+			indexMark = parseInt($(this).attr('data-slick-index'));
+			indexMark -= indexMax + 1;
+			$('.advert-slider .slick-slide').each(function(){
+				if (parseInt($(this).attr('data-slick-index')) == indexMark) {
+					$(this).find('.advert-fancybox').attr('data-fancybox-group', '');
+				};
+			});
+		});
+	});
+
+	// slider
+	$('.advert-slider').slick({
+		infinite: true,
+		slidesToShow: 5,
+		slideToScroll: 1
+	});
+
 // Main Nav
 	$(window).load(function(){
 		var mainInnerHeight = $('.section-main__in').height();
@@ -301,6 +350,64 @@ $(document).ready(function(){
 	$('.close-banner-fix').on('click', function(){
 		$(this).parent().hide();
 		$('.header').css('top', '0');
+	});
+
+// Advert fancybox
+	$('.advert-fancybox').fancybox({
+		maxHeight: '70%',
+		theme: 'light',
+		padding: 5,
+		openEffect	: 'drop',
+		closeEffect	: 'drop',
+		prevEffect: 'none',
+		nextEffect: 'none',
+		caption : {
+			type : 'outside'
+		},
+		helpers: {
+			thumbs: true
+		},
+		locked: true,
+		locale: 'ru',
+		locales: {
+			'ru': {
+				CLOSE: 'закрыть',
+				NEXT: 'вперед',
+				PREV: 'назад',
+				EXPAND: 'показать в полном размере'
+			}
+		},
+		beforeShow: function(){
+			wh = $(window).height()/this.height;
+			ww = $(window).width()/this.width;
+			if (wh<ww) {
+				this.height = this.height*wh;
+				this.width = this.width*wh;
+			} else {
+				this.height = this.height*ww;
+				this.width = this.width*ww;
+			}
+		}
+	});
+
+// author question fancybox
+	$('.author-q-popup').fancybox({
+		theme: 'light',
+		padding: 5,
+		openEffect	: 'drop',
+		closeEffect	: 'drop',
+		prevEffect: 'none',
+		nextEffect: 'none',
+		locked: true,
+		locale: 'ru',
+		locales: {
+			'ru': {
+				CLOSE: 'закрыть',
+				NEXT: 'вперед',
+				PREV: 'назад',
+				EXPAND: 'показать в полном размере'
+			}
+		}
 	});
 	
 	
