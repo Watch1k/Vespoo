@@ -414,19 +414,49 @@ $(document).ready(function(){
 			}
 		}
 	});
-	
+
+// fixed advert aside
+	$(window).load(function(){
+		if ($('.advert-el').length) {
+			var advertStart = $('.advert-el').offset().top - 100;
+			var advertStop = $('.advert-wrap').height() + advertStart - $('.advert-el').height();
+			console.log(advertStop);
+			$(window).scroll(function(){
+				if ((jQuery(document).scrollTop() >= advertStart) && (jQuery(document).scrollTop() < advertStop)) {
+					$('.advert-el').addClass('is-fixed');
+				} else {
+					$('.advert-el').removeClass('is-fixed');
+				}
+				if (jQuery(document).scrollTop() >= advertStop) {
+					$('.advert-el').css({
+						'top': 'auto',
+						'bottom': '50px',
+						'right': '0'
+					});
+				} else {
+					$('.advert-el').css({
+						'top': '0',
+						'bottom': 'auto',
+						'right': 'auto'
+					});
+					$('.advert-el.is-fixed').css('top', '100px');
+				}
+			});
+		}
+	});
 	
 });
 
 // Window Scroll
 $(window).scroll(function () {
 
-    'use strict';
+	'use strict';
 
-    if (jQuery(document).scrollTop() >= 220) {
-        $('.header').addClass('is-fixed');
-    } else {
-        $('.header').removeClass('is-fixed');
-    }
+	if (jQuery(document).scrollTop() >= 220) {
+	    $('.header').addClass('is-fixed');
+	} else {
+	    $('.header').removeClass('is-fixed');
+	}
+
 
 });

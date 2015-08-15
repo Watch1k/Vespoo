@@ -1493,6 +1493,7 @@ form .field
 			max-height: 90px
 			vertical-align: middle
 .advert-wrap
+	position: relative
 	margin-top: 20px
 	padding-bottom: 50px
 	+pie-clearfix
@@ -1920,7 +1921,20 @@ form .field
 	float: right
 	width: 304px
 	+pie-clearfix
+	.banner
+		margin-left: 25px
+		a
+			width: 250px
+			height: 250px
 .advert-el
+	position: absolute
+	top: 0
+	right: 0
+	width: 304px
+	&.is-fixed
+		position: fixed
+		top: 100px
+		width: 304px
 	&__price
 		height: 86px
 		font-size: 38px
