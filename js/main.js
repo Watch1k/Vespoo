@@ -244,6 +244,11 @@ $(document).ready(function(){
 	    });
 	}
 
+// Show phone number
+	$('.show-phone').on('click', function(){
+		var authorPhone = $(this).find('.author-phone').attr('data-phone');
+		$(this).find('.author-phone').text(authorPhone);
+	});
 
 // Main Slider
 	$('.slider-main').slick({

@@ -855,9 +855,10 @@ form .field:after { content: ""; display: table; clear: both; }
 
 .advert-el__price { height: 86px; font-size: 38px; color: #d4762d; font-weight: bold; text-align: center; line-height: 86px; background-color: #f1f0f0; }
 .advert-el .submit-btn { margin-top: 20px; padding-left: 15px; text-align: left; display: block; line-height: 45px; }
+.advert-el .submit-btn.show-phone { text-transform: none; }
 .advert-el .submit-btn .icon-all-mail-lg, .advert-el .submit-btn .icon-all-phone-lg { display: inline-block; margin-right: 15px; vertical-align: -2px; }
 .advert-el .submit-btn .icon-all-phone-lg { vertical-align: -6px; }
-.advert-el .submit-btn span + span { margin-left: 5px; font-size: 14px; color: #d0c9dc; letter-spacing: 0.05em; }
+.advert-el .submit-btn span + span { margin-left: 5px; font-size: 14px; color: #d0c9dc; letter-spacing: 0.05em; text-transform: uppercase; }
 .advert-el .submit-btn + .submit-btn { margin-top: 10px; }
 
 .advert-el__map { margin-top: 18px; padding: 5px 5px 20px 5px; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
