@@ -47,6 +47,10 @@ $(document).ready(function(){
 		$('.banner-top').each(function(){
 			if ($(this).css('display') == 'none') {
 				$('.header').css('top', '0');
+				if ($('.advert-el').length) {
+					advertStart = $('.advert-el').offset().top - 60;
+					advertStop = $('.advert-wrap').height() + advertStart - $('.advert-el').height() + $('.advert-el__map').outerHeight();
+				};
 			};
 			// var checkBlock = $(this).find('img');
 			// if (checkBlock.css('display') == 'none') {
@@ -352,9 +356,16 @@ $(document).ready(function(){
 	$('.close-banner').on('click', function(){
 		$(this).parent().hide();
 	});
+
+	var advertStart;
+	var advertStop;
 	$('.close-banner-fix').on('click', function(){
 		$(this).parent().hide();
 		$('.header').css('top', '0');
+		if ($('.advert-el').length) {
+			advertStart = $('.advert-el').offset().top - 60;
+			advertStop = $('.advert-wrap').height() + advertStart - $('.advert-el').height() + $('.advert-el__map').outerHeight();
+		};
 	});
 
 // Advert fancybox
@@ -418,8 +429,8 @@ $(document).ready(function(){
 // fixed advert aside
 	$(window).load(function(){
 		if ($('.advert-el').length) {
-			var advertStart = $('.advert-el').offset().top - 60;
-			var advertStop = $('.advert-wrap').height() + advertStart - $('.advert-el').height();
+			advertStart = $('.advert-el').offset().top - 60;
+			advertStop = $('.advert-wrap').height() + advertStart - $('.advert-el').height() + $('.advert-el__map').outerHeight();
 			console.log(advertStop);
 			$(window).scroll(function(){
 				if ((jQuery(document).scrollTop() >= advertStart) && (jQuery(document).scrollTop() < advertStop)) {
@@ -427,6 +438,11 @@ $(document).ready(function(){
 				} else {
 					$('.advert-el').removeClass('is-fixed');
 				}
+				if (jQuery(document).scrollTop() >= advertStart) {
+					$('.advert-el__map').slideUp();
+				} else {
+					$('.advert-el__map').slideDown();
+				};
 				if (jQuery(document).scrollTop() >= advertStop) {
 					$('.advert-el').css({
 						'top': 'auto',
