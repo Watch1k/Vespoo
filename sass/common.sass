@@ -3,13 +3,15 @@
 @import compass
 /*----- Slick Slider Styles -----*/
 @import slick
-@import icon-main/*.png
+@import icons-sprites/icon-main/*.png
 /**/
-@import icon-social/*.png
+@import icons-sprites/icon-social/*.png
 /**/
-@import icon-work/*.png
+@import icons-sprites/icon-work/*.png
 /**/
-@import icon-all/*.png
+@import icons-sprites/icon-all/*.png
+/**/
+@import icons-sprites/icon-list/*.png
 /**/
 
 /*----- icon main -----*/
@@ -24,6 +26,9 @@ $icon-work-sprite-dimensions: true
 /*----- icon all -----*/
 $icon-all-sprite-dimensions: true
 @include all-icon-all-sprites
+/*----- icon list -----*/
+$icon-list-sprite-dimensions: true
+@include all-icon-list-sprites
 
 // fonts
 $default-fonts: Arial, sans-serif
@@ -2011,3 +2016,98 @@ form .field
 			margin-top: 10px
 			color: $orange
 			border-bottom: 1px solid lighten($orange,25)
+/*-------------------------------------------------------------------------*/
+/*------------------------ List of Advertisements -------------------------*/
+/*-------------------------------------------------------------------------*/
+.advertlist-wrap
+	margin-top: 20px
+	+pie-clearfix
+.advertlist-in
+	float: right
+	width: 672px
+	+pie-clearfix
+.breadcrumbs.sm
+	padding: 5px
+	+pie-clearfix
+	> i
+		float: left
+		margin-top: 3px
+		margin-left: 3px
+		margin-bottom: 3px
+		margin-right: 8px
+		padding-right: 10px
+		border-right: 1px solid $viollet
+		box-sizing: content-box
+	.breadcrumbs-list
+		overflow: hidden
+		margin-top: 5px
+		padding: 8px 15px 11px 10px
+.al-settings
+	margin-top: 15px
+	font-size: 18px
+	line-height: 31px
+	+pie-clearfix
+	&-type
+		float: left
+		+pie-clearfix
+		li
+			float: left
+			+ li
+				margin-left: 10px
+			a
+				display: block
+				padding: 0 10px
+				box-shadow: 0 0 6px rgba(1,1,1,0.3)
+				border-bottom: 2px solid transparent
+				&:hover
+					border-bottom: 2px solid lighten($orange,25)
+	&-sort
+		float: left
+		margin-left: 10px
+		width: 242px
+		.selectric
+			.label
+				margin: 0 23px 0 10px
+				height: 33px
+				line-height: 33px
+				font-size: 18px
+			.button
+				width: 23px
+				height: 33px
+				border-left: 1px solid #dfdfdf
+	&-currency
+		float: left
+		margin-left: 11px
+		box-shadow: 0 0 6px rgba(1,1,1,0.3)
+		+pie-clearfix
+		&:hover
+		li
+			float: left
+			+ li
+				border-left: 1px solid #dfdfdf
+			a
+				display: block
+				padding: 0 6px
+				border-bottom: 2px solid transparent
+				&:hover
+					border-bottom: 2px solid lighten($orange,25)
+	&-view
+		float: right
+		box-shadow: 0 0 6px rgba(1,1,1,0.3)
+		+pie-clearfix
+		li
+			float: left
+			+ li
+				border-left: 1px solid #dfdfdf
+			a
+				display: block
+				width: 37px
+				height: 33px
+				line-height: 30px
+				text-align: center
+				border-bottom: 2px solid transparent
+				&:hover
+					border-bottom: 2px solid lighten($orange,25)
+				i
+					display: inline-block
+					vertical-align: middle
