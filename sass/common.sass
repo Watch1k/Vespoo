@@ -112,6 +112,8 @@ body
 /*-------------------------------------------------------------------------*/
 /*----------------------------- Main page ---------------------------------*/
 /*-------------------------------------------------------------------------*/
+.is-hidden
+	display: none
 .white-btn
 	display: block
 	padding: 0 10px
@@ -292,8 +294,6 @@ body
 	background-color: $viollet
 	transition: all 0.3s
 	+pie-clearfix
-	&.is-hidden
-		display: none
 	.field
 		float: left
 		width: 268px
@@ -2030,21 +2030,21 @@ form .field
 	width: 672px
 	+pie-clearfix
 .breadcrumbs.sm
+	position: relative
 	padding: 5px
 	+pie-clearfix
 	> i
-		float: left
-		margin-top: 3px
-		margin-left: 3px
-		margin-bottom: 3px
-		margin-right: 8px
-		padding-right: 10px
-		border-right: 1px solid $viollet
-		box-sizing: content-box
+		position: absolute
+		top: 50%
+		left: 8px
+		margin-top: -20px
 	.breadcrumbs-list
 		overflow: hidden
-		margin-top: 5px
-		padding: 8px 15px 11px 10px
+		margin-left: 50px
+		padding: 10px 15px 11px 10px
+		border-left: 1px solid lighten($viollet,20)
+		li
+			margin-top: 3px
 .al-settings
 	margin-top: 15px
 	font-size: 18px
@@ -2091,7 +2091,6 @@ form .field
 		margin-left: 11px
 		box-shadow: 0 0 6px rgba(1,1,1,0.3)
 		+pie-clearfix
-		&:hover
 		li
 			float: left
 			&.is-active
@@ -2196,3 +2195,201 @@ form .field
 			.icon-all-star
 				margin-top: -3px
 				display: inline-block
+.advertlist-aside
+	float: left
+	position: relative
+	width: 288px
+	padding-bottom: 440px
+	.banner
+		a
+			width: 240px
+			height: 400px
+.multifilters-wrap
+	position: relative
+	.help-category
+		position: absolute
+		left: -110px
+		top: -25px
+		width: 75px
+		font-size: 14px
+		color: $orange
+		font-weight: bold
+		i
+			position: absolute
+			display: block
+			right: -30px
+			bottom: -35px
+.multifilters
+	padding: 25px 20px
+	background-color: #f1f0f0
+	+pie-clearfix
+	.multifilters-in
+		+pie-clearfix
+		+ .multifilters-in
+			margin-top: 20px
+			&.multifilters-both
+				margin-top: 10px
+				&:before
+					position: absolute
+					content: ''
+					display: block
+					left: -10px
+					bottom: 50%
+					width: 9px
+					height: 34px
+					border-top: 1px solid #d67b34
+					border-left: 1px solid #d67b34
+					border-bottom: 1px solid #d67b34
+			.nav-btn
+				font-weight: normal
+				line-height: 25px
+				i
+					margin-top: 6px
+			.nav-menu
+				top: 27px
+		&.is-active
+			.nav-btn
+				box-shadow: 0 0 0 1px #d67b34
+			.nav-input
+				box-shadow: 0 0 0 1px #d67b34
+		&.multifilters-input
+			.nav-btn
+				cursor: text
+				i
+					display: none
+		&.multifilters-checkbox
+			.icheckbox_square-orange
+				margin-top: 0
+			.nav-menu
+				li
+					+pie-clearfix
+					label
+						display: block
+						padding: 3px 10px
+						line-height: 22px
+						cursor: pointer
+					&.is-active
+						color: $viollet
+						background-color: #fff
+		&.multifilters-select
+			.nav-menu
+				li
+					+pie-clearfix
+					label
+						display: block
+						line-height: 22px
+						cursor: pointer
+	li
+		position: relative
+		.nav-input
+			display: none
+			height: 25px
+			line-height: 25px
+			user-select: none
+			+placeholder-color(#aaa)
+		.nav-btn
+			position: relative
+			display: block
+			padding: 0 10px
+			width: 100%
+			line-height: 35px
+			font-weight: bold
+			background-color: #fff
+			box-shadow: 0 0 6px rgba(1,1,1,0.3)
+			+pie-clearfix
+			i
+				float: right
+				margin-top: 11px
+		.clear-filter-btn
+			display: none
+			position: absolute
+			right: 0
+			top: 0
+			width: 35px
+			height: 25px
+			cursor: pointer
+			background: url("../img/other/cancel.png") no-repeat center center, #fff
+			&:hover
+				background-image: url("../img/other/cancel-hover.png")
+		.nav-menu
+			display: none
+			overflow-y: auto
+			position: absolute
+			z-index: 50
+			left: 0
+			top: 37px
+			min-width: 100%
+			max-height: 300px
+			font-size: 14px
+			line-height: 20px
+			background-color: #fff
+			box-shadow: 0 0 6px rgba(1,1,1,0.3)
+			li
+				color: $viollet
+				border-bottom: 1px solid #eee
+				&.is-active, &.is-active:hover
+					color: #fff
+					background-color: $orange
+				&:hover
+					background-color: lighten($orange,45)
+					.nav-submenu
+						display: block
+				a
+					display: block
+					padding: 5px 10px
+					white-space: nowrap
+					+pie-clearfix
+					i
+						float: right
+						margin-top: 2px
+				.nav-submenu
+					display: none
+					position: absolute
+					top: 0
+					left: 100%
+					background-color: #fff
+					box-shadow: 0 0 6px rgba(1,1,1,0.3)
+/* pagination */
+.pagination
+	margin-top: 20px
+	line-height: 25px
+	+pie-clearfix
+	&__list
+		float: left
+		margin-right: 10px
+		li
+			display: inline-block
+			margin-right: 3px
+			&:hover, &.is-active
+				color: $orange
+	&__number
+		float: left
+		padding-left: 10px
+		border-left: 1px solid lighten($viollet,25)
+		+pie-clearfix
+		span
+			float: left
+			margin-right: 10px
+		form
+			float: left
+			.form-input
+				padding: 0
+				width: 50px
+				height: 25px
+				text-align: center
+				&:focus
+					box-shadow: 0 0 5px $orange
+			input[type="submit"]
+				display: none
+				visibility: hidden
+				opacity: 0
+	&__nav
+		float: right
+		.prev-button, .next-button
+			float: left
+			padding: 0 8px
+			box-shadow: 0 0 6px rgba(1,1,1,0.3)
+			&:hover
+				color: $orange
+		.next-button
+			margin-left: 10px
