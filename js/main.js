@@ -106,6 +106,7 @@ $(document).ready(function(){
 
 	// select
 	$('.multifilters-select .nav-menu li a').on('click', function(){
+		var _indOutfilters = $('.outfilters-in').length;
 		var _indCategory = false;
 		defaultValuesIndex = $(this).parents('.multifilters-in').index();
 		textIndex = $(this).parent('li').index();
@@ -133,20 +134,60 @@ $(document).ready(function(){
 					.find('span')
 					.text(_chosenValue);
 			} else {
-				$('.outfilters')
-					.append('<li class="outfilters-in"></li>')
-					.children('.outfilters-in:last-child')
-					.attr('data-category-index', defaultValuesIndex)
-					.append('<p class="outfilters-title"></p>')
-					.children('.outfilters-title')
-					.text(defaultValues[defaultValuesIndex])
-					.after('<ul class="outfilters-list"></ul>')
-					.siblings('.outfilters-list')
-					.append('<li><button class="outfilters-cancel"><i class="icon-all-check-cancel"></i></button><span></span></li>')
-					.children('li')
-					.attr('data-text-index', textIndex)
-					.find('span')
-					.text(_chosenValue);
+				var _position = false;
+				if (_indOutfilters) {
+					$('.outfilters-in').each(function(){
+						if (defaultValuesIndex > $(this).attr('data-category-index')) {
+							_position = $(this).attr('data-category-index');
+						};
+					});
+					if (_position) {
+						$('.outfilters')
+							.find('.outfilters-in[data-category-index="'+_position+'"]')
+							.after('<li class="outfilters-in" data-category-index="'+defaultValuesIndex+'"></li>')
+							.siblings('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]')
+							.append('<p class="outfilters-title"></p>')
+							.children('.outfilters-title')
+							.text(defaultValues[defaultValuesIndex])
+							.after('<ul class="outfilters-list"></ul>')
+							.siblings('.outfilters-list')
+							.append('<li><button class="outfilters-cancel"><i class="icon-all-check-cancel"></i></button><span></span></li>')
+							.children('li')
+							.attr('data-text-index', textIndex)
+							.find('span')
+							.text(_chosenValue);
+					} else {
+						$('.outfilters')
+							.children('.outfilters-in:first-child')
+							.before('<li class="outfilters-in" data-category-index="'+defaultValuesIndex+'"></li>')
+							.siblings('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]')
+							.append('<p class="outfilters-title"></p>')
+							.children('.outfilters-title')
+							.text(defaultValues[defaultValuesIndex])
+							.after('<ul class="outfilters-list"></ul>')
+							.siblings('.outfilters-list')
+							.append('<li><button class="outfilters-cancel"><i class="icon-all-check-cancel"></i></button><span></span></li>')
+							.children('li')
+							.attr('data-text-index', textIndex)
+							.find('span')
+							.text(_chosenValue);
+					}
+				} else {
+					$('.outfilters')
+						.append('<li class="outfilters-in"></li>')
+						.children('.outfilters-in')
+						.attr('data-category-index', defaultValuesIndex)
+						.append('<p class="outfilters-title"></p>')
+						.children('.outfilters-title')
+						.text(defaultValues[defaultValuesIndex])
+						.after('<ul class="outfilters-list"></ul>')
+						.siblings('.outfilters-list')
+						.append('<li><button class="outfilters-cancel"><i class="icon-all-check-cancel"></i></button><span></span></li>')
+						.children('li')
+						.attr('data-text-index', textIndex)
+						.find('span')
+						.text(_chosenValue);
+				}
 			}
 		} else {
 			$(this).parents('.nav-menu').hide().siblings('.nav-btn').children('span').text(defaultValues[defaultValuesIndex]);
@@ -155,7 +196,7 @@ $(document).ready(function(){
 			$(this).parents('.multifilters-in').removeClass('is-active');
 			// outfilters
 			$('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]').remove();
-			var _indOutfilters = $('.outfilters-in').length;
+			_indOutfilters = $('.outfilters-in').length;
 			if (!_indOutfilters) {
 				$('.outfilters-wrap').slideUp();
 			};
