@@ -2204,21 +2204,85 @@ form .field
 		a
 			width: 240px
 			height: 400px
+/* outfilters */
+.outfilters-wrap
+	display: none
+	position: relative
+	margin-bottom: 20px
+	padding-bottom: 15px
+	background-color: #f1f0f0
+	.help-block-info
+		position: absolute
+		left: -113px
+		top: 4px
+		width: 75px
+		font-size: 14px
+		line-height: 16px
+		color: $viollet
+		font-weight: bold
+		i
+			position: absolute
+			display: block
+			right: -33px
+			bottom: -40px
+	.title-sm
+		margin: 0 5px
+		padding-left: 15px
+		text-transform: none
+		line-height: 40px
+		border-bottom: 1px solid #d2d1d1
+.outfilters
+	padding: 10px 20px
+	&-title
+		font-weight: bold
+	&-list
+		margin-left: 10px
+		margin-bottom: 10px
+		+pie-clearfix
+		li
+			margin-top: 3px
+			mb
+			+pie-clearfix
+			.outfilters-cancel
+				float: left
+				margin-top: 3px
+				margin-right: 10px
+				box-shadow: 0 0 6px rgba(1,1,1,0.3)
+				&:hover
+					box-shadow: 0 0 5px $orange
+				i
+					display: block
+					vertical-align: middle
+.cancel-btn-wrap
+	text-align: center
+	.cancel-btn
+		display: inline-block
+		padding-bottom: 1px
+		font-size: 14px
+		color: $orange
+		background-color: transparent
+		border-bottom: 1px solid lighten($orange,15)
+		transition: all 0.2s
+		&:hover
+			text-shadow: 0 0 0.5px $orange
+			transition: all 0.2s
+/* multifilters */
 .multifilters-wrap
 	position: relative
-	.help-category
+	.help-block-info
 		position: absolute
-		left: -110px
+		left: -113px
 		top: -25px
 		width: 75px
 		font-size: 14px
+		line-height: 16px
 		color: $orange
 		font-weight: bold
 		i
 			position: absolute
 			display: block
-			right: -30px
-			bottom: -35px
+			right: -33px
+			bottom: -40px
 .multifilters
 	padding: 25px 20px
 	background-color: #f1f0f0

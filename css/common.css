@@ -76,7 +76,7 @@ a { color: inherit; }
 .icon-work-sprite, .icon-work-img_1, .icon-work-img_10, .icon-work-img_11, .icon-work-img_12, .icon-work-img_13, .icon-work-img_14, .icon-work-img_15, .icon-work-img_16, .icon-work-img_17, .icon-work-img_18, .icon-work-img_19, .icon-work-img_2, .icon-work-img_20, .icon-work-img_21, .icon-work-img_3, .icon-work-img_4, .icon-work-img_5, .icon-work-img_6, .icon-work-img_7, .icon-work-img_8, .icon-work-img_9 { background-image: url('../img/icons-sprites/icon-work.png'); background-repeat: no-repeat; }
 
 /* */
-.icon-all-sprite, .icon-all-arrow-left, .icon-all-arrow-right, .icon-all-arrow-top-orange, .icon-all-clip-sm, .icon-all-close, .icon-all-help-category, .icon-all-icon-mark, .icon-all-loc-lg, .icon-all-mail-lg, .icon-all-mail-sm, .icon-all-more-bot-orange, .icon-all-more-right-viollet, .icon-all-phone-lg, .icon-all-phone-sm, .icon-all-skype-sm, .icon-all-star, .icon-all-user-lg { background-image: url('../img/icons-sprites/icon-all.png'); background-repeat: no-repeat; }
+.icon-all-sprite, .icon-all-arrow-left, .icon-all-arrow-right, .icon-all-arrow-top-orange, .icon-all-check-cancel, .icon-all-clip-sm, .icon-all-close, .icon-all-help-category-viollet, .icon-all-help-category, .icon-all-icon-mark, .icon-all-loc-lg, .icon-all-mail-lg, .icon-all-mail-sm, .icon-all-more-bot-orange, .icon-all-more-right-viollet, .icon-all-phone-lg, .icon-all-phone-sm, .icon-all-skype-sm, .icon-all-star, .icon-all-user-lg { background-image: url('../img/icons-sprites/icon-all.png'); background-repeat: no-repeat; }
 
 /* */
 .icon-list-sprite, .icon-list-list, .icon-list-tile { background-image: url('../img/icons-sprites/icon-list.png'); background-repeat: no-repeat; }
@@ -170,34 +170,39 @@ a { color: inherit; }
 
 .icon-all-arrow-top-orange { background-position: 0 -72px; height: 91px; width: 114px; }
 
-.icon-all-clip-sm { background-position: 0 -163px; height: 19px; width: 18px; }
+.icon-all-check-cancel { background-position: 0 -179px; height: 16px; width: 16px; }
+.icon-all-check-cancel:hover, .icon-all-check-cancel.check-cancel-hover { background-position: 0 -163px; }
 
-.icon-all-close { background-position: 0 -182px; height: 12px; width: 12px; }
+.icon-all-clip-sm { background-position: 0 -195px; height: 19px; width: 18px; }
 
-.icon-all-help-category { background-position: 0 -194px; height: 49px; width: 38px; }
+.icon-all-close { background-position: 0 -214px; height: 12px; width: 12px; }
 
-.icon-all-icon-mark { background-position: 0 -243px; height: 70px; width: 55px; }
+.icon-all-help-category-viollet { background-position: 0 -226px; height: 49px; width: 38px; }
 
-.icon-all-loc-lg { background-position: 0 -313px; height: 30px; width: 21px; }
+.icon-all-help-category { background-position: 0 -275px; height: 49px; width: 38px; }
 
-.icon-all-mail-lg { background-position: 0 -343px; height: 20px; width: 28px; }
+.icon-all-icon-mark { background-position: 0 -324px; height: 70px; width: 55px; }
 
-.icon-all-mail-sm { background-position: 0 -363px; height: 16px; width: 22px; }
+.icon-all-loc-lg { background-position: 0 -394px; height: 30px; width: 21px; }
 
-.icon-all-more-bot-orange { background-position: 0 -379px; height: 13px; width: 15px; }
+.icon-all-mail-lg { background-position: 0 -424px; height: 20px; width: 28px; }
 
-.icon-all-more-right-viollet { background-position: 0 -392px; height: 15px; width: 13px; }
+.icon-all-mail-sm { background-position: 0 -444px; height: 16px; width: 22px; }
 
-.icon-all-phone-lg { background-position: 0 -407px; height: 31px; width: 23px; }
+.icon-all-more-bot-orange { background-position: 0 -460px; height: 13px; width: 15px; }
 
-.icon-all-phone-sm { background-position: 0 -438px; height: 23px; width: 18px; }
+.icon-all-more-right-viollet { background-position: 0 -473px; height: 15px; width: 13px; }
 
-.icon-all-skype-sm { background-position: 0 -461px; height: 23px; width: 23px; }
+.icon-all-phone-lg { background-position: 0 -488px; height: 31px; width: 23px; }
 
-.icon-all-star { background-position: 0 -506px; height: 22px; width: 23px; }
-.icon-all-star:hover, .icon-all-star.star-hover { background-position: 0 -484px; }
+.icon-all-phone-sm { background-position: 0 -519px; height: 23px; width: 18px; }
 
-.icon-all-user-lg { background-position: 0 -528px; height: 27px; width: 32px; }
+.icon-all-skype-sm { background-position: 0 -542px; height: 23px; width: 23px; }
+
+.icon-all-star { background-position: 0 -587px; height: 22px; width: 23px; }
+.icon-all-star:hover, .icon-all-star.star-hover { background-position: 0 -565px; }
+
+.icon-all-user-lg { background-position: 0 -609px; height: 27px; width: 32px; }
 
 /*----- icon list ----- */
 .icon-list-list { background-position: 0 -19px; height: 19px; width: 25px; }
@@ -967,9 +972,30 @@ form .field:after { content: ""; display: table; clear: both; }
 .advertlist-aside { float: left; position: relative; width: 288px; padding-bottom: 440px; }
 .advertlist-aside .banner a { width: 240px; height: 400px; }
 
+/* outfilters */
+.outfilters-wrap { display: none; position: relative; margin-bottom: 20px; padding-bottom: 15px; background-color: #f1f0f0; }
+.outfilters-wrap .help-block-info { position: absolute; left: -113px; top: 4px; width: 75px; font-size: 14px; line-height: 16px; color: #583d8b; font-weight: bold; }
+.outfilters-wrap .help-block-info i { position: absolute; display: block; right: -33px; bottom: -40px; }
+.outfilters-wrap .title-sm { margin: 0 5px; padding-left: 15px; text-transform: none; line-height: 40px; border-bottom: 1px solid #d2d1d1; }
+
+.outfilters { padding: 10px 20px; }
+.outfilters-title { font-weight: bold; }
+.outfilters-list { margin-left: 10px; margin-bottom: 10px; *zoom: 1; }
+.outfilters-list:after { content: ""; display: table; clear: both; }
+.outfilters-list li { margin-top: 3px; *zoom: 1; }
+.outfilters-list li:after { content: ""; display: table; clear: both; }
+.outfilters-list li .outfilters-cancel { float: left; margin-top: 3px; margin-right: 10px; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
+.outfilters-list li .outfilters-cancel:hover { box-shadow: 0 0 5px #d4762d; }
+.outfilters-list li .outfilters-cancel i { display: block; vertical-align: middle; }
+
+.cancel-btn-wrap { text-align: center; }
+.cancel-btn-wrap .cancel-btn { display: inline-block; padding-bottom: 1px; font-size: 14px; color: #d4762d; background-color: transparent; border-bottom: 1px solid #e19f6c; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.cancel-btn-wrap .cancel-btn:hover { text-shadow: 0 0 0.5px #d4762d; -webkit-transition: all 0.2s; transition: all 0.2s; }
+
+/* multifilters */
 .multifilters-wrap { position: relative; }
-.multifilters-wrap .help-category { position: absolute; left: -110px; top: -25px; width: 75px; font-size: 14px; color: #d4762d; font-weight: bold; }
-.multifilters-wrap .help-category i { position: absolute; display: block; right: -30px; bottom: -35px; }
+.multifilters-wrap .help-block-info { position: absolute; left: -113px; top: -25px; width: 75px; font-size: 14px; line-height: 16px; color: #d4762d; font-weight: bold; }
+.multifilters-wrap .help-block-info i { position: absolute; display: block; right: -33px; bottom: -40px; }
 
 .multifilters { padding: 25px 20px; background-color: #f1f0f0; *zoom: 1; }
 .multifilters:after { content: ""; display: table; clear: both; }

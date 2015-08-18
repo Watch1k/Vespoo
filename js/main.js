@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	var defaultValues = [];
 	var defaultValuesIndex = 0;
+	var textIndex = 0;
 	// fill array
 	$('.nav-btn').each(function(){
 		defaultValues[defaultValuesIndex] = $(this).children('span').text();
@@ -105,7 +106,9 @@ $(document).ready(function(){
 
 	// select
 	$('.multifilters-select .nav-menu li a').on('click', function(){
+		var _indCategory = false;
 		defaultValuesIndex = $(this).parents('.multifilters-in').index();
+		textIndex = $(this).parent('li').index();
 		var _indexOption = $(this).parents('.nav-menu > li').index();
 		var _chosenValue = $(this).find('span').text();
 		if (_indexOption != 0) {
@@ -113,15 +116,75 @@ $(document).ready(function(){
 			$(this).parents('.nav-menu').siblings('.nav-input').val(_chosenValue);
 			$(this).parents('.nav-menu').siblings('.clear-filter-btn').show();
 			$(this).parents('.multifilters-in').addClass('is-active');
+			// outfilters
+			if ($('.outfilters-wrap').css('display') == 'none') {
+				$('.outfilters-wrap').fadeIn();
+			};
+			$('.outfilters-in').each(function(){
+				if ($(this).attr('data-category-index') == defaultValuesIndex) {
+					_indCategory = true;
+				}
+			});
+			if(_indCategory) {
+				$('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]')
+					.children('.outfilters-list')
+					.children('li')
+					.attr('data-text-index', textIndex)
+					.find('span')
+					.text(_chosenValue);
+			} else {
+				$('.outfilters')
+					.append('<li class="outfilters-in"></li>')
+					.children('.outfilters-in:last-child')
+					.attr('data-category-index', defaultValuesIndex)
+					.append('<p class="outfilters-title"></p>')
+					.children('.outfilters-title')
+					.text(defaultValues[defaultValuesIndex])
+					.after('<ul class="outfilters-list"></ul>')
+					.siblings('.outfilters-list')
+					.append('<li><button class="outfilters-cancel"><i class="icon-all-check-cancel"></i></button><span></span></li>')
+					.children('li')
+					.attr('data-text-index', textIndex)
+					.find('span')
+					.text(_chosenValue);
+			}
 		} else {
 			$(this).parents('.nav-menu').hide().siblings('.nav-btn').children('span').text(defaultValues[defaultValuesIndex]);
 			$(this).parents('.nav-menu').siblings('.nav-input').val('');
 			$(this).parents('.nav-menu').siblings('.clear-filter-btn').hide();
 			$(this).parents('.multifilters-in').removeClass('is-active');
+			// outfilters
+			$('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]').remove();
+			var _indOutfilters = $('.outfilters-in').length;
+			if (!_indOutfilters) {
+				$('.outfilters-wrap').slideUp();
+			};
 		}
 		$(this).parents('.multifilters-in').find('li').removeClass('is-active');
 		$(this).parentsUntil($('.nav-menu'), 'li').addClass('is-active');
 		$('.nav-btn').removeClass('is-active');
+	});
+	
+	// select outfilters CLEAR
+	$('.outfilters').on('click', '.outfilters-cancel', function(){
+		var _indOutfilters = true;
+		defaultValuesIndex = $(this).parents('.outfilters-in').attr('data-category-index');
+		textIndex = $(this).parent('li').attr('data-category-index');
+		$(this).parent('li').remove();
+		var _indCategoryOut = true;
+		_indCategory = $('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]').find('li').length;
+		if (!_indCategory) {
+			$('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]').remove();
+		}
+		_indOutfilters = $('.outfilters-in').length;
+		if (!_indOutfilters) {
+			$('.outfilters-wrap').slideUp();
+		}
+		$('.multifilters-in').eq(defaultValuesIndex).children('.nav-input').val('');
+		$('.multifilters-in').eq(defaultValuesIndex).children('.clear-filter-btn').hide();
+		$('.multifilters-in').eq(defaultValuesIndex).children('.nav-btn').children('span').text(defaultValues[defaultValuesIndex]);
+		$('.multifilters-in').eq(defaultValuesIndex).children('.nav-menu').children('li').removeClass('is-active').eq(0).addClass('is-active');
+		$('.multifilters-in').eq(defaultValuesIndex).removeClass('is-active');
 	});
 
 	// checkbox
@@ -153,7 +216,6 @@ $(document).ready(function(){
 			$(this).parents('.nav-menu').siblings('.clear-filter-btn').show();
 			$(this).parents('.multifilters-in').addClass('is-active');
 		};
-		console.log(_parent.index());
 	});
 	
 	// input
@@ -192,12 +254,18 @@ $(document).ready(function(){
 
 	// clear select
 	$('.multifilters-select .clear-filter-btn').on('click', function(){
+		var _indOutfilters = true;
 		$(this).hide();
 		defaultValuesIndex = $(this).parents('.multifilters-in').index();
 		$(this).siblings('.nav-input').val('');
 		$(this).siblings('.nav-btn').children('span').text(defaultValues[defaultValuesIndex]);
 		$(this).siblings('.nav-menu').children('li').removeClass('is-active').eq(0).addClass('is-active');
 		$(this).parent().removeClass('is-active');
+		$('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]').remove();
+		_indOutfilters = $('.outfilters-in').length;
+		if (!_indOutfilters) {
+			$('.outfilters-wrap').slideUp();
+		};
 	});
 
 	// clear checkbox
@@ -215,6 +283,24 @@ $(document).ready(function(){
 		$(this).siblings('.nav-btn').children('span').text(defaultValues[defaultValuesIndex]);
 		$(this).siblings('.nav-menu').children('li').removeClass('is-active').eq(0).addClass('is-active');
 		$(this).parent().removeClass('is-active');
+	});
+
+	// outfilters main clear button
+	$('.outfilters-wrap .cancel-btn').on('click', function(){
+		$(this).parent().siblings('.outfilters').children('.outfilters-in').remove();
+		$('.outfilters-wrap').slideUp();
+		$('.multifilters-in').removeClass('is-active');
+		$('.multifilters-in').find('.nav-input').val('');
+		defaultValuesIndex = 0;
+		$('.multifilters-in .nav-btn').each(function(){
+			$(this).removeClass('is-active').children('span').text(defaultValues[defaultValuesIndex]);
+			$(this).siblings('.clear-filter-btn').hide();
+			defaultValuesIndex++;
+		});
+		$('.multifilters-select, .multifilters-input').each(function(){
+			$(this).children('.nav-menu').children('li').removeClass('is-active').eq(0).addClass('is-active');
+		});
+
 	});
 
 // Validation
@@ -652,7 +738,6 @@ $(document).ready(function(){
 		if ($('.advert-el').length) {
 			advertStart = $('.advert-el').offset().top - 60;
 			advertStop = $('.advert-wrap').height() + advertStart - $('.advert-el').height() + $('.advert-el__map').outerHeight();
-			console.log(advertStop);
 			$(window).scroll(function(){
 				if ((jQuery(document).scrollTop() >= advertStart) && (jQuery(document).scrollTop() < advertStop)) {
 					$('.advert-el').addClass('is-fixed');
