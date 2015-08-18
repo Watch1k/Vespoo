@@ -993,6 +993,7 @@ form .field:after { content: ""; display: table; clear: both; }
 .multifilters .multifilters-in.multifilters-select .nav-menu li { *zoom: 1; }
 .multifilters .multifilters-in.multifilters-select .nav-menu li:after { content: ""; display: table; clear: both; }
 .multifilters .multifilters-in.multifilters-select .nav-menu li label { display: block; line-height: 22px; cursor: pointer; }
+.multifilters .multifilters-in.multifilters-category .nav-menu { overflow-y: visible; max-height: none; }
 .multifilters li { position: relative; }
 .multifilters li .nav-input { display: none; height: 25px; line-height: 25px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 .multifilters li .nav-input:-moz-placeholder, .multifilters li .nav-input::-moz-placeholder { color: #aaa; opacity: 1; }
