@@ -206,7 +206,7 @@ $(document).ready(function(){
 		$('.nav-btn').removeClass('is-active');
 	});
 	
-	// select outfilters CLEAR
+	// outfilters cancel buttons
 	$('.outfilters').on('click', '.outfilters-cancel', function(){
 		var _indOutfilters = true;
 		defaultValuesIndex = $(this).parents('.outfilters-in').attr('data-category-index');
@@ -221,27 +221,119 @@ $(document).ready(function(){
 		if (!_indOutfilters) {
 			$('.outfilters-wrap').slideUp();
 		}
-		$('.multifilters-in').eq(defaultValuesIndex).children('.nav-input').val('');
-		$('.multifilters-in').eq(defaultValuesIndex).children('.clear-filter-btn').hide();
-		$('.multifilters-in').eq(defaultValuesIndex).children('.nav-btn').children('span').text(defaultValues[defaultValuesIndex]);
-		$('.multifilters-in').eq(defaultValuesIndex).children('.nav-menu').children('li').removeClass('is-active').eq(0).addClass('is-active');
-		$('.multifilters-in').eq(defaultValuesIndex).removeClass('is-active');
+		if ($('.multifilters-in').eq(defaultValuesIndex).hasClass('multifilters-select')) {
+			$('.multifilters-in').eq(defaultValuesIndex).children('.nav-input').val('');
+			$('.multifilters-in').eq(defaultValuesIndex).children('.clear-filter-btn').hide();
+			$('.multifilters-in').eq(defaultValuesIndex).children('.nav-btn').children('span').text(defaultValues[defaultValuesIndex]);
+			$('.multifilters-in').eq(defaultValuesIndex).children('.nav-menu').children('li').removeClass('is-active').eq(0).addClass('is-active');
+			$('.multifilters-in').eq(defaultValuesIndex).removeClass('is-active');
+		};
+		if ($('.multifilters-in').eq(defaultValuesIndex).hasClass('multifilters-checkbox')) {
+			$('.multifilters-in').eq(defaultValuesIndex).find('input').iCheck('uncheck');
+			$('.multifilters-in').eq(defaultValuesIndex).find('input').eq(0).iCheck('check');
+			$('.multifilters-in').eq(defaultValuesIndex).children('.clear-filter-btn').hide();
+			$('.multifilters-in').eq(defaultValuesIndex).children('.nav-btn').children('span').text(defaultValues[defaultValuesIndex]);
+			$('.multifilters-in').eq(defaultValuesIndex).children('.nav-menu').children('li').removeClass('is-active').eq(0).addClass('is-active');
+			$('.multifilters-in').eq(defaultValuesIndex).removeClass('is-active');
+		};
 	});
 
 	// checkbox
 	$('.multifilters-checkbox .nav-menu li label').on('click', function(){
 		$(this).find('input').iCheck('uncheck');
 		$(this).parent('li').siblings('li').find('input').iCheck('uncheck');
+		var _indOutfilters = $('.outfilters-in').length;
+		var _indCategory = false;
 		defaultValuesIndex = $(this).parents('.multifilters-in').index();
+		textIndex = $(this).parents('.nav-menu > li').index();
 		var _indexOption = $(this).parents('.nav-menu > li').index();
+		var _chosenValue = $(this).find('span').text();
 		if (_indexOption != 0) {
 			$(this).parents('.nav-menu').hide();
 			$(this).parents('.nav-menu').siblings('.clear-filter-btn').show();
 			$(this).parents('.multifilters-in').addClass('is-active');
+			// outfilters
+			if ($('.outfilters-wrap').css('display') == 'none') {
+				$('.outfilters-wrap').fadeIn();
+			};
+			$('.outfilters-in').each(function(){
+				if ($(this).attr('data-category-index') == defaultValuesIndex) {
+					_indCategory = true;
+				}
+			});
+			if(_indCategory) {
+				$('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]')
+					.children('.outfilters-list')
+					.children('li')
+					.attr('data-text-index', textIndex)
+					.find('span')
+					.text(_chosenValue);
+			} else {
+				var _position = false;
+				if (_indOutfilters) {
+					$('.outfilters-in').each(function(){
+						if (defaultValuesIndex > $(this).attr('data-category-index')) {
+							_position = $(this).attr('data-category-index');
+						};
+					});
+					if (_position) {
+						$('.outfilters')
+							.find('.outfilters-in[data-category-index="'+_position+'"]')
+							.after('<li class="outfilters-in" data-category-index="'+defaultValuesIndex+'"></li>')
+							.siblings('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]')
+							.append('<p class="outfilters-title"></p>')
+							.children('.outfilters-title')
+							.text(defaultValues[defaultValuesIndex])
+							.after('<ul class="outfilters-list"></ul>')
+							.siblings('.outfilters-list')
+							.append('<li><button class="outfilters-cancel"><i class="icon-all-check-cancel"></i></button><span></span></li>')
+							.children('li')
+							.attr('data-text-index', textIndex)
+							.find('span')
+							.text(_chosenValue);
+					} else {
+						$('.outfilters')
+							.children('.outfilters-in:first-child')
+							.before('<li class="outfilters-in" data-category-index="'+defaultValuesIndex+'"></li>')
+							.siblings('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]')
+							.append('<p class="outfilters-title"></p>')
+							.children('.outfilters-title')
+							.text(defaultValues[defaultValuesIndex])
+							.after('<ul class="outfilters-list"></ul>')
+							.siblings('.outfilters-list')
+							.append('<li><button class="outfilters-cancel"><i class="icon-all-check-cancel"></i></button><span></span></li>')
+							.children('li')
+							.attr('data-text-index', textIndex)
+							.find('span')
+							.text(_chosenValue);
+					}
+				} else {
+					$('.outfilters')
+						.append('<li class="outfilters-in"></li>')
+						.children('.outfilters-in')
+						.attr('data-category-index', defaultValuesIndex)
+						.append('<p class="outfilters-title"></p>')
+						.children('.outfilters-title')
+						.text(defaultValues[defaultValuesIndex])
+						.after('<ul class="outfilters-list"></ul>')
+						.siblings('.outfilters-list')
+						.append('<li><button class="outfilters-cancel"><i class="icon-all-check-cancel"></i></button><span></span></li>')
+						.children('li')
+						.attr('data-text-index', textIndex)
+						.find('span')
+						.text(_chosenValue);
+				}
+			}
 		} else {
 			$(this).parents('.nav-menu').hide();
 			$(this).parents('.nav-menu').siblings('.clear-filter-btn').hide();
 			$(this).parents('.multifilters-in').removeClass('is-active');
+			// outfilters
+			$('.outfilters-in[data-category-index="'+defaultValuesIndex+'"]').remove();
+			_indOutfilters = $('.outfilters-in').length;
+			if (!_indOutfilters) {
+				$('.outfilters-wrap').slideUp();
+			};
 		}
 		$('.nav-btn').removeClass('is-active');
 	});
