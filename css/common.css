@@ -370,9 +370,11 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 .post-list__in { margin-top: 8px; border-top: 1px solid rgba(88, 61, 139, 0.65); }
 .post-list__in p + p { font-size: 20px; color: #d4762d; }
 
-.vip-post { margin-top: 27px; }
-.vip-post .post-list { margin-left: 0; }
-.vip-post .post-list li { margin-top: 20px; margin-left: 30px; }
+.vip-post, .advertlist-post { margin-top: 27px; }
+.vip-post .post-list, .advertlist-post .post-list { margin-left: 0; }
+.vip-post .post-list li, .advertlist-post .post-list li { margin-top: 25px; margin-left: 30px; }
+
+.advertlist-post { margin-top: 20px; padding-bottom: 30px; border-top: 1px solid #9980c7; }
 
 .post-title { padding-left: 10px; font-size: 20px; color: #fff; line-height: 35px; text-transform: uppercase; font-weight: normal; background-color: #d4762d; }
 .post-title a:hover { border-bottom: 2px solid #fff; }

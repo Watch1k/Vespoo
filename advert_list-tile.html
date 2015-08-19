@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vespoo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/orange.css">
+	<link rel="stylesheet" href="css/selectric.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/jquery.fancybox-thumbs.css">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	
+	<!-- begin wrapper  -->
+	<div id="main" class="wrapper">
+		<!-- begin banner-top -->
+		<div class="banner-top">
+			<a href="#" class="banner-top__in"></a>
+			<button class="close-banner-fix">x</button>
+		</div>
+		<!-- end banner-top -->
+		
+		<!-- begin header  -->
+		<div class="header">
+			<div class="container">
+				<!-- begin header__top  -->
+				<div class="header__top">
+					<a href="index.html" class="logo"><img src="img/logo.png" alt="Vespoo"></a>
+					<a href="#" class="post-new">+ Подать объявление</a>
+					<a href="#" class="userbox">Мой профиль</a>
+					<ul class="lang-selector">
+						<li><a href="#">язык</a></li>
+						<li><a href="#">мова</a></li>
+					</ul>
+				</div>
+				<!-- end header__top -->
+				
+				<form action="#" id="searchForm" class="form-search">
+					<fieldset>
+						<!-- begin field  -->
+						<div class="field location">
+							<input type="text" id="cityCurrent" readonly="readonly" placeholder="Город, область...">
+							<a href="#" class="clear-input reset icon-all-close"></a>
+						</div>
+						<!-- begin field  -->
+						<div class="field search">
+							<input type="text" placeholder="Поиск...">
+							<a href="#" class="clear-input icon-all-close"></a>
+						</div>
+						<!-- begin field  -->
+						<div class="field submit">
+							<button type="submit">Поиск</button>
+						</div>
+					</fieldset>
+				</form>
+
+				<!-- begion location-wrap -->
+				<div class="location-wrap">
+					<div class="location-title">
+						<button class="location-title__all">Вся Украина</button>
+						<button class="location-title__region">область</button>
+						<button class="location-title__back">вернуться к выбору области</button>
+					</div>
+					<div class="search-city-wrap">
+						<input type="text" id="cityBox" placeholder="Начните вводить город">
+						<a href="#" class="clear-input icon-all-close"></a>
+					</div>
+					<div class="region-wrap"></div>
+					<div class="city-wrap"></div>
+				</div>
+				<!-- end location-wrap -->
+			</div>
+		</div>
+		<!-- end header -->
+
+		<!-- begin body-branding  -->
+		<div class="body-branding">
+			<!-- begin banner  -->
+			<div class="banner-1">
+				<a href="#"><img src="img/banners/Banner-160x600.jpg" alt="banner"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end banner -->
+
+			<!-- begin service-1  -->
+			<div class="service-1">
+				<a href="#"><img src="img/banners/service-1.jpg" alt="service"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end service-1 -->
+
+			<!-- begin service-2  -->
+			<div class="service-2">
+				<a href="#"><img src="img/banners/service-1.jpg" alt="service"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end service-2 -->
+		</div>
+		<!-- end body-branding -->
+
+		<!-- begin content-wrap  -->
+		<div class="content-wrap container">
+			<!-- begin banner-inner__top  -->
+			<div class="banner-inner__top">
+				<a href="#"><img src="img/banners/banner-inner-top.jpg" alt="banner"></a>
+			</div>
+			<!-- end banner-inner__top -->
+
+			<!-- begin advertlist-wrap  -->
+			<div class="advertlist-wrap">
+				<!-- begin advertlist-aside  -->
+				<div class="advertlist-aside">
+					<!-- begin outfilters-wrap  -->
+					<div class="outfilters-wrap">
+						<!-- begin help-block-info  -->
+						<div class="help-block-info">
+							<span>Удалите ненужные фильтры</span>
+							<i class="icon-all-help-category-viollet"></i>
+						</div>
+						<!-- end help-block-info -->
+						<p class="title-sm">Вы уже выбрали:</p>
+
+						<!-- begin outfilters-container -->
+						<div class="outfilters-container">
+							<ul class="outfilters"></ul>
+						</div>
+						<!-- end outfilters-container -->
+
+						<div class="all-filter-btn">
+							<span>показать весь фильтр</span>
+						</div>
+
+						<div class="cancel-btn-wrap">
+							<button class="cancel-btn">Убрать все фильтры</button>
+						</div>
+					</div>
+					<!-- end outfilters-wrap -->
+
+					<!-- begin multifilters-wrap  -->
+					<form action="#" class="multifilters-wrap">
+						<fieldset>
+							<!-- begin help-block-info  -->
+							<div class="help-block-info">
+								<span>Выберите рубрику</span>
+								<i class="icon-all-help-category"></i>
+							</div>
+							<!-- end help-block-info -->
+
+							<ul class="multifilters">
+								<!-- begin main category -->
+								<li class="multifilters-in multifilters-category">
+									<a href="javascript:void(0);" class="nav-btn"><span>Все рубрики</span><i class="icon-all-more-bot-orange"></i></a>
+									<input type="text" class="form-input nav-input" name="category">
+									<ul class="nav-menu">
+										<!-- begin category -->
+										<li class="is-active">
+											<a href="javascript:void(0);"><span>Все рубрики</span></a>
+										</li>
+										<!-- begin category -->
+										<li>
+											<a href="javascript:void(0);"><i class="icon-all-more-right-viollet"></i><span>Детский мир</span></a>
+											<!-- begin sub-category -->
+											<ul class="nav-submenu">
+												<li><a href="javascript:void(0);"><span>Категория 1</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 2</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 3</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 4</span></a></li>
+											</ul>
+										</li>
+										<!-- begin category -->
+										<li>
+											<a href="javascript:void(0);"><i class="icon-all-more-right-viollet"></i><span>Недвижимость</span></a>
+											<!-- begin sub-category -->
+											<ul class="nav-submenu">
+												<li><a href="javascript:void(0);"><span>Категория 1</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 2</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 3</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 4</span></a></li>
+											</ul>
+										</li>
+										<!-- begin category -->
+										<li>
+											<a href="javascript:void(0);"><i class="icon-all-more-right-viollet"></i><span>Транспорт</span></a>
+											<!-- begin sub-category -->
+											<ul class="nav-submenu">
+												<li><a href="javascript:void(0);"><span>Категория 1</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 2</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 3</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 4</span></a></li>
+											</ul>
+										</li>
+										<!-- begin category -->
+										<li>
+											<a href="javascript:void(0);"><i class="icon-all-more-right-viollet"></i><span>Работа</span></a>
+											<!-- begin sub-category -->
+											<ul class="nav-submenu">
+												<li><a href="javascript:void(0);"><span>Категория 1</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 2</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 3</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 4</span></a></li>
+											</ul>
+										</li>
+										<!-- begin category -->
+										<li>
+											<a href="javascript:void(0);"><i class="icon-all-more-right-viollet"></i><span>Животные</span></a>
+											<!-- begin sub-category -->
+											<ul class="nav-submenu">
+												<li><a href="javascript:void(0);"><span>Категория 1</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 2</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 3</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 4</span></a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="javascript:void(0);"><i class="icon-all-more-right-viollet"></i><span>Дом и сад</span></a>
+											<!-- begin sub-category -->
+											<ul class="nav-submenu">
+												<li><a href="javascript:void(0);"><span>Категория 1</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 2</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 3</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 4</span></a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="javascript:void(0);"><i class="icon-all-more-right-viollet"></i><span>Электроника</span></a>
+											<!-- begin sub-category -->
+											<ul class="nav-submenu">
+												<li><a href="javascript:void(0);"><span>Категория 1</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 2</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 3</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 4</span></a></li>
+											</ul>
+										</li>
+										<!-- begin category -->
+										<li>
+											<a href="javascript:void(0);"><i class="icon-all-more-right-viollet"></i><span>Бизнес и услуги</span></a>
+											<!-- begin sub-category -->
+											<ul class="nav-submenu">
+												<li><a href="javascript:void(0);"><span>Категория 1</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 2</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 3</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 4</span></a></li>
+											</ul>
+										</li>
+										<!-- begin category -->
+										<li>
+											<a href="javascript:void(0);"><i class="icon-all-more-right-viollet"></i><span>Мода и стиль</span></a>
+											<!-- begin sub-category -->
+											<ul class="nav-submenu">
+												<li><a href="javascript:void(0);"><span>Категория 1</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 2</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 3</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 4</span></a></li>
+											</ul>
+										</li>
+										<!-- begin category -->
+										<li>
+											<a href="javascript:void(0);"><i class="icon-all-more-right-viollet"></i><span>Хобби, отдых и спорт</span></a>
+											<!-- begin sub-category -->
+											<ul class="nav-submenu">
+												<li><a href="javascript:void(0);"><span>Категория 1</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 2</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 3</span></a></li>
+												<li><a href="javascript:void(0);"><span>Категория 4</span></a></li>
+											</ul>
+										</li>
+										<!-- begin category -->
+										<li>
+											<a href="javascript:void(0);"><span>Нужна помощь</span></a>
+										</li>
+										<!-- begin category -->
+										<li>
+											<a href="javascript:void(0);"><span>Отдам даром</span></a>
+										</li>
+										<!-- begin category -->
+										<li>
+											<a href="javascript:void(0);"><span>Обмен</span></a>
+										</li>
+									</ul>
+								</li>
+								<!-- begin select -->
+								<li class="multifilters-in multifilters-select">
+									<a href="javascript:void(0);" class="nav-btn"><span>Марка</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<input type="text" class="form-input nav-input" name="brand">
+									<ul class="nav-menu">
+										<li><a href="javascript:void(0);"><span>Все</span></a></li>
+										<li><a href="javascript:void(0);"><span>BMW</span></a></li>
+										<li><a href="javascript:void(0);"><span>Lexus</span></a></li>
+										<li><a href="javascript:void(0);"><span>Audi</span></a></li>
+									</ul>
+								</li>
+								<!-- begin checkbox -->
+								<li class="multifilters-in multifilters-checkbox">
+									<a href="javascript:void(0);" class="nav-btn"><span>Модель</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<div class="multifilters-info-wrap"><i class="icon-all-info"></i><span></span></div>
+									<ul class="nav-menu">
+										<li><label><input type="checkbox"><span>Все</span></label></li>
+										<li><label><input type="checkbox"><span>Модель 1</span><i class="icon-all-info multifilters-info">подсказка, которой повезло - она особенная</i></label></li>
+										<li><label><input type="checkbox"><span>Модель 2</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Модель 3</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+									</ul>
+								</li>
+								<!-- begin select-input -->
+								<li class="multifilters-in multifilters-input">
+									<a href="javascript:void(0);" class="nav-btn" data-mask-text="от"><span>Год выпуска от</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<input type="text" class="form-input nav-input mask-input" placeholder="введите" name="year_from" data-mask-character="number">
+									<ul class="nav-menu">
+										<li class="is-active"><a href="javascript:void(0);"><span>Все</span></a></li>
+										<li><a href="javascript:void(0);"><span>1990</span></a></li>
+										<li><a href="javascript:void(0);"><span>1995</span></a></li>
+										<li><a href="javascript:void(0);"><span>2000</span></a></li>
+									</ul>
+								</li>
+								<!-- begin select-input both -->
+								<li class="multifilters-in multifilters-input multifilters-both">
+									<a href="javascript:void(0);" class="nav-btn" data-mask-text="до"><span>Год выпуска до</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<input type="text" class="form-input nav-input mask-input" placeholder="введите" name="year_to" data-mask-character="number">
+									<ul class="nav-menu">
+										<li class="is-active"><a href="javascript:void(0);"><span>Все</span></a></li>
+										<li><a href="javascript:void(0);"><span>1990</span></a></li>
+										<li><a href="javascript:void(0);"><span>1995</span></a></li>
+										<li><a href="javascript:void(0);"><span>2000</span></a></li>
+									</ul>
+								</li>
+								<!-- begin select-input -->
+								<li class="multifilters-in multifilters-input">
+									<a href="javascript:void(0);" class="nav-btn" data-mask-text="от (грн.)"><span>Цена от</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<input type="text" class="form-input nav-input mask-input" placeholder="введите" name="price_from" data-mask-character="number">
+									<ul class="nav-menu">
+										<li class="is-active"><a href="javascript:void(0);"><span>Все</span></a></li>
+										<li><a href="javascript:void(0);"><span>17000</span></a></li>
+										<li><a href="javascript:void(0);"><span>20000</span></a></li>
+										<li><a href="javascript:void(0);"><span>25000</span></a></li>
+									</ul>
+								</li>
+								<!-- begin select-input both -->
+								<li class="multifilters-in multifilters-input multifilters-both">
+									<a href="javascript:void(0);" class="nav-btn" data-mask-text="до (грн.)"><span>Цена до</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<input type="text" class="form-input nav-input mask-input" placeholder="введите" name="price_to" data-mask-character="number">
+									<ul class="nav-menu">
+										<li class="is-active"><a href="javascript:void(0);"><span>Все</span></a></li>
+										<li><a href="javascript:void(0);"><span>17000</span></a></li>
+										<li><a href="javascript:void(0);"><span>20000</span></a></li>
+										<li><a href="javascript:void(0);"><span>25000</span></a></li>
+									</ul>
+								</li>
+								<!-- begin select-input -->
+								<li class="multifilters-in multifilters-input">
+									<a href="javascript:void(0);" class="nav-btn" data-mask-text="от (см&sup3;)"><span>Объем двигателя от</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<input type="text" class="form-input nav-input mask-input" placeholder="введите" name="capacity_from" data-mask-character="number">
+									<ul class="nav-menu">
+										<li class="is-active"><a href="javascript:void(0);"><span>Все</span></a></li>
+										<li><a href="javascript:void(0);"><span>150000</span></a></li>
+										<li><a href="javascript:void(0);"><span>200000</span></a></li>
+										<li><a href="javascript:void(0);"><span>250000</span></a></li>
+									</ul>
+								</li>
+								<!-- begin select-input both -->
+								<li class="multifilters-in multifilters-input multifilters-both">
+									<a href="javascript:void(0);" class="nav-btn" data-mask-text="до (см&sup3;)"><span>Объем двигателя до</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<input type="text" class="form-input nav-input mask-input" placeholder="введите" name="capacity_to" data-mask-character="number">
+									<ul class="nav-menu">
+										<li class="is-active"><a href="javascript:void(0);"><span>Все</span></a></li>
+										<li><a href="javascript:void(0);"><span>150000</span></a></li>
+										<li><a href="javascript:void(0);"><span>200000</span></a></li>
+										<li><a href="javascript:void(0);"><span>250000</span></a></li>
+									</ul>
+								</li>
+								<!-- begin select-input -->
+								<li class="multifilters-in multifilters-input">
+									<a href="javascript:void(0);" class="nav-btn" data-mask-text="от (км)"><span>Пробег от</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<input type="text" class="form-input nav-input mask-input" placeholder="введите" name="distance_from" data-mask-character="number">
+									<ul class="nav-menu">
+										<li class="is-active"><a href="javascript:void(0);"><span>Все</span></a></li>
+										<li><a href="javascript:void(0);"><span>150000</span></a></li>
+										<li><a href="javascript:void(0);"><span>200000</span></a></li>
+										<li><a href="javascript:void(0);"><span>250000</span></a></li>
+									</ul>
+								</li>
+								<!-- begin select-input both -->
+								<li class="multifilters-in multifilters-input multifilters-both">
+									<a href="javascript:void(0);" class="nav-btn" data-mask-text="до (км)"><span>Пробег до</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<input type="text" class="form-input nav-input mask-input" placeholder="введите" name="distance_to" data-mask-character="number">
+									<ul class="nav-menu">
+										<li><a href="javascript:void(0);"><span>Все</span></a></li>
+										<li><a href="javascript:void(0);"><span>150000</span></a></li>
+										<li><a href="javascript:void(0);"><span>200000</span></a></li>
+										<li><a href="javascript:void(0);"><span>250000</span></a></li>
+									</ul>
+								</li>
+								<!-- begin checkbox -->
+								<li class="multifilters-in multifilters-checkbox">
+									<a href="javascript:void(0);" class="nav-btn"><span>Тип кузова</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<div class="multifilters-info-wrap"><i class="icon-all-info"></i><span></span></div>
+									<ul class="nav-menu">
+										<li><label><input type="checkbox"><span>Все</span></label></li>
+										<li><label><input type="checkbox"><span>Кабриолет</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Пикап</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Купе</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Универсал</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Хэтчбек</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Минивэн</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Внедорожник</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Седан</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Другой</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+									</ul>
+								</li>
+								<!-- begin checkbox -->
+								<li class="multifilters-in multifilters-checkbox">
+									<a href="javascript:void(0);" class="nav-btn"><span>Вид топлива</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<div class="multifilters-info-wrap"><i class="icon-all-info"></i><span></span></div>
+									<ul class="nav-menu">
+										<li class="is-active"><label><input type="checkbox"><span>Все</span></label></li>
+										<li><label><input type="checkbox"><span>Бензин</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Дизель</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Другой</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+									</ul>
+								</li>
+								<!-- begin checkbox -->
+								<li class="multifilters-in multifilters-checkbox">
+									<a href="javascript:void(0);" class="nav-btn"><span>Коробка передач</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<div class="multifilters-info-wrap"><i class="icon-all-info"></i><span></span></div>
+									<ul class="nav-menu">
+										<li><label><input type="checkbox"><span>Все</span></label></li>
+										<li><label><input type="checkbox"><span>Механическая</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Автоматическая</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Другая</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+									</ul>
+								</li>
+								<!-- begin checkbox -->
+								<li class="multifilters-in multifilters-checkbox">
+									<a href="javascript:void(0);" class="nav-btn"><span>Цвет</span><i class="icon-all-more-bot-orange"></i></a>
+									<i class="clear-filter-btn"></i>
+									<div class="multifilters-info-wrap"><i class="icon-all-info"></i><span></span></div>
+									<ul class="nav-menu">
+										<li><label><input type="checkbox"><span>Все</span></label></li>
+										<li><label><input type="checkbox"><span>Белый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Черный</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Синий</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Серый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Серебристый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Красный</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Зеленый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Апельсин</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Асфальт</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Бежевый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Бирюзовый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Бронзовый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Вишневый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Синий</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Голубй</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Желтый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Золотой</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Коричневый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Магнолии</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Матовый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Оливковый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Розовый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Сафари</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Фиолетовый</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+										<li><label><input type="checkbox"><span>Хамелеон</span><i class="icon-all-info multifilters-info">подсказка на все случаи жизни</i></label></li>
+									</ul>
+								</li>
+								<!-- <li>
+									<input type="submit" class="submit-btn" value="test">
+								</li> -->
+							</ul>
+						</fieldset>
+					</form>
+					<!-- end multifilters-wrap -->
+
+					<!-- begin banner -->
+					<div class="banner">
+						<a href="#"><img src="img/banners/banner-300x600.jpg" alt="banner-img"></a>
+					</div>
+					<!-- end banner -->
+				</div>
+				<!-- end advertlist-aside -->
+
+				<!-- begin advertlist-in  -->
+				<div class="advertlist-in">
+					<!-- begin breadcrumbs  -->
+					<div class="breadcrumbs sm">
+						<i class="icon-main-animal"></i>
+						<ul class="breadcrumbs-list">
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">Раздел</a></li>
+							<li><a href="#">Подраздел</a></li>
+						</ul>
+					</div>
+					<!-- end breadcrumbs -->
+
+					<!-- begin advertlist-settings  -->
+					<div class="al-settings">
+						<ul class="al-settings-type">
+							<li class="is-active"><a href="#">Все</a></li>
+							<li><a href="#">Частное</a></li>
+							<li><a href="#">Бизнес</a></li>
+						</ul>
+						<div class="al-settings-sort">
+							<select>
+								<option value="от дешевых к дорогим">от дешевых к дорогим</option>
+								<option value="от дорогих к дешевым">от дорогих к дешевым</option>
+							</select>
+						</div>
+						<ul class="al-settings-currency">
+							<li class="is-active"><a href="#">&#36;</a></li>
+							<li><a href="#">&#8364;</a></li>
+							<li><a href="#">грн</a></li>
+						</ul>
+						<ul class="al-settings-view">
+							<li><a href="#"><i class="icon-list-list"></i></a></li>
+							<li class="is-active"><a href="#"><i class="icon-list-tile"></i></a></li>
+						</ul>
+					</div>
+					<!-- end advertlist-settings -->
+
+					<!-- begin vip-post  -->
+					<div class="advertlist-post">
+						<!-- begin post-list -->
+						<ul class="post-list">
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-electro"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-house"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-trade"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-h.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-work"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-transport"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-animal"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-h.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-work"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-transport"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-animal"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-h.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-work"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-transport"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-animal"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-h.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-work"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-transport"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-animal"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-h.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-work"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-transport"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-animal"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-h.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-work"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-transport"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-w.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+							<!-- begin post -->
+							<li>
+								<div class="post-list__mark icon-all-icon-mark">
+									<i class="icon-main-animal"></i>
+								</div>
+								<a href="#" class="post-list__img">
+									<img src="watermark.php?image=img/content/photo-h.jpg" alt="image">
+								</a>
+								<div class="post-list__in">
+									<p>Краткая инфа о тов...</p>
+									<p><i class="icon-all-star"></i>13 500 грн.</p>
+								</div>
+							</li>
+						</ul>
+						<!-- end post-list -->
+					</div>
+					<!-- end advertlist-post -->
+				</div>
+				<!-- end advertlist-in -->
+			</div>
+			<!-- end advertlist-wrap -->
+
+			<!-- begin pagination  -->
+			<div class="pagination">
+				<!-- begin pagination__list  -->
+				<ul class="pagination__list">
+					<li class="is-active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li><a href="#">10</a></li>
+					<li><a href="#">11</a></li>
+					<li><a href="#">12</a></li>
+					<li><a href="#">13</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#">99</a></li>
+				</ul>
+				<!-- end pagination__list -->
+
+				<!-- begin pagination__number  -->
+				<div class="pagination__number">
+					<span>Перейти на страницу</span>
+					<form action="#" class="form-pagination">
+						<fieldset>
+							<!-- begin field -->
+							<div class="field">
+								<input name="page_number" type="text" class="form-input">
+							</div>
+							<!-- begin field  -->
+							<div class="field">
+								<input type="submit">
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<!-- end pagination__number -->
+
+				<!-- begin pagination__nav  -->
+				<div class="pagination__nav">
+					<a href="#" class="prev-button">&laquo; Предыдущая</a>
+					<a href="#" class="next-button">Следующая &raquo;</a>
+				</div>
+				<!-- end pagination__nav -->
+			</div>
+			<!-- end pagination -->
+
+			<!-- begin section-about  -->
+			<div class="section-about">
+				<div class="row">
+					<div class="logo">
+						<a href="#">
+							<img src="img/logo-2.png" alt="Vespoo">
+						</a>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam totam rem aperiam totam</p>
+				</div>
+				<div class="row">
+					<p><strong>Популярные запросы:</strong> <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>.</p>
+				</div>
+				<p class="social-title">Спасибо, что рассказываете о нас друзьям!</p>
+				<ul class="social-list">
+					<li><a href="#"><i class="icon-social-twitter"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-fb"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-vk"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-class"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-gplus"></i>Поделиться<span>35</span></a></li>
+				</ul>
+			</div>
+			<!-- end section-about -->
+		</div>
+		<!-- end content-wrap -->
+	</div>
+	<!-- end wrapper -->
+
+	<!-- begin footer  -->
+	<div class="footer">
+		<div class="container">
+			<!-- begin footer__left  -->
+			<div class="footer__left">
+				<div class="footer__col">
+					<p>Компания</p>
+					<ul class="footer-list">
+						<li><a href="#">Добавить обьявление</a></li>
+						<li><a href="#">Добавить магазин</a></li>
+						<li><a href="#">Реклама на сайте</a></li>
+						<li><a href="#">Безопасные сделки Vespoo</a></li>
+						<li><a href="#">Партнерские программы</a></li>
+						<li><a href="#">Сортировка в поиске</a></li>
+					</ul>
+				</div>
+				<div class="footer__col">
+					<p>Партнерам</p>
+					<ul class="footer-list">
+						<li><a href="#">Политика конфиденциальности и возвращения средств</a></li>
+						<li><a href="#">Карта опций</a></li>
+						<li><a href="#">Карта городов</a></li>
+						<li><a href="#">Карта сайта</a></li>
+						<li><a href="#">Помощь</a></li>
+						<li><a href="#">Оставить отзыв о сайте Vespoo</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end footer__left -->
+
+			<!-- begin footer__right  -->
+			<div class="footer__right">
+				<p>Отдел заботы о пользователях</p>
+				<p>Фамилия Имя</p>
+				<p>Консультант по вопросам работы сайта Vespoo</p>
+				<p>Горячая линия:</p>
+				<ul class="phone-list">
+					<li>0-800-00-00-00</li>
+					<li>(067)123-45-67</li>
+					<li>(093)123-45-67</li>
+				</ul>
+				<a href="#" class="phone-btn">Связаться</a>
+			</div>
+			<!-- end footer__right -->
+
+			<!-- begin footer__bottom  -->
+			<div class="footer__bottom">
+				<a href="#" class="footer__logo"><img src="img/logo-2.png" alt="Vespoo"></a>
+				<p>&copy; Vespoo.com. Все права защищены.</p>
+				<p>Разработка и поддержка <a href="#">MTITM &amp; Koldios</a></p>
+			</div>
+			<!-- end footer__bottom -->
+		</div>
+	</div>
+	<!-- end footer -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/icheck.min.js"></script>
+	<script src="js/jquery.selectric.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.form-validator.min.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
+	<script src="js/jquery.fancybox-thumbs.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
