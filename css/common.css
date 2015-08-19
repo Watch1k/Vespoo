@@ -372,7 +372,7 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 
 .vip-post, .advertlist-post { margin-top: 27px; }
 .vip-post .post-list, .advertlist-post .post-list { margin-left: 0; }
-.vip-post .post-list li, .advertlist-post .post-list li { margin-top: 25px; margin-left: 30px; }
+.vip-post .post-list li, .advertlist-post .post-list li { margin-top: 30px; margin-left: 30px; }
 
 .advertlist-post { margin-top: 20px; padding-bottom: 30px; border-top: 1px solid #9980c7; }
 
@@ -1076,3 +1076,14 @@ form .field:after { content: ""; display: table; clear: both; }
 .pagination__nav .prev-button, .pagination__nav .next-button { float: left; padding: 0 8px; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
 .pagination__nav .prev-button:hover, .pagination__nav .next-button:hover { color: #d4762d; }
 .pagination__nav .next-button { margin-left: 10px; }
+
+/*------------------------------------------------------------------------- */
+/*---------------------------- Partners page ------------------------------ */
+/*------------------------------------------------------------------------- */
+.partners { margin-bottom: 100px; }
+.partners .post-title { background-color: #473589; color: #fff; }
+.partners__list { margin-top: 20px; *zoom: 1; }
+.partners__list:after { content: ""; display: table; clear: both; }
+.partners__list li { float: left; margin-top: 20px; margin-left: 20px; }
+.partners__list li a { display: block; }
+.partners__list li a img { vertical-align: middle; }
