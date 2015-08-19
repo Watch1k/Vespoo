@@ -25,7 +25,7 @@ if ($('.multifilters-wrap').length) {
 		$('.multifilters-select .nav-menu li:first-child').addClass('is-active');
 
 	// fill checkbox
-		$('.multifilters-checkbox .nav-menu li:first-child').on('ifCreated', function(){
+		$('.multifilters-checkbox .nav-menu li:first-child input').on('ifCreated', function(){
 			$(this).iCheck('check');
 		});
 
@@ -474,8 +474,12 @@ if ($('.multifilters-wrap').length) {
 		$('.multifilters-in').find('.nav-input').val('');
 		defaultValuesIndex = 0;
 		$('.multifilters-in .nav-btn').each(function(){
-			$(this).removeClass('is-active').children('span').text(defaultValues[defaultValuesIndex]);
-			$(this).siblings('.clear-filter-btn').hide();
+			if ($(this).parent().index() != 0) {
+				$(this).removeClass('is-active').children('span').text(defaultValues[defaultValuesIndex]);
+				$(this).siblings('.clear-filter-btn').hide();
+				$(this).siblings('.nav-menu').find('input[type="checkbox"]').iCheck('uncheck');
+				$('.multifilters-checkbox .nav-menu li:first-child input').iCheck('check');
+			};
 			defaultValuesIndex++;
 		});
 		$('.multifilters-select, .multifilters-input').each(function(){
