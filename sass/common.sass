@@ -2209,7 +2209,7 @@ form .field
 	display: none
 	position: relative
 	margin-bottom: 20px
-	padding-bottom: 15px
+	padding-bottom: 90px
 	background-color: #f1f0f0
 	.help-block-info
 		position: absolute
@@ -2231,13 +2231,59 @@ form .field
 		text-transform: none
 		line-height: 40px
 		border-bottom: 1px solid #d2d1d1
+.all-filter-btn
+	display: none
+	position: absolute
+	left: 0
+	bottom: 50px
+	width: 100%
+	font-size: 14px
+	font-weight: bold
+	text-align: center
+	cursor: pointer
+	&:hover
+		color: $orange
+		&:after
+			content: ''
+			display: inline-block
+			+arr(14, 10, lighten($orange,15), b)
+	&:after
+		content: ''
+		display: inline-block
+		+arr(14, 10, lighten($viollet,15), b)
+	&:before
+		content: '...'
+		display: block
+		margin-bottom: 17px
+		width: 100%
+		color: $viollet
+		font-size: 40px
+		line-height: 10px
+		text-align: center
+	&.is-active
+		&:hover
+			&:after
+				content: ''
+				display: inline-block
+				+arr(14, 10, lighten($orange,15), t)
+		&:after
+			content: ''
+			display: inline-block
+			+arr(14, 10, lighten($viollet,15), t)
+		&:before
+			content: none
+.outfilters-container
+	overflow: hidden
+	height: 162px
 .outfilters
+	overflow: hidden
 	padding: 10px 20px
+	padding-bottom: 0
 	&-title
 		font-weight: bold
+		line-height: 25px
 	&-list
 		margin-left: 10px
-		margin-bottom: 10px
 		+pie-clearfix
 		li
 			margin-top: 3px
@@ -2247,13 +2293,17 @@ form .field
 				float: left
 				margin-top: 3px
 				margin-right: 10px
-				box-shadow: 0 0 6px rgba(1,1,1,0.3)
+				box-shadow: 0 0 3px rgba(1,1,1,0.3)
 				&:hover
-					box-shadow: 0 0 5px $orange
+					box-shadow: 0 0 3px $orange
 				i
 					display: block
 					vertical-align: middle
 .cancel-btn-wrap
+	position: absolute
+	left: 0
+	bottom: 20px
+	width: 100%
 	text-align: center
 	.cancel-btn
 		display: inline-block
