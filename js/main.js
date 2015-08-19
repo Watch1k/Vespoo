@@ -1274,6 +1274,13 @@ if ($('.multifilters-wrap').length) {
 			});
 		}
 	});
+
+	// Button scroll top
+	(function() {
+		$('.to-top-btn').on("click", function() {
+			$('body,html').animate({scrollTop:0},800);
+		});
+	}());
 	
 });
 

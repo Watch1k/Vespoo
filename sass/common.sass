@@ -2547,8 +2547,7 @@ form .field
 .partners
 	margin-bottom: 100px
 	.post-title
-		background-color: #473589
-		color: #fff
+		background-color: $viollet
 	&__list
 		margin-top: 20px
 		+pie-clearfix
@@ -2560,3 +2559,53 @@ form .field
 				display: block
 				img
 					vertical-align: middle
+/*-------------------------------------------------------------------------*/
+/*------------------------- User Agreement page ---------------------------*/
+/*-------------------------------------------------------------------------*/
+.agreement
+	margin-top: 20px
+	margin-bottom: 70px
+	font-size: 16px
+	line-height: 22px
+	a
+		color: $orange
+		&:hover, &:active
+			text-decoration: underline
+	.post-title
+		background-color: $viollet
+	> ol
+		padding-left: 33px
+		margin-bottom: 25px
+		> li
+			margin-top: 10px
+			list-style-type: decimal
+			> ul
+				padding-left: 22px
+				> li
+					margin-top: 10px
+					list-style-type: disc
+	&-title
+		margin-top: 20px
+		padding-top: 6px
+		padding-left: 10px
+		padding-right: 10px
+		padding-bottom: 5px
+		font-size: 20px
+		line-height: 24px
+		text-transform: uppercase
+		background-color: #f1f0f0
+		box-shadow: 0 0 6px rgba(1,1,1,0.3)
+		.to-top-btn
+			float: right
+			height: 24px
+			font-size: 16px
+			color: $viollet
+			line-height: 24px
+			text-transform: none
+			background-color: transparent
+			&:hover
+				text-decoration: underline
+			i
+				display: inline-block
+				margin-right: 10px
+				vertical-align: middle
