@@ -3,6 +3,19 @@ $(document).ready(function(){
 // advert's filters
 if ($('.multifilters-wrap').length) {
 
+	// multifilters info
+	var infoTextDefault = 'пустая подсказка';
+	$('.multifilters-in').each(function(){
+		$(this).children('.multifilters-info-wrap').find('span').text();
+	});
+	
+	$('.multifilters-info').hover(function(){
+		var _infoText = $(this).text();
+		$(this).parents('.multifilters-in').children('.multifilters-info-wrap').show().find('span').text(_infoText);
+	}, function(){
+		$(this).parents('.multifilters-in').children('.multifilters-info-wrap').hide().find('span').text(infoTextDefault);
+	});
+
 	function checkOutfiltersHeight() {
 		if ($('.outfilters-wrap').css('display') == 'none') {
 			// holder

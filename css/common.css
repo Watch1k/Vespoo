@@ -76,7 +76,7 @@ a { color: inherit; }
 .icon-work-sprite, .icon-work-img_1, .icon-work-img_10, .icon-work-img_11, .icon-work-img_12, .icon-work-img_13, .icon-work-img_14, .icon-work-img_15, .icon-work-img_16, .icon-work-img_17, .icon-work-img_18, .icon-work-img_19, .icon-work-img_2, .icon-work-img_20, .icon-work-img_21, .icon-work-img_3, .icon-work-img_4, .icon-work-img_5, .icon-work-img_6, .icon-work-img_7, .icon-work-img_8, .icon-work-img_9 { background-image: url('../img/icons-sprites/icon-work.png'); background-repeat: no-repeat; }
 
 /* */
-.icon-all-sprite, .icon-all-arrow-left, .icon-all-arrow-right, .icon-all-arrow-top-orange, .icon-all-check-cancel, .icon-all-clip-sm, .icon-all-close, .icon-all-help-category-viollet, .icon-all-help-category, .icon-all-icon-mark, .icon-all-loc-lg, .icon-all-mail-lg, .icon-all-mail-sm, .icon-all-more-bot-orange, .icon-all-more-right-viollet, .icon-all-phone-lg, .icon-all-phone-sm, .icon-all-skype-sm, .icon-all-star, .icon-all-user-lg { background-image: url('../img/icons-sprites/icon-all.png'); background-repeat: no-repeat; }
+.icon-all-sprite, .icon-all-arrow-left, .icon-all-arrow-right, .icon-all-arrow-top-orange, .icon-all-check-cancel, .icon-all-clip-sm, .icon-all-close, .icon-all-help-category-viollet, .icon-all-help-category, .icon-all-icon-mark, .icon-all-info, .icon-all-loc-lg, .icon-all-mail-lg, .icon-all-mail-sm, .icon-all-more-bot-orange, .icon-all-more-right-viollet, .icon-all-phone-lg, .icon-all-phone-sm, .icon-all-skype-sm, .icon-all-star, .icon-all-user-lg { background-image: url('../img/icons-sprites/icon-all.png'); background-repeat: no-repeat; }
 
 /* */
 .icon-list-sprite, .icon-list-list, .icon-list-tile { background-image: url('../img/icons-sprites/icon-list.png'); background-repeat: no-repeat; }
@@ -183,26 +183,29 @@ a { color: inherit; }
 
 .icon-all-icon-mark { background-position: 0 -324px; height: 70px; width: 55px; }
 
-.icon-all-loc-lg { background-position: 0 -394px; height: 30px; width: 21px; }
+.icon-all-info { background-position: 0 -410px; height: 16px; width: 16px; }
+.icon-all-info:hover, .icon-all-info.info-hover { background-position: 0 -394px; }
 
-.icon-all-mail-lg { background-position: 0 -424px; height: 20px; width: 28px; }
+.icon-all-loc-lg { background-position: 0 -426px; height: 30px; width: 21px; }
 
-.icon-all-mail-sm { background-position: 0 -444px; height: 16px; width: 22px; }
+.icon-all-mail-lg { background-position: 0 -456px; height: 20px; width: 28px; }
 
-.icon-all-more-bot-orange { background-position: 0 -460px; height: 13px; width: 15px; }
+.icon-all-mail-sm { background-position: 0 -476px; height: 16px; width: 22px; }
 
-.icon-all-more-right-viollet { background-position: 0 -473px; height: 15px; width: 13px; }
+.icon-all-more-bot-orange { background-position: 0 -492px; height: 13px; width: 15px; }
 
-.icon-all-phone-lg { background-position: 0 -488px; height: 31px; width: 23px; }
+.icon-all-more-right-viollet { background-position: 0 -505px; height: 15px; width: 13px; }
 
-.icon-all-phone-sm { background-position: 0 -519px; height: 23px; width: 18px; }
+.icon-all-phone-lg { background-position: 0 -520px; height: 31px; width: 23px; }
 
-.icon-all-skype-sm { background-position: 0 -542px; height: 23px; width: 23px; }
+.icon-all-phone-sm { background-position: 0 -551px; height: 23px; width: 18px; }
 
-.icon-all-star { background-position: 0 -587px; height: 22px; width: 23px; }
-.icon-all-star:hover, .icon-all-star.star-hover { background-position: 0 -565px; }
+.icon-all-skype-sm { background-position: 0 -574px; height: 23px; width: 23px; }
 
-.icon-all-user-lg { background-position: 0 -609px; height: 27px; width: 32px; }
+.icon-all-star { background-position: 0 -619px; height: 22px; width: 23px; }
+.icon-all-star:hover, .icon-all-star.star-hover { background-position: 0 -597px; }
+
+.icon-all-user-lg { background-position: 0 -641px; height: 27px; width: 32px; }
 
 /*----- icon list ----- */
 .icon-list-list { background-position: 0 -19px; height: 19px; width: 25px; }
@@ -1026,11 +1029,15 @@ form .field:after { content: ""; display: table; clear: both; }
 .multifilters .multifilters-in.multifilters-checkbox .nav-menu li { *zoom: 1; }
 .multifilters .multifilters-in.multifilters-checkbox .nav-menu li:after { content: ""; display: table; clear: both; }
 .multifilters .multifilters-in.multifilters-checkbox .nav-menu li label { display: block; padding: 3px 10px; line-height: 22px; cursor: pointer; }
+.multifilters .multifilters-in.multifilters-checkbox .nav-menu li label i { float: right; margin-top: 3px; text-indent: -9999px; overflow: hidden; }
 .multifilters .multifilters-in.multifilters-checkbox .nav-menu li.is-active { color: #583d8b; background-color: #fff; }
 .multifilters .multifilters-in.multifilters-select .nav-menu li { *zoom: 1; }
 .multifilters .multifilters-in.multifilters-select .nav-menu li:after { content: ""; display: table; clear: both; }
 .multifilters .multifilters-in.multifilters-select .nav-menu li label { display: block; line-height: 22px; cursor: pointer; }
 .multifilters .multifilters-in.multifilters-category .nav-menu { overflow-y: visible; max-height: none; }
+.multifilters .multifilters-in .multifilters-info-wrap { display: none; position: absolute; left: 100%; top: 0; margin-left: 10px; padding: 5px; width: 260px; height: auto; font-size: 14px; line-height: 16px; color: #d4762d; background-color: #fff; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
+.multifilters .multifilters-in .multifilters-info-wrap i { float: left; margin-top: 2px; margin-right: 7px; }
+.multifilters .multifilters-in .multifilters-info-wrap span { overflow: hidden; display: block; }
 .multifilters li { position: relative; }
 .multifilters li .nav-input { display: none; height: 25px; line-height: 25px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 .multifilters li .nav-input:-moz-placeholder, .multifilters li .nav-input::-moz-placeholder { color: #aaa; opacity: 1; }
