@@ -76,7 +76,7 @@ a { color: inherit; }
 .icon-work-sprite, .icon-work-img_1, .icon-work-img_10, .icon-work-img_11, .icon-work-img_12, .icon-work-img_13, .icon-work-img_14, .icon-work-img_15, .icon-work-img_16, .icon-work-img_17, .icon-work-img_18, .icon-work-img_19, .icon-work-img_2, .icon-work-img_20, .icon-work-img_21, .icon-work-img_3, .icon-work-img_4, .icon-work-img_5, .icon-work-img_6, .icon-work-img_7, .icon-work-img_8, .icon-work-img_9 { background-image: url('../img/icons-sprites/icon-work.png'); background-repeat: no-repeat; }
 
 /* */
-.icon-all-sprite, .icon-all-arrow-left, .icon-all-arrow-right, .icon-all-arrow-top-orange, .icon-all-check-cancel, .icon-all-clip-sm, .icon-all-close, .icon-all-help-category-viollet, .icon-all-help-category, .icon-all-icon-mark, .icon-all-info, .icon-all-loc-lg, .icon-all-mail-lg, .icon-all-mail-sm, .icon-all-more-bot-orange, .icon-all-more-right-viollet, .icon-all-more-top-viollet, .icon-all-phone-lg, .icon-all-phone-sm, .icon-all-skype-sm, .icon-all-star, .icon-all-user-lg { background-image: url('../img/icons-sprites/icon-all.png'); background-repeat: no-repeat; }
+.icon-all-sprite, .icon-all-arrow-l-o, .icon-all-arrow-left, .icon-all-arrow-right, .icon-all-arrow-top-orange, .icon-all-check-cancel, .icon-all-clip-sm, .icon-all-close, .icon-all-help-category-viollet, .icon-all-help-category, .icon-all-icon-mark, .icon-all-info, .icon-all-loc-lg, .icon-all-mail-lg, .icon-all-mail-sm, .icon-all-more-bot-orange, .icon-all-more-right-viollet, .icon-all-more-top-viollet, .icon-all-phone-lg, .icon-all-phone-sm, .icon-all-skype-sm, .icon-all-star, .icon-all-user-lg { background-image: url('../img/icons-sprites/icon-all.png'); background-repeat: no-repeat; }
 
 /* */
 .icon-list-sprite, .icon-list-list, .icon-list-tile { background-image: url('../img/icons-sprites/icon-list.png'); background-repeat: no-repeat; }
@@ -164,50 +164,52 @@ a { color: inherit; }
 .icon-work-img_9 { background-position: 0 -817px; height: 37px; width: 49px; }
 
 /*----- icon all ----- */
-.icon-all-arrow-left { background-position: 0 0; height: 45px; width: 88px; }
+.icon-all-arrow-l-o { background-position: 0 0; height: 38px; width: 81px; }
 
-.icon-all-arrow-right { background-position: 0 -45px; height: 27px; width: 161px; }
+.icon-all-arrow-left { background-position: 0 -38px; height: 45px; width: 88px; }
 
-.icon-all-arrow-top-orange { background-position: 0 -72px; height: 91px; width: 114px; }
+.icon-all-arrow-right { background-position: 0 -83px; height: 27px; width: 161px; }
 
-.icon-all-check-cancel { background-position: 0 -179px; height: 16px; width: 16px; }
-.icon-all-check-cancel:hover, .icon-all-check-cancel.check-cancel-hover { background-position: 0 -163px; }
+.icon-all-arrow-top-orange { background-position: 0 -110px; height: 91px; width: 114px; }
 
-.icon-all-clip-sm { background-position: 0 -195px; height: 19px; width: 18px; }
+.icon-all-check-cancel { background-position: 0 -217px; height: 16px; width: 16px; }
+.icon-all-check-cancel:hover, .icon-all-check-cancel.check-cancel-hover { background-position: 0 -201px; }
 
-.icon-all-close { background-position: 0 -214px; height: 12px; width: 12px; }
+.icon-all-clip-sm { background-position: 0 -233px; height: 19px; width: 18px; }
 
-.icon-all-help-category-viollet { background-position: 0 -226px; height: 49px; width: 38px; }
+.icon-all-close { background-position: 0 -252px; height: 12px; width: 12px; }
 
-.icon-all-help-category { background-position: 0 -275px; height: 49px; width: 38px; }
+.icon-all-help-category-viollet { background-position: 0 -264px; height: 49px; width: 38px; }
 
-.icon-all-icon-mark { background-position: 0 -324px; height: 70px; width: 55px; }
+.icon-all-help-category { background-position: 0 -313px; height: 49px; width: 38px; }
 
-.icon-all-info { background-position: 0 -410px; height: 16px; width: 16px; }
-.icon-all-info:hover, .icon-all-info.info-hover { background-position: 0 -394px; }
+.icon-all-icon-mark { background-position: 0 -362px; height: 70px; width: 55px; }
 
-.icon-all-loc-lg { background-position: 0 -426px; height: 30px; width: 21px; }
+.icon-all-info { background-position: 0 -448px; height: 16px; width: 16px; }
+.icon-all-info:hover, .icon-all-info.info-hover { background-position: 0 -432px; }
 
-.icon-all-mail-lg { background-position: 0 -456px; height: 20px; width: 28px; }
+.icon-all-loc-lg { background-position: 0 -464px; height: 30px; width: 21px; }
 
-.icon-all-mail-sm { background-position: 0 -476px; height: 16px; width: 22px; }
+.icon-all-mail-lg { background-position: 0 -494px; height: 20px; width: 28px; }
 
-.icon-all-more-bot-orange { background-position: 0 -492px; height: 13px; width: 15px; }
+.icon-all-mail-sm { background-position: 0 -514px; height: 16px; width: 22px; }
 
-.icon-all-more-right-viollet { background-position: 0 -505px; height: 15px; width: 13px; }
+.icon-all-more-bot-orange { background-position: 0 -530px; height: 13px; width: 15px; }
 
-.icon-all-more-top-viollet { background-position: 0 -520px; height: 13px; width: 15px; }
+.icon-all-more-right-viollet { background-position: 0 -543px; height: 15px; width: 13px; }
 
-.icon-all-phone-lg { background-position: 0 -533px; height: 31px; width: 23px; }
+.icon-all-more-top-viollet { background-position: 0 -558px; height: 13px; width: 15px; }
 
-.icon-all-phone-sm { background-position: 0 -564px; height: 23px; width: 18px; }
+.icon-all-phone-lg { background-position: 0 -571px; height: 31px; width: 23px; }
 
-.icon-all-skype-sm { background-position: 0 -587px; height: 23px; width: 23px; }
+.icon-all-phone-sm { background-position: 0 -602px; height: 23px; width: 18px; }
 
-.icon-all-star { background-position: 0 -632px; height: 22px; width: 23px; }
-.icon-all-star:hover, .icon-all-star.star-hover { background-position: 0 -610px; }
+.icon-all-skype-sm { background-position: 0 -625px; height: 23px; width: 23px; }
 
-.icon-all-user-lg { background-position: 0 -654px; height: 27px; width: 32px; }
+.icon-all-star { background-position: 0 -670px; height: 22px; width: 23px; }
+.icon-all-star:hover, .icon-all-star.star-hover { background-position: 0 -648px; }
+
+.icon-all-user-lg { background-position: 0 -692px; height: 27px; width: 32px; }
 
 /*----- icon list ----- */
 .icon-list-list { background-position: 0 -19px; height: 19px; width: 25px; }
@@ -1183,3 +1185,49 @@ form .field:after { content: ""; display: table; clear: both; }
 .blog__tags h3 { margin-bottom: 15px; padding-top: 13px; padding-bottom: 13px; font-size: 20px; line-height: 24px; text-align: center; font-weight: normal; text-transform: uppercase; background-color: #f1f0f0; }
 .blog__tags p { padding-left: 20px; padding-right: 20px; }
 .blog__tags p a:hover { color: #d4762d; }
+
+/*------------------------------------------------------------------------- */
+/*------------------------------- Payment --------------------------------- */
+/*------------------------------------------------------------------------- */
+.payment { margin-top: 20px; margin-bottom: 80px; padding-left: 20px; padding-right: 20px; border-top: 1px solid #8b6ec0; *zoom: 1; }
+.payment:after { content: ""; display: table; clear: both; }
+.payment__title { margin-top: 20px; font-size: 20px; color: #d4762d; line-height: 45px; text-transform: uppercase; font-weight: normal; }
+.payment__title span { display: inline-block; margin-right: 20px; font-size: 24px; padding-left: 15px; padding-right: 15px; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
+.payment .post-title { margin-top: 20px; background-color: #583d8b; }
+.payment__list { font-size: 20px; line-height: 55px; }
+.payment__list > li { margin-top: 10px; padding: 20px; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); *zoom: 1; }
+.payment__list > li:after { content: ""; display: table; clear: both; }
+.payment__list > li.is-active { background-color: #f1f0f0; }
+.payment__list .field { float: left; }
+.payment__list .field__checkbox { padding-top: 16px; padding-right: 20px; }
+.payment__list .field__img img { vertical-align: middle; }
+.payment__list .field__text { padding-left: 20px; padding-right: 20px; width: 500px; }
+.payment__list .field__select { padding-top: 10px; width: 175px; }
+.payment__list .field__select .selectric .label { font-size: 20px; }
+.payment__list .field__select .selectric-items li { font-size: 16px; }
+.payment__list .field__price { float: right; font-size: 24px; color: #d4762d; }
+
+.paytype__list { margin-left: -20px; *zoom: 1; }
+.paytype__list:after { content: ""; display: table; clear: both; }
+.paytype__list > li { float: left; margin-top: 20px; margin-left: 20px; padding: 10px 10px 0 10px; width: 220px; height: 220px; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
+.paytype__list > li.is-active { background-color: #f1f0f0; }
+.paytype__list > li:last-child { float: right; padding: 0; width: 460px; font-size: 20px; box-shadow: none; }
+.paytype__list > li:last-child:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.paytype__list > li:last-child .paytype__container { display: inline-block; width: 450px; vertical-align: bottom; }
+.paytype__list > li:last-child .paytype__container:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.paytype__list > li:last-child .paytype__total { text-align: right; text-transform: uppercase; *zoom: 1; }
+.paytype__list > li:last-child .paytype__total:after { content: ""; display: table; clear: both; }
+.paytype__list > li:last-child .paytype__total p { height: 52px; }
+.paytype__list > li:last-child .paytype__total p i { display: none; margin-right: 10px; vertical-align: -30px; }
+.paytype__list > li:last-child .paytype__total p span { color: #d4762d; }
+.paytype__list > li:last-child .paytype__submit { margin-top: 10px; *zoom: 1; }
+.paytype__list > li:last-child .paytype__submit:after { content: ""; display: table; clear: both; }
+.paytype__list > li:last-child .paytype__submit .submit-btn { width: 220px; float: left; }
+.paytype__list > li:last-child .paytype__submit .submit-btn + .submit-btn { float: right; text-align: center; }
+.paytype__list > li:last-child .paytype__submit button[type="submit"] { display: none; }
+.paytype__list .paytype__img { width: 200px; height: 150px; line-height: 150px; text-align: center; vertical-align: middle; }
+.paytype__list .paytype__img img { max-width: 200px; max-height: 150px; vertical-align: middle; }
+.paytype__list .paytype__choose { overflow: hidden; margin-top: 10px; height: 49px; border-top: 1px solid #7c5db8; }
+.paytype__list .paytype__choose:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.paytype__list .paytype__choose .icheckbox_square-orange { float: none; display: inline-block; margin-top: 0; margin-right: 10px; vertical-align: middle; }
+.paytype__list .paytype__choose .icheckbox_square-orange + p { display: inline-block; width: 159px; margin: 0; font-size: 18px; line-height: 18px; vertical-align: middle; }

@@ -1275,13 +1275,75 @@ if ($('.multifilters-wrap').length) {
 		}
 	});
 
-	// Button scroll top
+// Payment checkbox
+	$('.payment__list input').on('ifChanged', function(){
+		$(this).parents('.payment__list > li').toggleClass('is-active');
+		setTimeout(function(){
+			if ($('.paytype__list > li.is-active').length && $('.payment__list > li.is-active').length) {
+				$('.paytype__container button[type="submit"]').show();
+				$('.paytype__total i').css('display', 'inline-block');
+			} else {
+				$('.paytype__container button[type="submit"]').hide();
+				$('.paytype__total i').css('display', 'none');
+			}
+		},1);
+	});
+
+	// calculator
+	$('.payment__list input').on('ifChecked', function(){
+		var _totalPrice = 0;
+		if ($('.paytype__list > li.is-active').length) {
+			$('.paytype__container button[type="submit"]').show();
+			$('.paytype__total i').css('display', 'inline-block');
+		}
+		$(this).parents('.payment__list').children('li.is-active').each(function(){
+			_totalPrice += parseInt($(this).find('.field__price').find('span').text());
+		});
+		$('.paytype__total .total-number').text(_totalPrice);
+	});
+	$('.payment__list input').on('ifUnchecked', function(){
+		var _totalPrice = 0;
+		$(this).parents('.payment__list').children('li.is-active').each(function(){
+			_totalPrice += parseInt($(this).find('.field__price').find('span').text());
+		});
+		$('.paytype__total .total-number').text(_totalPrice);
+	});
+
+	$('.paytype__list input').on('ifChecked', function(){
+		$(this).parents('.paytype__list > li').siblings('li').find('input').iCheck('uncheck');
+		$(this).parents('.paytype__list > li').addClass('is-active');
+	});
+	$('.paytype__list input').on('ifUnchecked', function(){
+		$(this).parents('.paytype__list > li').removeClass('is-active');
+	});
+	$('.paytype__list input').on('ifChanged', function(){
+		setTimeout(function(){
+			if ($('.paytype__list > li.is-active').length && $('.payment__list > li.is-active').length) {
+				$('.paytype__container button[type="submit"]').show();
+				$('.paytype__total i').css('display', 'inline-block');
+			} else {
+				$('.paytype__container button[type="submit"]').hide();
+				$('.paytype__total i').css('display', 'none');
+			}
+		},1);
+	});
+
+	// reset
+	$('.paytype__container .reset').on('click', function(){
+		$('.payment__list input').each(function(){
+			$(this).iCheck('uncheck');
+		});
+		$('.paytype__list > li.is-active input').iCheck('uncheck');
+	});
+
+// Button scroll top
 	(function() {
 		$('.to-top-btn').on("click", function() {
 			$('body,html').animate({scrollTop:0},800);
 		});
 	}());
-	
+
+
 });
 
 // Window Scroll
