@@ -2609,3 +2609,42 @@ form .field
 				display: inline-block
 				margin-right: 10px
 				vertical-align: middle
+/*-------------------------------------------------------------------------*/
+/*------------------------- User Agreement page ---------------------------*/
+/*-------------------------------------------------------------------------*/
+.sitemap
+	margin-top: 20px
+	.post-title
+		background-color: $viollet
+	&__list
+		margin-top: 20px
+		margin-left: 20px
+		margin-bottom: 70px
+		column-width: 220px
+		+pie-clearfix
+	&__item
+		display: inline-block
+		margin-top: 25px
+		vertical-align: top
+		> a
+			display: block
+			margin-bottom: 5px
+			font-size: 16px
+			color: $orange
+			line-height: 32px
+			font-weight: bold
+			text-transform: uppercase
+			border-bottom: 1px solid lighten($orange,25)
+			&:hover
+				text-decoration: underline
+	&__sublist
+		font-size: 12px
+		color: #685096
+		line-height: 18px
+		a:hover
+			color: $orange
+			text-decoration: underline
+		span
+			color: #afa6c2
+		.sitemap__sublist
+			margin-left: 15px

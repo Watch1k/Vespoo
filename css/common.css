@@ -1105,3 +1105,18 @@ form .field:after { content: ""; display: table; clear: both; }
 .agreement-title .to-top-btn { float: right; height: 24px; font-size: 16px; color: #583d8b; line-height: 24px; text-transform: none; background-color: transparent; }
 .agreement-title .to-top-btn:hover { text-decoration: underline; }
 .agreement-title .to-top-btn i { display: inline-block; margin-right: 10px; vertical-align: middle; }
+
+/*------------------------------------------------------------------------- */
+/*------------------------- User Agreement page --------------------------- */
+/*------------------------------------------------------------------------- */
+.sitemap { margin-top: 20px; }
+.sitemap .post-title { background-color: #583d8b; }
+.sitemap__list { margin-top: 20px; margin-left: 20px; margin-bottom: 70px; -webkit-column-width: 220px; -moz-column-width: 220px; column-width: 220px; *zoom: 1; }
+.sitemap__list:after { content: ""; display: table; clear: both; }
+.sitemap__item { display: inline-block; margin-top: 25px; vertical-align: top; }
+.sitemap__item > a { display: block; margin-bottom: 5px; font-size: 16px; color: #d4762d; line-height: 32px; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #eabb97; }
+.sitemap__item > a:hover { text-decoration: underline; }
+.sitemap__sublist { font-size: 12px; color: #685096; line-height: 18px; }
+.sitemap__sublist a:hover { color: #d4762d; text-decoration: underline; }
+.sitemap__sublist span { color: #afa6c2; }
+.sitemap__sublist .sitemap__sublist { margin-left: 15px; }
