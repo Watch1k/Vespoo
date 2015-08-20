@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+jQuery.fn.extend({
+    toggleText: function (a, b){
+        var isClicked = false;
+        var that = this;
+        this.click(function (){
+            if (isClicked) { that.text(a); isClicked = false; }
+            else { that.text(b); isClicked = true; }
+        });
+        return this;
+    }
+});
+
 // advert's filters
 if ($('.multifilters-wrap').length) {
 
@@ -1342,6 +1354,20 @@ if ($('.multifilters-wrap').length) {
 			$('body,html').animate({scrollTop:0},800);
 		});
 	}());
+
+// show/hide regions map button
+	if ($('.regions').length) {
+		$('.regions__title button').on('click', function(){
+			$(this).parents('.regions__list > li').siblings('li').children('.regions__sublist').removeClass('is-active');
+			$(this).parents('.regions__list > li').siblings('li').children('.regions__title').children('button').removeClass('is-active').text("показать все").append('<i class="icon-all-more-top-viollet"></i>');
+			$(this).parents('.regions__title').siblings('.regions__sublist').toggleClass('is-active');
+			if ($(this).hasClass('is-active')) {
+				$(this).removeClass('is-active').text("показать все").append('<i class="icon-all-more-top-viollet"></i>');
+			} else {
+				$(this).addClass('is-active').text("скрыть").append('<i class="icon-all-more-top-viollet"></i>');
+			}
+		});
+	}
 
 
 });

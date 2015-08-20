@@ -1233,3 +1233,25 @@ form .field:after { content: ""; display: table; clear: both; }
 .paytype__list .paytype__choose:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .paytype__list .paytype__choose .icheckbox_square-orange { float: none; display: inline-block; margin-top: 0; margin-right: 10px; vertical-align: middle; }
 .paytype__list .paytype__choose .icheckbox_square-orange + p { display: inline-block; width: 156px; margin: 0; font-size: 18px; line-height: 18px; vertical-align: middle; }
+
+/*------------------------------------------------------------------------- */
+/*----------------------------- Region's map ------------------------------ */
+/*------------------------------------------------------------------------- */
+.regions { margin-bottom: 80px; }
+.regions .post-title { background-color: #583d8b; }
+.regions__list > li { margin-top: 20px; }
+.regions__title { margin-right: 20px; padding: 0 10px; height: 35px; color: #d4762d; line-height: 35px; background-color: #f1f0f0; *zoom: 1; }
+.regions__title:after { content: ""; display: table; clear: both; }
+.regions__title p { float: left; text-transform: uppercase; }
+.regions__title p span { color: #eabb97; }
+.regions__title button { float: right; font-size: 16px; line-height: 35px; color: #583d8b; background-color: transparent; }
+.regions__title button i { display: inline-block; margin-left: 10px; vertical-align: middle; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
+.regions__title button.is-active i { -webkit-transform: rotate(0); -ms-transform: rotate(0); transform: rotate(0); }
+.regions__title button:hover { color: #d4762d; }
+.regions__sublist { margin-top: 5px; font-size: 12px; color: #685096; line-height: 18px; *zoom: 1; }
+.regions__sublist:after { content: ""; display: table; clear: both; }
+.regions__sublist li { position: relative; float: left; margin-left: 20px; width: 220px; }
+.regions__sublist li a:hover { color: #d4762d; }
+.regions__sublist li span { color: #afa6c2; }
+.regions__sublist li:nth-child(1n+13) { display: none; }
+.regions__sublist.is-active li { display: block; }

@@ -2981,3 +2981,63 @@ form .field
 				font-size: 18px
 				line-height: 18px
 				vertical-align: middle
+/*-------------------------------------------------------------------------*/
+/*----------------------------- Region's map ------------------------------*/
+/*-------------------------------------------------------------------------*/
+.regions
+	margin-bottom: 80px
+	.post-title
+		background-color: $viollet
+	&__list
+		> li
+			margin-top: 20px
+	&__title
+		margin-right: 20px
+		padding: 0 10px
+		height: 35px
+		color: $orange
+		line-height: 35px
+		background-color: #f1f0f0
+		+pie-clearfix
+		p
+			float: left
+			text-transform: uppercase
+			span
+				color: lighten($orange,25)
+		button
+			float: right
+			font-size: 16px
+			line-height: 35px
+			color: $viollet
+			background-color: transparent
+			i
+				display: inline-block
+				margin-left: 10px
+				vertical-align: middle
+				transform: rotate(180deg)
+			&.is-active
+				i
+					transform: rotate(0)
+			&:hover
+				color: $orange
+	&__sublist
+		margin-top: 5px
+		font-size: 12px
+		color: #685096
+		line-height: 18px
+		+pie-clearfix
+		li
+			position: relative
+			float: left
+			margin-left: 20px
+			width: 220px
+			a:hover
+				color: $orange
+			span
+				color: #afa6c2
+			.help-title
+			&:nth-child(1n+13)
+				display: none
+		&.is-active
+			li
+				display: block
