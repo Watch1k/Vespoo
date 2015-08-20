@@ -440,10 +440,11 @@ body { min-width: 1240px; font-family: Arial, sans-serif; font-size: 16px; color
 
 .section-top { margin-top: 30px; -webkit-transition: all 0.3s; transition: all 0.3s; *zoom: 1; }
 .section-top:after { content: ""; display: table; clear: both; }
-.section-top .top-post-btn { float: right; margin-top: 10px; margin-bottom: -10px; height: 60px; font-size: 20px; font-style: italic; vertical-align: top; -webkit-transition: all 0.2s; transition: all 0.2s; *zoom: 1; }
-.section-top .top-post-btn:after { content: ""; display: table; clear: both; }
-.section-top .top-post-btn:hover { color: #d4762d; -webkit-transition: all 0.2s; transition: all 0.2s; }
-.section-top .top-post-btn .icon-all-arrow-left { float: left; margin-top: 10px; margin-right: 5px; }
+
+.top-post-btn { float: right; margin-top: 10px; height: 60px; font-size: 20px; font-style: italic; vertical-align: top; -webkit-transition: all 0.2s; transition: all 0.2s; *zoom: 1; }
+.top-post-btn:after { content: ""; display: table; clear: both; }
+.top-post-btn:hover { color: #d4762d; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.top-post-btn .icon-all-arrow-left { float: left; margin-top: 10px; margin-right: 5px; }
 
 .section-new { margin-top: 40px; *zoom: 1; }
 .section-new:after { content: ""; display: table; clear: both; }
