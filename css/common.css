@@ -1195,6 +1195,7 @@ form .field:after { content: ""; display: table; clear: both; }
 .payment__title span { display: inline-block; margin-right: 20px; font-size: 24px; padding-left: 15px; padding-right: 15px; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
 .payment .post-title { margin-top: 20px; background-color: #583d8b; }
 .payment__list { font-size: 20px; line-height: 55px; }
+.payment__list + .payment__title { margin-top: 70px; }
 .payment__list > li { margin-top: 10px; padding: 20px; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); *zoom: 1; }
 .payment__list > li:after { content: ""; display: table; clear: both; }
 .payment__list > li.is-active { background-color: #f1f0f0; }
@@ -1227,7 +1228,7 @@ form .field:after { content: ""; display: table; clear: both; }
 .paytype__list > li:last-child .paytype__submit button[type="submit"] { display: none; }
 .paytype__list .paytype__img { width: 200px; height: 150px; line-height: 150px; text-align: center; vertical-align: middle; }
 .paytype__list .paytype__img img { max-width: 200px; max-height: 150px; vertical-align: middle; }
-.paytype__list .paytype__choose { overflow: hidden; margin-top: 10px; height: 49px; border-top: 1px solid #7c5db8; }
+.paytype__list .paytype__choose { overflow: hidden; margin-top: 10px; padding-left: 3px; height: 49px; border-top: 1px solid #7c5db8; }
 .paytype__list .paytype__choose:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .paytype__list .paytype__choose .icheckbox_square-orange { float: none; display: inline-block; margin-top: 0; margin-right: 10px; vertical-align: middle; }
-.paytype__list .paytype__choose .icheckbox_square-orange + p { display: inline-block; width: 159px; margin: 0; font-size: 18px; line-height: 18px; vertical-align: middle; }
+.paytype__list .paytype__choose .icheckbox_square-orange + p { display: inline-block; width: 156px; margin: 0; font-size: 18px; line-height: 18px; vertical-align: middle; }
