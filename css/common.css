@@ -1298,6 +1298,8 @@ form .field:after { content: ""; display: table; clear: both; }
 .feedback-help .write-to-us { margin-top: 15px; margin-left: 10px; margin-bottom: 15px; padding-right: 25px; width: 600px; font-size: 18px; color: #d4762d; line-height: 22px; height: 65px; background: url("../img/other/arrow-b-o.png") no-repeat bottom right; }
 .feedback-help__aside { float: left; width: 308px; }
 .feedback-help__aside .footer__right { float: none; width: 100%; background-color: #f1f0f0; box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); }
+.feedback-help__aside .footer__right > p:nth-child(1) { text-align: center; }
+.feedback-help__aside .footer__right > p:nth-child(2) { font-size: 18px; }
 .feedback-help__in { float: right; width: 652px; }
 .feedback-help__in .feedback-help-form .field { *zoom: 1; }
 .feedback-help__in .feedback-help-form .field:after { content: ""; display: table; clear: both; }
@@ -1315,3 +1317,24 @@ form .field:after { content: ""; display: table; clear: both; }
 .feedback-help__in .feedback-help-form .captcha .row a:hover { color: #d4762d; }
 .feedback-help__in .feedback-help-form .captcha .row a + a { float: right; }
 .feedback-help__in .feedback-help-form .submit-btn { float: right; width: 310px; height: 45px; line-height: 45px; }
+
+/*------------------------------------------------------------------------- */
+/*--------------------------- Contact Us page ----------------------------- */
+/*------------------------------------------------------------------------- */
+.feedback-help.contact-us .post-title { background-color: #583d8b; }
+.feedback-help.contact-us .write-to-us { padding-right: 190px; width: auto; height: 95px; font-size: 18px; color: #583d8b; line-height: 22px; background-position: center bottom; }
+.feedback-help.contact-us .feedback-help__aside > p { margin-top: 15px; padding: 0 10px; line-height: 20px; }
+.feedback-help.contact-us .feedback-help__aside > p + p { margin-top: 0; }
+.feedback-help.contact-us .feedback-help__aside > p a { color: #d4762d; }
+.feedback-help.contact-us .feedback-help__aside > p a:hover { text-decoration: underline; }
+
+.feedback-help-form .field-half { float: left; margin-top: 10px; width: 50%; }
+.feedback-help-form .field-half button[type="submit"] { margin-top: 25px; }
+.feedback-help-form .field-half + .field-half { *zoom: 1; }
+.feedback-help-form .field-half + .field-half:after { content: ""; display: table; clear: both; }
+.feedback-help-form .field-half + .field-half .captcha { float: right; }
+.feedback-help-form .field-half + .field-half .captcha__in { margin-top: 15px; }
+.feedback-help-form .field-half .form-input { float: none; }
+.feedback-help-form .field-half .submit-btn.inverse { float: none; margin-top: 10px; padding: 0 10px; width: 100%; height: 35px; font-size: 18px; line-height: 35px; text-align: left; text-transform: none; }
+.feedback-help-form .field-half .submit-btn.inverse i { display: inline-block; vertical-align: middle; margin-right: 10px; }
+.feedback-help-form .field-half .field__info { margin-top: 10px; margin-left: 20px; width: 250px; font-size: 14px; line-height: 16px; }
