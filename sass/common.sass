@@ -103,13 +103,13 @@ body
 	margin-top: 200px
 .wrapper
 	position: relative
-	z-index: 6
+	z-index: 5
 	overflow: hidden
 	min-height: 100%
 	padding-bottom: 306px
 .footer
 	position: relative
-	z-index: 5
+	z-index: 6
 	margin-top: -286px
 /*-------------------------------------------------------------------------*/
 /*----------------------------- Main page ---------------------------------*/
@@ -3041,3 +3041,167 @@ form .field
 		&.is-active
 			li
 				display: block
+/*-------------------------------------------------------------------------*/
+/*----------------------------- Help page ---------------------------------*/
+/*-------------------------------------------------------------------------*/
+.siteblog__title
+	span
+		font-size: 20px
+		color: #fff
+.help
+	&__wrap
+		margin-top: 20px
+		margin-bottom: 70px
+		+pie-clearfix
+	&__aside
+		float: left
+		width: 308px
+		line-height: 18px
+		.nav-help
+			> li
+				position: relative
+				z-index: 6
+				padding: 15px 20px 15px 10px
+				+pie-clearfix
+				+ li
+					margin-top: 5px
+				> a
+					display: block
+					font-size: 18px
+					line-height: 20px
+					font-weight: bold
+				a:hover
+					color: $orange
+				i
+					display: none
+					float: right
+					margin-top: 3px
+					vertical-align: middle
+					transform: rotate(-90deg)
+				&.is-active
+					position: relative
+					box-shadow: 0 0 6px rgba(1,1,1,0.3)
+					&:after
+						content: ''
+						position: absolute
+						top: 0
+						right: -4px
+						display: block
+						width: 8px
+						height: 100%
+						background-color: #fff
+					> a
+						margin-left: 10px
+						color: $orange
+					i
+						display: block
+		.nav-help-sub
+			margin-left: 10px
+			li
+				margin-top: 5px
+				&.is-active
+					color: $orange
+	&__in
+		padding: 10px
+		float: right
+		width: 672px
+		box-shadow: 0 0 6px rgba(1,1,1,0.3)
+		+pie-clearfix
+	&__list
+		> li
+			> p
+				padding-left: 10px
+				line-height: 35px
+				box-shadow: 0 0 6px rgba(1,1,1,0.3)
+				cursor: pointer
+				+pie-clearfix
+				&:hover
+					color: $orange
+				i
+					float: right
+					margin-top: 10px
+					margin-right: 10px
+					transform: rotate(-180deg)
+					transition: all 0.4s
+			+ li
+				margin-top: 20px
+			&.is-active
+				> p
+					background-color: #f1f0f0
+					i
+						transform: rotate(0)
+						transition: all 0.4s
+		ol
+			padding-left: 20px
+			li
+				list-style-type: decimal
+				+ li
+					margin-top: 3px
+	&__content
+		display: none
+		padding: 10px
+		line-height: 22px
+		a
+			color: $orange
+			&:hover
+				text-decoration: underline
+.feedback-help
+	margin-bottom: 50px
+	+pie-clearfix
+	.write-to-us
+		margin-top: 15px
+		margin-left: 10px
+		margin-bottom: 15px
+		padding-right: 25px
+		width: 600px
+		font-size: 18px
+		color: $orange
+		line-height: 22px
+		height: 65px
+		background: url("../img/other/arrow-b-o.png") no-repeat bottom right
+	&__aside
+		float: left
+		width: 308px
+		.footer__right
+			float: none
+			width: 100%
+			background-color: #f1f0f0
+			box-shadow: 0 0 6px rgba(1,1,1,0.3)
+	&__in
+		float: right
+		width: 652px
+		.feedback-help-form
+			.field
+				+pie-clearfix
+				+ .field
+					margin-top: 10px
+			.selectric .label
+				font-size: 18px
+			.form-input
+				font-size: 18px
+			.form-area
+				font-size: 18px
+				vertical-align: middle
+				+placeholder-color($viollet)
+			.captcha
+				float: left
+				width: 262px
+				&__in
+					height: 45px
+					box-shadow: 0 0 6px rgba(1,1,1,0.3)
+					img
+						vertical-align: middle
+				.row
+					margin-top: 2px
+					a
+						float: left
+						font-size: 12px
+						&:hover
+							color: $orange
+						+ a
+							float: right
+			.submit-btn
+				float: right
+				width: 310px
+				height: 45px
+				line-height: 45px

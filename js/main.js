@@ -1369,8 +1369,18 @@ if ($('.multifilters-wrap').length) {
 		});
 	}
 
+// nav-help
+	if ($('.nav-help-sub li.is-active').length) {
+		$('.nav-help-sub li.is-active').parents('.nav-help > li').addClass('is-active');
+	}
+
 
 });
+
+// help accordion
+	$('.help__list > li > p').on('click', function(){
+		$(this).siblings('.help__content').slideToggle().parent().toggleClass('is-active').siblings('li').removeClass('is-active').children('.help__content').slideUp();
+	});
 
 // Window Scroll
 $(window).scroll(function () {

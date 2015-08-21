@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vespoo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/orange.css">
+	<link rel="stylesheet" href="css/selectric.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/jquery.fancybox-thumbs.css">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	
+	<!-- begin wrapper  -->
+	<div id="main" class="wrapper">
+		<!-- begin banner-top -->
+		<div class="banner-top">
+			<a href="#" class="banner-top__in"></a>
+			<button class="close-banner-fix">x</button>
+		</div>
+		<!-- end banner-top -->
+		
+		<!-- begin header  -->
+		<div class="header">
+			<div class="container">
+				<!-- begin header__top  -->
+				<div class="header__top">
+					<a href="index.html" class="logo"><img src="img/logo.png" alt="Vespoo"></a>
+					<a href="#" class="post-new">+ Подать объявление</a>
+					<a href="#" class="userbox">Мой профиль</a>
+					<ul class="lang-selector">
+						<li><a href="#">язык</a></li>
+						<li><a href="#">мова</a></li>
+					</ul>
+				</div>
+				<!-- end header__top -->
+				
+				<form action="#" id="searchForm" class="form-search">
+					<fieldset>
+						<!-- begin field  -->
+						<div class="field location">
+							<input type="text" id="cityCurrent" readonly="readonly" placeholder="Город, область...">
+							<a href="#" class="clear-input reset icon-all-close"></a>
+						</div>
+						<!-- begin field  -->
+						<div class="field search">
+							<input type="text" placeholder="Поиск...">
+							<a href="#" class="clear-input icon-all-close"></a>
+						</div>
+						<!-- begin field  -->
+						<div class="field submit">
+							<button type="submit">Поиск</button>
+						</div>
+					</fieldset>
+				</form>
+
+				<!-- begion location-wrap -->
+				<div class="location-wrap">
+					<div class="location-title">
+						<button class="location-title__all">Вся Украина</button>
+						<button class="location-title__region">область</button>
+						<button class="location-title__back">вернуться к выбору области</button>
+					</div>
+					<div class="search-city-wrap">
+						<input type="text" id="cityBox" placeholder="Начните вводить город">
+						<a href="#" class="clear-input icon-all-close"></a>
+					</div>
+					<div class="region-wrap"></div>
+					<div class="city-wrap"></div>
+				</div>
+				<!-- end location-wrap -->
+			</div>
+		</div>
+		<!-- end header -->
+
+		<!-- begin body-branding  -->
+		<div class="body-branding">
+			<!-- begin banner  -->
+			<div class="banner-1">
+				<a href="#"><img src="img/banners/Banner-160x600.jpg" alt="banner"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end banner -->
+
+			<!-- begin service-1  -->
+			<div class="service-1">
+				<a href="#"><img src="img/banners/service-1.jpg" alt="service"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end service-1 -->
+
+			<!-- begin service-2  -->
+			<div class="service-2">
+				<a href="#"><img src="img/banners/service-1.jpg" alt="service"></a>
+				<button class="close-banner">x</button>
+			</div>
+			<!-- end service-2 -->
+		</div>
+		<!-- end body-branding -->
+
+		<!-- begin content-wrap  -->
+		<div class="content-wrap container">
+
+			<!-- begin siteblog  -->
+			<div class="siteblog">
+				<!-- begin blog-title -->
+				<div class="siteblog__title">
+					<span>Помощь</span>
+					<form action="#" class="blog-search">
+						<fieldset>
+							<!-- begin field  -->
+							<div class="field">
+								<input type="text" placeholder="Поиск...">
+							</div>
+							<!-- begin field  -->
+							<div class="field">
+								<button type="submit"></button>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<!-- end blog-title -->
+
+				<!-- begin help__wrap  -->
+				<div class="help__wrap">
+					<!-- begin help__aside  -->
+					<div class="help__aside">
+						<ul class="nav-help">
+							<li class="is-active"><a href="#">Топ-10 вопросов<i class="icon-all-more-bot-orange"></i></a></li>
+							<li>
+								<a href="#">Топ-10 вопросов<i class="icon-all-more-bot-orange"></i></a>
+								<ul class="nav-help-sub">
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Правила публикации объявлений</a></li>
+									<li><a href="#">Список запрещенных товаров, услуг</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Объявления<i class="icon-all-more-bot-orange"></i></a>
+								<ul class="nav-help-sub">
+									<li><a href="#">Как разместить объявление на сайте OLX</a></li>
+									<li><a href="#">Как добавить фотографии к объявлению</a></li>
+									<li><a href="#">Как составить привлекательное объявление?</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Как рекламировать объявления<i class="icon-all-more-bot-orange"></i></a>
+								<ul class="nav-help-sub">
+									<li><a href="#">Порядок оплаты</a></li>
+									<li><a href="#">Преимущества платных услуг</a></li>
+									<li><a href="#">Стоимость услуг</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Как продавать безопасно<i class="icon-all-more-bot-orange"></i></a>
+								<ul class="nav-help-sub">
+									<li><a href="#">Как связаться с автором объявления?</a></li>
+									<li><a href="#">Как продавать безопасно</a></li>
+									<li><a href="#">Как покупать безопасно</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- end help__aside -->
+
+					<!-- begin help__in  -->
+					<div class="help__in">
+						<ul class="help__list">
+							<!-- begin element -->
+							<li>
+								<p>Как продавать безопасно<i class="icon-all-more-top-viollet"></i></p>
+								<div class="help__content">
+									<p>На сайте vespoo.ua вы можете опубликовать свои объявления бесплатно, легко и быстро! для этого просто нажмите кнопку «подать объявление» в правом верхнем углу главной страницы.</p>
+								</div>
+							</li>
+							<!-- begin element -->
+							<li>
+								<p>Как разместить объявление на сайте Vespoo<i class="icon-all-more-top-viollet"></i></p>
+								<div class="help__content">
+									<p>На сайте vespoo.ua вы можете опубликовать свои объявления бесплатно, легко и быстро! для этого просто нажмите кнопку «подать объявление» в правом верхнем углу главной страницы.</p>
+									<div class="text-center">
+										<img src="img/content/help-img.jpg" alt="some-img">
+									</div>
+									<ol>
+										<li>Составьте заголовок предлагаемого вами товара/услуги. Он должен быть понятным, грамотным и привлекательным, содержать наименование вашего товара/услуги.</li>
+										<li>Выберите подходящие раздел и рубрику, в которых вы хотите разместить свое объявление - так ваше объявление получит наибольшее количество откликов. Вы можете заранее узнать нужную рубрику, найдя по поиску на сайте объявления, подобные вашему, и опубликовать свое в том же разделе.</li>
+										<li>Определите, к какому типу относится ваше объявление - предложение или спрос (только для рубрик Работа и Недвижимость). Выберите параметр «Предлагаю», если вы предлагаете товар/услугу или параметр «Ищу», если вы хотите что-то купить или найти.</li>
+										<li>Укажите цену - данное поле обязательно! Если вы готовы к пересмотру указанной цены, выберите параметр «Торг возможен», если вы намерены обменять товар - «Обмен», а если вы готовы подарить товар, выберите параметр «Бесплатно». Указывайте реальную цену, а не условную вроде 1 грн., 2 руб. и т.д.</li>
+										<li>Выберите параметр «Частное лицо», если вы предлагаете собственные товары или «Бизнес» - если вы представляете агентство, интернет-магазин, компанию, частный бизнес.</li>
+										<li>Добавьте описание предлагаемого вами товара/услуги, содержащее как можно больше подробной информации. Это позволит быстрее продать товар и избежать дополнительных вопросов со стороны потенциальных покупателей. Как создать привлекательный текст объявления, читайте <a href="#">здесь</a>.</li>
+										<li>Добавьте фотографии. Объявления с качественными фотографиями получают в среднем в 3-5 раз больше откликов, чем без фото! Вы можете добавить максимум 8 фотографий в формате jpg, gif, png, не более 5 Мбайт и 2000x2000 px. Подробную информацию о добавлении фотографий можно найти <a href="#">здесь</a>.</li>
+										<li>Укажите регион, город, район, станцию метро – это поможет вашему покупателю/потребителю услуг понять, где вы находитесь.</li>
+										<li>Введите ваш email-адрес. Он не будет отображаться на странице с объявлениями. E-mail необходим для активации вашего объявления и входа в личную учетную запись. Также укажите альтернативные способы связи - телефон, ICQ или Skype. Это даст возможность общаться с большим количеством потенциальных покупателей.</li>
+										<li>Активация объявления. На ваш e-mail будет отправлена ссылка активации объявления. Перейдите по ней для публикации объявления. Объявления, публикуемые зарегистрированными и авторизированными пользователями, не требуют активации и сразу же публикуются на сайте OLX.ua.</li>
+										<li>Для завершения публикации нажмите кнопку «Опубликовать».</li>
+									</ol>
+								</div>
+							</li>
+							<!-- begin element -->
+							<li>
+								<p>Личная учетная запись «Мой профиль»<i class="icon-all-more-top-viollet"></i></p>
+								<div class="help__content">
+									<p>На сайте vespoo.ua вы можете опубликовать свои объявления бесплатно, легко и быстро! для этого просто нажмите кнопку «подать объявление» в правом верхнем углу главной страницы.</p>
+								</div>
+							</li>
+							<!-- begin element -->
+							<li>
+								<p>Забыли пароль?<i class="icon-all-more-top-viollet"></i></p>
+								<div class="help__content">
+									<p>На сайте vespoo.ua вы можете опубликовать свои объявления бесплатно, легко и быстро! для этого просто нажмите кнопку «подать объявление» в правом верхнем углу главной страницы.</p>
+								</div>
+							</li>
+							<!-- begin element -->
+							<li>
+								<p>Преимущества платных услуг<i class="icon-all-more-top-viollet"></i></p>
+								<div class="help__content">
+									<p>На сайте vespoo.ua вы можете опубликовать свои объявления бесплатно, легко и быстро! для этого просто нажмите кнопку «подать объявление» в правом верхнем углу главной страницы.</p>
+								</div>
+							</li>
+							<!-- begin element -->
+							<li>
+								<p>Список запрещенных товаров, услуг<i class="icon-all-more-top-viollet"></i></p>
+								<div class="help__content">
+									<p>На сайте vespoo.ua вы можете опубликовать свои объявления бесплатно, легко и быстро! для этого просто нажмите кнопку «подать объявление» в правом верхнем углу главной страницы.</p>
+								</div>
+							</li>
+							<!-- begin element -->
+							<li>
+								<p>Избранные результаты поиска<i class="icon-all-more-top-viollet"></i></p>
+								<div class="help__content">
+									<p>На сайте vespoo.ua вы можете опубликовать свои объявления бесплатно, легко и быстро! для этого просто нажмите кнопку «подать объявление» в правом верхнем углу главной страницы.</p>
+								</div>
+							</li>
+							<!-- begin element -->
+							<li>
+								<p>Почему мое объявление удалено<i class="icon-all-more-top-viollet"></i></p>
+								<div class="help__content">
+									<p>На сайте vespoo.ua вы можете опубликовать свои объявления бесплатно, легко и быстро! для этого просто нажмите кнопку «подать объявление» в правом верхнем углу главной страницы.</p>
+								</div>
+							</li>
+							<!-- begin element -->
+							<li>
+								<p>Обратная связь<i class="icon-all-more-top-viollet"></i></p>
+								<div class="help__content">
+									<p>На сайте vespoo.ua вы можете опубликовать свои объявления бесплатно, легко и быстро! для этого просто нажмите кнопку «подать объявление» в правом верхнем углу главной страницы.</p>
+								</div>
+							</li>
+							<!-- begin element -->
+							<li>
+								<p>Как составить привлекательное объявление<i class="icon-all-more-top-viollet"></i></p>
+								<div class="help__content">
+									<p>На сайте vespoo.ua вы можете опубликовать свои объявления бесплатно, легко и быстро! для этого просто нажмите кнопку «подать объявление» в правом верхнем углу главной страницы.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- end help__in -->
+				</div>
+				<!-- end help__wrap -->
+
+				<!-- begin feedback-help  -->
+				<div class="feedback-help">
+					<h2 class="post-title">Не нашли ответа на свой вопрос?</h2>
+					<p class="write-to-us"><strong>Напишите нам.</strong> Сотрудник Отдела заботы о пользователях ответит в ближайшее время удобным для вас способом.</p>
+					<!-- begin row  -->
+					<div class="row">
+						<!-- begin feedback-help__aside  -->
+						<div class="feedback-help__aside">
+							<!-- begin info  -->
+							<div class="footer__right">
+								<p>Отдел заботы о пользователях</p>
+								<p>Фамилия Имя</p>
+								<p>Консультант по вопросам работы сайта Vespoo</p>
+								<p>Горячая линия:</p>
+								<ul class="phone-list">
+									<li>0-800-00-00-00</li>
+									<li>(067)123-45-67</li>
+									<li>(093)123-45-67</li>
+								</ul>
+								<a href="#" class="phone-btn">Связаться</a>
+							</div>
+							<!-- end info -->
+						</div><!-- end feedback-help__aside -->
+
+						<!-- begin feedback-help__in  -->
+						<div class="feedback-help__in">
+							<form action="#" class="feedback-help-form">
+								<fieldset>
+									<!-- begin field  -->
+									<div class="field">
+										<div id="errorProject">
+											<select data-validation="required" data-validation-event="change" data-validation-error-msg="Выберите проект" data-validation-error-msg-container="#errorProject">
+												<option value="">Выберите проект</option>
+												<option value="Проект 1">Проект 1</option>
+												<option value="Проект 2">Проект 2</option>
+												<option value="Проект 3">Проект 3</option>
+											</select>
+										</div>
+									</div>
+									<!-- begin field  -->
+									<div class="field">
+										<input type="text" class="form-input" placeholder="Тема">
+									</div>
+									<!-- begin field  -->
+									<div class="field">
+										<textarea class="form-area" placeholder="Текст сообщения..." data-validation="length" data-validation-length="min5" data-validation-error-msg="Поле обязательное для заполнения"></textarea>
+									</div>
+									<!-- begin field  -->
+									<div class="field">
+										<input type="text" class="form-input" name="user_email" placeholder="E-mail" data-validation="email" data-validation-error-msg="Обязательно для заполнения. На указанный email будет предоставлен ответ.">
+									</div>
+									<div class="field field__submit">
+										<!-- begin captcha  -->
+										<div class="captcha">
+											<div class="captcha__in">
+												<img src="img/other/recaptcha.jpg" alt="recaptcha">
+											</div>
+											<div class="row">
+												<a href="#">Конфиденциальность</a>
+												<a href="#">Условия использования</a>
+											</div>
+										</div><!-- end captcha -->
+										<button type="submit" class="submit-btn">Отправить</button>
+									</div>
+								</fieldset>
+							</form>
+						</div><!-- end feedback-help__in -->
+					</div><!-- end row -->
+				</div><!-- end feedback-help -->
+			</div>
+			<!-- end siteblog -->
+
+			<!-- begin section-about  -->
+			<div class="section-about">
+				<div class="row">
+					<div class="logo">
+						<a href="#">
+							<img src="img/logo-2.png" alt="Vespoo">
+						</a>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam totam rem aperiam totam</p>
+				</div>
+				<div class="row">
+					<p><strong>Популярные запросы:</strong> <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>, <a href="#">рубрика</a>, <a href="#">категория</a>, <a href="#">техника</a>.</p>
+				</div>
+				<p class="social-title">Спасибо, что рассказываете о нас друзьям!</p>
+				<ul class="social-list">
+					<li><a href="#"><i class="icon-social-twitter"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-fb"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-vk"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-class"></i>Поделиться<span>35</span></a></li>
+					<li><a href="#"><i class="icon-social-gplus"></i>Поделиться<span>35</span></a></li>
+				</ul>
+			</div>
+			<!-- end section-about -->
+		</div>
+		<!-- end content-wrap -->
+	</div>
+	<!-- end wrapper -->
+
+	<!-- begin footer  -->
+	<div class="footer">
+		<div class="container">
+			<!-- begin footer__left  -->
+			<div class="footer__left">
+				<div class="footer__col">
+					<p>Компания</p>
+					<ul class="footer-list">
+						<li><a href="#">Добавить обьявление</a></li>
+						<li><a href="#">Добавить магазин</a></li>
+						<li><a href="#">Реклама на сайте</a></li>
+						<li><a href="#">Безопасные сделки Vespoo</a></li>
+						<li><a href="#">Партнерские программы</a></li>
+						<li><a href="#">Сортировка в поиске</a></li>
+					</ul>
+				</div>
+				<div class="footer__col">
+					<p>Партнерам</p>
+					<ul class="footer-list">
+						<li><a href="#">Политика конфиденциальности и возвращения средств</a></li>
+						<li><a href="#">Карта опций</a></li>
+						<li><a href="#">Карта городов</a></li>
+						<li><a href="#">Карта сайта</a></li>
+						<li><a href="#">Помощь</a></li>
+						<li><a href="#">Оставить отзыв о сайте Vespoo</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end footer__left -->
+
+			<!-- begin footer__right  -->
+			<div class="footer__right">
+				<p>Отдел заботы о пользователях</p>
+				<p>Фамилия Имя</p>
+				<p>Консультант по вопросам работы сайта Vespoo</p>
+				<p>Горячая линия:</p>
+				<ul class="phone-list">
+					<li>0-800-00-00-00</li>
+					<li>(067)123-45-67</li>
+					<li>(093)123-45-67</li>
+				</ul>
+				<a href="#" class="phone-btn">Связаться</a>
+			</div>
+			<!-- end footer__right -->
+
+			<!-- begin footer__bottom  -->
+			<div class="footer__bottom">
+				<a href="#" class="footer__logo"><img src="img/logo-2.png" alt="Vespoo"></a>
+				<p>&copy; Vespoo.com. Все права защищены.</p>
+				<p>Разработка и поддержка <a href="#">MTITM &amp; Koldios</a></p>
+			</div>
+			<!-- end footer__bottom -->
+		</div>
+	</div>
+	<!-- end footer -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/icheck.min.js"></script>
+	<script src="js/jquery.selectric.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.form-validator.min.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
+	<script src="js/jquery.fancybox-thumbs.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
